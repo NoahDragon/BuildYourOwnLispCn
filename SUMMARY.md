@@ -17,5 +17,5 @@
 * [第十四章 • 字符串](14.Strings.md)
 * [第十五章 • 标准库](15.Standard-Library.md)
 * [第十六章 • 彩蛋](16.Bonus-Projects.md)
-* [第十七章 • 附录](17.Appendix.md)
+* [附录](Appendix.md)
 
