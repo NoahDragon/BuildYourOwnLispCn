@@ -1,4 +1,4 @@
-# 第十一章-第十四章正在创作中，敬请期待！
+# 第十一章, 第十二章, 第十四章正在创作中，敬请期待！
 
 [![Build Status](https://travis-ci.org/NoahDragon/BuildYourOwnLispCn.svg?branch=master)](https://travis-ci.org/NoahDragon/BuildYourOwnLispCn)
 
@@ -14,7 +14,7 @@
 - 项目主页：[BuildYourOwnLisp](https://github.com/orangeduck/BuildYourOwnLisp)
 - 共享协议：[CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/)
 
-**译者(Translator)**: 第零零章-第零十章 KSCO (numbksco@gmail.com) 第零十章-第十六章 Abner Chou (hi@abnerchou.me) | Bon（bon@utai.io)
+**译者(Translator)**: 第零零章-第零十章 KSCO (numbksco@gmail.com) 第零十章-第十六章 Abner Chou (hi@abnerchou.me) | Bon（bon@utai.io) | wusiration (landloyal@gmail.com)
 
 - 阅读地址：https://josan.gitbook.io/c-lisp/
 - 项目主页：[BuildYourOwnLispCn](https://github.com/NoahDragon/BuildYourOwnLispCn)
