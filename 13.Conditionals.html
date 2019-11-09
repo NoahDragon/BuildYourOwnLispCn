@@ -1,0 +1,1638 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第十三章 • 条件分支 · 学C语言写Lisp</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex-toc/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-collapse/collapse.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="website-1573318305263.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    
+        <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    
+    
+    
+
+    
+    <link rel="next" href="14.Strings.html" />
+    
+    
+    <link rel="prev" href="12.Functions.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            <div class="book-logo">   
+                
+                <img src="./assets/logo.png"/>
+                
+            </div>
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.1" 
+            data-path="./">
+
+            
+                <a href="./">
+            
+                    
+                    第零零章 • 关于
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.2" 
+            data-path="01.Introduction.html">
+
+            
+                <a href="01.Introduction.html">
+            
+                    
+                    第零一章 • 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.3" 
+            data-path="02.Installation.html">
+
+            
+                <a href="02.Installation.html">
+            
+                    
+                    第零二章 • 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.4" 
+            data-path="03.Basics.html">
+
+            
+                <a href="03.Basics.html">
+            
+                    
+                    第零三章 • 基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.5" 
+            data-path="04.Interactive.html">
+
+            
+                <a href="04.Interactive.html">
+            
+                    
+                    第零四章 • 交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.6" 
+            data-path="05.Languages.html">
+
+            
+                <a href="05.Languages.html">
+            
+                    
+                    第零五章 • 编程语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.7" 
+            data-path="06.Parsing.html">
+
+            
+                <a href="06.Parsing.html">
+            
+                    
+                    第零六章 • 语法分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.8" 
+            data-path="07.Evaluation.html">
+
+            
+                <a href="07.Evaluation.html">
+            
+                    
+                    第零七章 • 计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.9" 
+            data-path="08.Error-Handling.html">
+
+            
+                <a href="08.Error-Handling.html">
+            
+                    
+                    第零八章 • 错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.10" 
+            data-path="09.S-Expressions.html">
+
+            
+                <a href="09.S-Expressions.html">
+            
+                    
+                    第零九章 • S-表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.11" 
+            data-path="10.Q-Expressions.html">
+
+            
+                <a href="10.Q-Expressions.html">
+            
+                    
+                    第零十章 • Q-表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.12" 
+            data-path="11.Variables.html">
+
+            
+                <a href="11.Variables.html">
+            
+                    
+                    第十一章 • 变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.13" 
+            data-path="12.Functions.html">
+
+            
+                <a href="12.Functions.html">
+            
+                    
+                    第十二章 • 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+            active  selected  "
+            data-level="1.14" 
+            data-path="13.Conditionals.html">
+
+            
+                <a href="13.Conditionals.html">
+            
+                    
+                    第十三章 • 条件分支
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.15" 
+            data-path="14.Strings.html">
+
+            
+                <a href="14.Strings.html">
+            
+                    
+                    第十四章 • 字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.16" 
+            data-path="15.Standard-Library.html">
+
+            
+                <a href="15.Standard-Library.html">
+            
+                    
+                    第十五章 • 标准库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.17" 
+            data-path="16.Bonus-Projects.html">
+
+            
+                <a href="16.Bonus-Projects.html">
+            
+                    
+                    第十六章 • 彩蛋
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.18" 
+            data-path="Appendix.html">
+
+            
+                <a href="Appendix.html">
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.19" 
+            >
+
+            
+                <a target="_blank" href="https://github.com/NoahDragon/BuildYourOwnLispCn/raw/master/source.tar.gz">
+            
+                    
+                    源代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.20" 
+            >
+
+            
+                <a target="_blank" href="http://buildyourownlisp.com/contents">
+            
+                    
+                    英文原版在线阅读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.21" 
+            >
+
+            
+                <a target="_blank" href="https://github.com/NoahDragon/BuildYourOwnLispCn">
+            
+                    
+                    Github
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >第十三章 • 条件分支</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7DP27M&placement=abnerchoume" id="_carbonads_js"></script>
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x7B2C;&#x5341;&#x4E09;&#x7AE0;&#xB7;&#x6761;&#x4EF6;&#x5206;&#x652F;"><b>1. </b>&#x7B2C;&#x5341;&#x4E09;&#x7AE0;&#xB7;&#x6761;&#x4EF6;&#x5206;&#x652F;</a></li><ul><li><span class="title-icon "></span><a href="#&#x81EA;&#x5DF1;&#x52A8;&#x624B;"><b>1.1. </b>&#x81EA;&#x5DF1;&#x52A8;&#x624B;</a></li><li><span class="title-icon "></span><a href="#&#x6392;&#x5E8F;&#x51FD;&#x6570;"><b>1.2. </b>&#x6392;&#x5E8F;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x7B49;&#x4E8E;&#x51FD;&#x6570;"><b>1.3. </b>&#x7B49;&#x4E8E;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#if&#x51FD;&#x6570;"><b>1.4. </b>If&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x9012;&#x5F52;&#x51FD;&#x6570;"><b>1.5. </b>&#x9012;&#x5F52;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x5F69;&#x86CB;"><b>1.6. </b>&#x5F69;&#x86CB;</a></li><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b>1.7. </b>&#x53C2;&#x8003;</a></li></ul></ul></div><a href="#&#x7B2C;&#x5341;&#x4E09;&#x7AE0;&#xB7;&#x6761;&#x4EF6;&#x5206;&#x652F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7B2C;&#x5341;&#x4E09;&#x7AE0;&#xB7;&#x6761;&#x4EF6;&#x5206;&#x652F;"><a name="&#x7B2C;&#x5341;&#x4E09;&#x7AE0;&#xB7;&#x6761;&#x4EF6;&#x5206;&#x652F;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x5341;&#x4E09;&#x7AE0;&#xB7;&#x6761;&#x4EF6;&#x5206;&#x652F;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x7B2C;&#x5341;&#x4E09;&#x7AE0;&#xB7;&#x6761;&#x4EF6;&#x5206;&#x652F;</h1>
+<h2 id="&#x81EA;&#x5DF1;&#x52A8;&#x624B;"><a name="&#x81EA;&#x5DF1;&#x52A8;&#x624B;" class="anchor-navigation-ex-anchor" href="#&#x81EA;&#x5DF1;&#x52A8;&#x624B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x81EA;&#x5DF1;&#x52A8;&#x624B;</h2>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5728;&#x6211;&#x4EEC;&#x7684;Lispy&#x505A;&#x4E86;&#x4E0D;&#x5C11;&#x4E8B;&#x60C5;&#x3002;&#x76F8;&#x4FE1;&#x4EE5;&#x4F60;&#x73B0;&#x6709;&#x7684;C&#x8BED;&#x8A00;&#x77E5;&#x8BC6;&#x5DF2;&#x7ECF;&#x8DB3;&#x4EE5;&#x72EC;&#x7ACB;&#x5F00;&#x53D1;&#x529F;&#x80FD;&#x3002;&#x5982;&#x679C;&#x4F60;&#x6709;&#x4FE1;&#x5FC3;&#x7684;&#x8BDD;&#xFF0C;&#x8FD9;&#x4E00;&#x7AE0;&#x662F;&#x4E00;&#x4E2A;&#x5B8C;&#x7F8E;&#x7684;&#x673A;&#x4F1A;&#xFF0C;&#x8BA9;&#x4F60;&#x653E;&#x98DE;&#x601D;&#x8DEF;&#x5E76;&#x5C1D;&#x8BD5;&#x5B9E;&#x73B0;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x4E00;&#x4E9B;&#x60F3;&#x6CD5;&#x3002;&#x8FD9;&#x4E00;&#x7AE0;&#x7BC7;&#x5E45;&#x8F83;&#x77ED;&#xFF0C;&#x4E3B;&#x8981;&#x5185;&#x5BB9;&#x662F;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B;&#x5904;&#x7406;&#x6BD4;&#x8F83;&#x548C;&#x6392;&#x5E8F;&#x7684;&#x5185;&#x7F6E;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x6709;&#x4FE1;&#x5FC3;&#xFF0C;&#x7EE7;&#x7EED;&#x5E76;&#x5C1D;&#x8BD5;&#x5728;&#x4F60;&#x7684;Lispy&#x4E2D;&#x5B9E;&#x73B0;&#x6BD4;&#x8F83;&#x548C;&#x6392;&#x5E8F;&#x529F;&#x80FD;&#x3002;&#x5B9A;&#x4E49;&#x4E00;&#x4E9B;&#x65B0;&#x7684;&#x5185;&#x7F6E;&#x51FD;&#x6570;&#x7528;&#x4E8E;&#x5927;&#x4E8E;&#x3001;&#x5C0F;&#x4E8E;&#x3001;&#x7B49;&#x4E8E;&#x4EE5;&#x53CA;&#x5176;&#x4F59;&#x5728;C&#x8BED;&#x8A00;&#x4E2D;&#x9002;&#x7528;&#x7684;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;&#x3002;&#x5C1D;&#x8BD5;&#x53BB;&#x5B9A;&#x4E49;<code>if</code>&#x51FD;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x68C0;&#x9A8C;&#x67D0;&#x4E9B;&#x6761;&#x4EF6;&#x5E76;&#x6839;&#x636E;&#x7ED3;&#x679C;&#x6267;&#x884C;&#x4E0D;&#x540C;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x5F53;&#x4F60;&#x5B8C;&#x6210;&#x4EE5;&#x540E;&#x63A5;&#x7740;&#x770B;&#x4E0B;&#x9762;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x6BD4;&#x8F83;&#x4F60;&#x4E0E;&#x6211;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x4E0A;&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x5206;&#x6790;&#x4E0D;&#x540C;&#x4E4B;&#x5904;&#x5E76;&#x9009;&#x62E9;&#x4F60;&#x66F4;&#x559C;&#x6B22;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x6CA1;&#x4EC0;&#x4E48;&#x601D;&#x8DEF;&#xFF0C;&#x4E0D;&#x7528;&#x62C5;&#x5FC3;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x5C06;&#x4F1A;&#x89E3;&#x91CA;&#x6211;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<h2 id="&#x6392;&#x5E8F;&#x51FD;&#x6570;"><a name="&#x6392;&#x5E8F;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x6392;&#x5E8F;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x6392;&#x5E8F;&#x51FD;&#x6570;</h2>
+<p>&#x4E3A;&#x4E86;&#x7B80;&#x5355;&#x8D77;&#x89C1;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x590D;&#x7528;&#x4E4B;&#x524D;&#x7684;&#x6570;&#x5B57;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x6765;&#x8868;&#x793A;&#x6BD4;&#x8F83;&#x7ED3;&#x679C;&#x3002; &#x5236;&#x5B9A;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x4E8E;C&#x8BED;&#x8A00;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x5047;&#x8BBE;&#x4EFB;&#x4F55;&#x4E0D;&#x662F;<code>0</code>&#x7684;&#x6570;&#x5B57;&#x5728;<code>if</code>&#x8BED;&#x53E5;&#x4E2D;&#x603B;&#x4E3A;true&#xFF0C;&#x800C;<code>0</code>&#x5219;&#x603B;&#x4E3A;false&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x6392;&#x5E8F;&#x51FD;&#x6570;&#x6709;&#x70B9;&#x50CF;&#x7B97;&#x672F;&#x51FD;&#x6570;&#x7684;&#x7B80;&#x5316;&#x7248;&#x672C;&#x3002; &#x6392;&#x5E8F;&#x51FD;&#x6570;&#x4EC5;&#x4EC5;&#x80FD;&#x591F;&#x5904;&#x7406;&#x6570;&#x5B57;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x51FD;&#x6570;&#x53EA;&#x80FD;&#x9002;&#x7528;&#x4E8E;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x60C5;&#x5F62;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x53C2;&#x6570;&#x7B26;&#x5408;&#x8FD9;&#x4E9B;&#x9519;&#x8BEF;&#x60C5;&#x5F62;&#xFF0C;&#x5219;&#x8BA1;&#x7B97;&#x4E0A;&#x5F88;&#x7B80;&#x5355;&#x3002;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x6839;&#x636E;&#x4E24;&#x4E2A;<code>lval</code>&#x8F93;&#x5165;&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x7B49;&#x6BD4;&#x8F83;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x4E3A;<code>0</code>&#x6216;<code>1</code>&#x7684;<code>lval</code>&#x3002; &#x4F7F;&#x7528;C&#x7684;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#x8FD9;&#x4E00;&#x70B9;&#x3002; &#x4E0E;&#x4E4B;&#x524D;&#x7684;&#x7B97;&#x672F;&#x51FD;&#x6570;&#x4E00;&#x6837;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4F7F;&#x7528;&#x5355;&#x4E2A;&#x51FD;&#x6570;&#x6765;&#x5B8C;&#x6210;&#x6240;&#x6709;&#x6BD4;&#x8F83;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x68C0;&#x67E5;&#x9519;&#x8BEF;&#x60C5;&#x5F62;&#xFF0C;&#x7136;&#x540E;&#x6211;&#x4EEC;&#x6BD4;&#x8F83;&#x53C2;&#x6570;&#x4E2D;&#x7684;&#x6570;&#x5B57;&#x83B7;&#x5F97;&#x7ED3;&#x679C;&#x3002; &#x6700;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x7ED3;&#x679C;&#x4F5C;&#x4E3A;&#x6570;&#x5B57;&#x8FD4;&#x56DE;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">lval* <span class="hljs-title">builtin_gt</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  <span class="hljs-keyword">return</span> builtin_ord(e, a, <span class="hljs-string">&quot;&gt;&quot;</span>);
+}
+</code></pre>
+<pre><code class="lang-c"><span class="hljs-function">lval* <span class="hljs-title">builtin_lt</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  <span class="hljs-keyword">return</span> builtin_ord(e, a, <span class="hljs-string">&quot;&lt;&quot;</span>);
+}
+</code></pre>
+<pre><code class="lang-c"><span class="hljs-function">lval* <span class="hljs-title">builtin_ge</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  <span class="hljs-keyword">return</span> builtin_ord(e, a, <span class="hljs-string">&quot;&gt;=&quot;</span>);
+}
+</code></pre>
+<pre><code class="lang-c"><span class="hljs-function">lval* <span class="hljs-title">builtin_le</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  <span class="hljs-keyword">return</span> builtin_ord(e, a, <span class="hljs-string">&quot;&lt;=&quot;</span>);
+}
+</code></pre>
+<pre><code class="lang-c"><span class="hljs-function">lval* <span class="hljs-title">builtin_ord</span><span class="hljs-params">(lenv* e, lval* a, <span class="hljs-keyword">char</span>* op)</span> </span>{
+  LASSERT_NUM(op, a, <span class="hljs-number">2</span>);
+  LASSERT_TYPE(op, a, <span class="hljs-number">0</span>, LVAL_NUM);
+  LASSERT_TYPE(op, a, <span class="hljs-number">1</span>, LVAL_NUM);
+
+  <span class="hljs-keyword">int</span> r;
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;&gt;&quot;</span>)  == <span class="hljs-number">0</span>) {
+    r = (a-&gt;cell[<span class="hljs-number">0</span>]-&gt;num &gt;  a-&gt;cell[<span class="hljs-number">1</span>]-&gt;num);
+  }
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;&lt;&quot;</span>)  == <span class="hljs-number">0</span>) {
+    r = (a-&gt;cell[<span class="hljs-number">0</span>]-&gt;num &lt;  a-&gt;cell[<span class="hljs-number">1</span>]-&gt;num);
+  }
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;&gt;=&quot;</span>) == <span class="hljs-number">0</span>) {
+    r = (a-&gt;cell[<span class="hljs-number">0</span>]-&gt;num &gt;= a-&gt;cell[<span class="hljs-number">1</span>]-&gt;num);
+  }
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;&lt;=&quot;</span>) == <span class="hljs-number">0</span>) {
+    r = (a-&gt;cell[<span class="hljs-number">0</span>]-&gt;num &lt;= a-&gt;cell[<span class="hljs-number">1</span>]-&gt;num);
+  }
+  lval_del(a);
+  <span class="hljs-keyword">return</span> lval_num(r);
+}
+</code></pre>
+<h2 id="&#x7B49;&#x4E8E;&#x51FD;&#x6570;"><a name="&#x7B49;&#x4E8E;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x7B49;&#x4E8E;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x7B49;&#x4E8E;&#x51FD;&#x6570;</h2>
+<p>&#x7B49;&#x4E8E;&#x51FD;&#x6570;&#x5C06;&#x4F1A;&#x4E0E;&#x6392;&#x5E8F;&#x51FD;&#x6570;&#x6709;&#x6240;&#x4E0D;&#x540C;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x5B83;&#x4E0D;&#x4EC5;&#x4EC5;&#x9002;&#x7528;&#x4E8E;&#x6570;&#x5B57;&#x7C7B;&#x578B;&#x3002;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x5B83;&#x5C06;&#x7528;&#x4E8E;&#x5224;&#x65AD;&#x8F93;&#x5165;&#x662F;&#x5426;&#x4E3A;&#x7A7A;&#x5217;&#x8868;&#xFF0C;&#x6216;&#x8005;&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x662F;&#x5426;&#x76F8;&#x540C;&#x3002;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7528;&#x6765;&#x68C0;&#x9A8C;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7C7B;&#x578B;<code>lval</code>&#x53D8;&#x91CF;&#x662F;&#x5426;&#x76F8;&#x7B49;&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x8BE5;&#x51FD;&#x6570;&#x5B9E;&#x8D28;&#x4E0A;&#x68C0;&#x67E5;&#x4E24;&#x4E2A;&#x6784;&#x6210;<code>lval</code>&#x7C7B;&#x578B;&#x6570;&#x636E;&#x7684;&#x6240;&#x6709;&#x5B57;&#x6BB5;&#x662F;&#x5426;&#x76F8;&#x7B49;&#x3002; &#x82E5;&#x6240;&#x6709;&#x5B57;&#x6BB5;&#x90FD;&#x76F8;&#x7B49;&#xFF0C;&#x5219;&#x4E24;&#x8005;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x76F8;&#x7B49;&#x7684;&#x3002; &#x5426;&#x5219;&#xFF0C;&#x82E5;&#x5B58;&#x5728;&#x4EFB;&#x4F55;&#x5DEE;&#x5F02;&#xFF0C;&#x5219;&#x4E24;&#x8005;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x4E0D;&#x76F8;&#x7B49;&#x7684;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">lval_eq</span><span class="hljs-params">(lval* x, lval* y)</span> </span>{
+
+  <span class="hljs-comment">/* Different Types are always unequal */</span>
+  <span class="hljs-keyword">if</span> (x-&gt;type != y-&gt;type) { <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>; }
+
+  <span class="hljs-comment">/* Compare Based upon type */</span>
+  <span class="hljs-keyword">switch</span> (x-&gt;type) {
+    <span class="hljs-comment">/* Compare Number Value */</span>
+    <span class="hljs-keyword">case</span> LVAL_NUM: <span class="hljs-keyword">return</span> (x-&gt;num == y-&gt;num);
+
+    <span class="hljs-comment">/* Compare String Values */</span>
+    <span class="hljs-keyword">case</span> LVAL_ERR: <span class="hljs-keyword">return</span> (<span class="hljs-built_in">strcmp</span>(x-&gt;err, y-&gt;err) == <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">case</span> LVAL_SYM: <span class="hljs-keyword">return</span> (<span class="hljs-built_in">strcmp</span>(x-&gt;sym, y-&gt;sym) == <span class="hljs-number">0</span>);
+
+    <span class="hljs-comment">/* If builtin compare, otherwise compare formals and body */</span>
+    <span class="hljs-keyword">case</span> LVAL_FUN:
+      <span class="hljs-keyword">if</span> (x-&gt;builtin || y-&gt;builtin) {
+        <span class="hljs-keyword">return</span> x-&gt;builtin == y-&gt;builtin;
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">return</span> lval_eq(x-&gt;formals, y-&gt;formals)
+          &amp;&amp; lval_eq(x-&gt;body, y-&gt;body);
+      }
+
+    <span class="hljs-comment">/* If list compare every individual element */</span>
+    <span class="hljs-keyword">case</span> LVAL_QEXPR:
+    <span class="hljs-keyword">case</span> LVAL_SEXPR:
+      <span class="hljs-keyword">if</span> (x-&gt;count != y-&gt;count) { <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>; }
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; x-&gt;count; i++) {
+        <span class="hljs-comment">/* If any element not equal then whole list not equal */</span>
+        <span class="hljs-keyword">if</span> (!lval_eq(x-&gt;cell[i], y-&gt;cell[i])) { <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>; }
+      }
+      <span class="hljs-comment">/* Otherwise lists must be equal */</span>
+      <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">break</span>;
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x8BE5;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x5730;&#x65B0;&#x589E;&#x7528;&#x4E8E;&#x6BD4;&#x8F83;&#x662F;&#x5426;&#x76F8;&#x7B49;&#x7684;&#x5185;&#x7F6E;&#x51FD;&#x6570;&#x3002; &#x6211;&#x4EEC;&#x4EC5;&#x9700;&#x8981;&#x4FDD;&#x8BC1;&#x8F93;&#x5165;&#x4E3A;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x68C0;&#x9A8C;&#x5B83;&#x4EEC;&#x662F;&#x5426;&#x76F8;&#x7B49;&#xFF0C;&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5C06;&#x6BD4;&#x8F83;&#x7ED3;&#x679C;&#x5B58;&#x50A8;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;<code>lval</code>&#x4E2D;&#x5E76;&#x8FD4;&#x56DE;&#x5B83;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">lval* <span class="hljs-title">builtin_cmp</span><span class="hljs-params">(lenv* e, lval* a, <span class="hljs-keyword">char</span>* op)</span> </span>{
+  LASSERT_NUM(op, a, <span class="hljs-number">2</span>);
+  <span class="hljs-keyword">int</span> r;
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;==&quot;</span>) == <span class="hljs-number">0</span>) {
+    r =  lval_eq(a-&gt;cell[<span class="hljs-number">0</span>], a-&gt;cell[<span class="hljs-number">1</span>]);
+  }
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;!=&quot;</span>) == <span class="hljs-number">0</span>) {
+    r = !lval_eq(a-&gt;cell[<span class="hljs-number">0</span>], a-&gt;cell[<span class="hljs-number">1</span>]);
+  }
+  lval_del(a);
+  <span class="hljs-keyword">return</span> lval_num(r);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_eq</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  <span class="hljs-keyword">return</span> builtin_cmp(e, a, <span class="hljs-string">&quot;==&quot;</span>);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_ne</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  <span class="hljs-keyword">return</span> builtin_cmp(e, a, <span class="hljs-string">&quot;!=&quot;</span>);
+}
+</code></pre>
+<h2 id="if&#x51FD;&#x6570;"><a name="if&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#if&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. If&#x51FD;&#x6570;</h2>
+<p>&#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x7684;&#x4F7F;&#x7528;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x65B0;&#x589E;<code>if</code>&#x51FD;&#x6570;&#x3002; &#x8BE5;&#x51FD;&#x6570;&#x6709;&#x70B9;&#x50CF;C&#x4E2D;&#x7684;&#x4E09;&#x5143;&#x8FD0;&#x7B97;&#x3002;&#x5728;&#x6761;&#x4EF6;&#x4E3A;&#x771F;&#x65F6;&#xFF0C;&#x5B83;&#x5BF9;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;&#x6C42;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x6761;&#x4EF6;&#x4E3A;&#x5047;&#xFF0C;&#x5219;&#x5BF9;&#x53E6;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;&#x6C42;&#x503C;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x518D;&#x6B21;&#x4F7F;&#x7528;Q&#x8868;&#x8FBE;&#x5F0F;&#x6765;&#x5BF9;&#x8BA1;&#x7B97;&#x5F0F;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#x3002; &#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x8BA9;&#x7528;&#x6237;&#x4F20;&#x5165;&#x6BD4;&#x8F83;&#x7ED3;&#x679C;&#xFF0C;&#x7136;&#x540E;&#x6211;&#x4EEC;&#x8BA9;&#x7528;&#x6237;&#x4F20;&#x5165;&#x4E24;&#x4E2A;Q&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5206;&#x522B;&#x8868;&#x793A;&#x5728;&#x6761;&#x4EF6;&#x7ED3;&#x679C;&#x4E3A;true&#x6216;false&#x65F6;&#x8FDB;&#x884C;&#x6C42;&#x503C;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">lval* <span class="hljs-title">builtin_if</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  LASSERT_NUM(<span class="hljs-string">&quot;if&quot;</span>, a, <span class="hljs-number">3</span>);
+  LASSERT_TYPE(<span class="hljs-string">&quot;if&quot;</span>, a, <span class="hljs-number">0</span>, LVAL_NUM);
+  LASSERT_TYPE(<span class="hljs-string">&quot;if&quot;</span>, a, <span class="hljs-number">1</span>, LVAL_QEXPR);
+  LASSERT_TYPE(<span class="hljs-string">&quot;if&quot;</span>, a, <span class="hljs-number">2</span>, LVAL_QEXPR);
+
+  <span class="hljs-comment">/* Mark Both Expressions as evaluable */</span>
+  lval* x;
+  a-&gt;cell[<span class="hljs-number">1</span>]-&gt;type = LVAL_SEXPR;
+  a-&gt;cell[<span class="hljs-number">2</span>]-&gt;type = LVAL_SEXPR;
+
+  <span class="hljs-keyword">if</span> (a-&gt;cell[<span class="hljs-number">0</span>]-&gt;num) {
+    <span class="hljs-comment">/* If condition is true evaluate first expression */</span>
+    x = lval_eval(e, lval_pop(a, <span class="hljs-number">1</span>));
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">/* Otherwise evaluate second expression */</span>
+    x = lval_eval(e, lval_pop(a, <span class="hljs-number">2</span>));
+  }
+
+  <span class="hljs-comment">/* Delete argument list and return */</span>
+  lval_del(a);
+  <span class="hljs-keyword">return</span> x;
+}
+</code></pre>
+<p>&#x5269;&#x4E0B;&#x7684;&#x5C31;&#x662F;&#x8BA9;&#x6211;&#x4EEC;&#x6CE8;&#x518C;&#x8FD9;&#x4E9B;&#x65B0;&#x589E;&#x5185;&#x7F6E;&#x51FD;&#x6570;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-comment">/* Comparison Functions */</span>
+lenv_add_builtin(e, <span class="hljs-string">&quot;if&quot;</span>, builtin_if);
+lenv_add_builtin(e, <span class="hljs-string">&quot;==&quot;</span>, builtin_eq);
+lenv_add_builtin(e, <span class="hljs-string">&quot;!=&quot;</span>, builtin_ne);
+lenv_add_builtin(e, <span class="hljs-string">&quot;&gt;&quot;</span>,  builtin_gt);
+lenv_add_builtin(e, <span class="hljs-string">&quot;&lt;&quot;</span>,  builtin_lt);
+lenv_add_builtin(e, <span class="hljs-string">&quot;&gt;=&quot;</span>, builtin_ge);
+lenv_add_builtin(e, <span class="hljs-string">&quot;&lt;=&quot;</span>, builtin_le);
+</code></pre>
+<p>&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;&#x65B0;&#x589E;&#x5185;&#x7F6E;&#x51FD;&#x6570;&#xFF0C;&#x68C0;&#x67E5;Lispy&#x4E00;&#x5207;&#x662F;&#x5426;&#x5DE5;&#x4F5C;&#x6B63;&#x5E38;&#x3002;</p>
+<pre><code>lispy&gt; &gt; 10 5
+1
+lispy&gt; &lt;= 88 5
+0
+lispy&gt; == 5 6
+0
+lispy&gt; == 5 {}
+0
+lispy&gt; == 1 1
+1
+lispy&gt; != {} 56
+1
+lispy&gt; == {1 2 3 {5 6}} {1   2  3   {5 6}}
+1
+lispy&gt; def {x y} 100 200
+()
+lispy&gt; if (== x y) {+ x y} {- x y}
+-100
+</code></pre><h2 id="&#x9012;&#x5F52;&#x51FD;&#x6570;"><a name="&#x9012;&#x5F52;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x9012;&#x5F52;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x9012;&#x5F52;&#x51FD;&#x6570;</h2>
+<p>&#x5F15;&#x5165;&#x6761;&#x4EF6;&#x5206;&#x652F;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x8BA9;&#x6211;&#x4EEC;&#x7684;&#x8BED;&#x8A00;&#x53D8;&#x5F97;&#x66F4;&#x52A0;&#x5F3A;&#x5927;&#x3002; &#x56E0;&#x4E3A;&#x6761;&#x4EF6;&#x5206;&#x652F;&#x53EF;&#x4EE5;&#x6709;&#x6548;&#x5730;&#x8BA9;&#x6211;&#x4EEC;&#x5B9E;&#x73B0;&#x9012;&#x5F52;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x9012;&#x5F52;&#x51FD;&#x6570;&#x662F;&#x90A3;&#x4E9B;&#x81EA;&#x5DF1;&#x8C03;&#x7528;&#x81EA;&#x5DF1;&#x7684;&#x51FD;&#x6570;&#x3002; &#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5728;C&#x4E2D;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x6765;&#x6267;&#x884C;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x8BFB;&#x53D6;&#x548C;&#x6C42;&#x503C;&#x3002; &#x6211;&#x4EEC;&#x9700;&#x8981;&#x6761;&#x4EF6;&#x5206;&#x652F;&#x7684;&#x539F;&#x56E0;&#x662F;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x8BA9;&#x6211;&#x4EEC;&#x68C0;&#x9A8C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7EC8;&#x6B62;&#x9012;&#x5F52;&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6761;&#x4EF6;&#x5206;&#x652F;&#x6765;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x51FD;&#x6570;<code>len</code>&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x5217;&#x8868;&#x4E2D;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x3002; &#x5982;&#x679C;&#x6211;&#x4EEC;&#x9047;&#x5230;&#x7A7A;&#x5217;&#x8868;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x8FD4;&#x56DE;<code>0</code>&#x3002; &#x5426;&#x5219;&#x6211;&#x4EEC;&#x8FD4;&#x56DE;&#x8F93;&#x5165;&#x5217;&#x8868;&#x7684;<code>tail</code>&#x7684;&#x957F;&#x5EA6;&#x52A0;&#x4E0A;<code>1</code>&#x3002; &#x60F3;&#x60F3;&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x8FD9;&#x6837;&#x3002; &#x5B83;&#x91CD;&#x590D;&#x8C03;&#x7528;len&#x51FD;&#x6570;&#xFF0C;&#x76F4;&#x5230;&#x9047;&#x5230;&#x7A7A;&#x5217;&#x8868;&#x3002; &#x6B64;&#x65F6;&#x5B83;&#x8FD4;&#x56DE;<code>0</code>&#x5E76;&#x5C06;&#x6240;&#x6709;&#x5176;&#x4ED6;&#x90E8;&#x5206;&#x7ED3;&#x679C;&#x52A0;&#x5728;&#x4E00;&#x8D77;&#x3002;</p>
+<pre><code>(fun {len l} {
+  if (== l {})
+    {0}
+    {+ 1 (len (tail l))}
+})
+</code></pre><p>&#x5C31;&#x50CF;&#x5728;C&#x4E2D;&#x4E00;&#x6837;&#xFF0C;&#x9012;&#x5F52;&#x51FD;&#x6570;&#x5177;&#x6709;&#x4EE4;&#x4EBA;&#x6109;&#x60A6;&#x7684;&#x5BF9;&#x79F0;&#x6027;&#x3002; &#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x5BF9;&#x7A7A;&#x5217;&#x8868;&#xFF08;&#x57FA;&#x7EBF;&#x6761;&#x4EF6;&#xFF09;&#x505A;&#x4E00;&#x4E9B;&#x5904;&#x7406;&#x3002; &#x7136;&#x540E;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5F97;&#x5230;&#x66F4;&#x5927;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x4F1A;&#x53D6;&#x51FA;&#x4E00;&#x4E2A;&#x90E8;&#x5206;&#xFF0C;&#x4F8B;&#x5982;&#x5217;&#x8868;&#x7684;&#x5934;&#x90E8;&#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x5BF9;&#x5B83;&#x505A;&#x4E00;&#x4E9B;&#x5904;&#x7406;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5C06;&#x5B83;&#x4E0E;&#x5DF2;&#x7ECF;&#x8C03;&#x7528;&#x4E86;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x5176;&#x4F59;&#x90E8;&#x5206;&#x8FDB;&#x884C;&#x7EC4;&#x5408;&#x3002;</p>
+<p>&#x8FD9;&#x662F;&#x53E6;&#x4E00;&#x4E2A;&#x9012;&#x5F52;&#x51FD;&#x6570;&#x2014;&#x2014;&#x53CD;&#x8F6C;&#x5217;&#x8868;&#x3002; &#x548C;&#x4E4B;&#x524D;&#x4E00;&#x6837;&#xFF0C;&#x51FD;&#x6570;&#x68C0;&#x67E5;&#x5217;&#x8868;&#x662F;&#x5426;&#x7A7A;&#x5217;&#x8868;&#xFF0C;&#x4F46;&#x8BE5;&#x51FD;&#x6570;&#x4E2D;&#x57FA;&#x7EBF;&#x6761;&#x4EF6;&#x7684;&#x5904;&#x7406;&#x662F;&#x8FD4;&#x56DE;&#x7A7A;&#x5217;&#x8868;&#x3002;&#x8FD9;&#x662F;&#x5408;&#x7406;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x7A7A;&#x5217;&#x8868;&#x7684;&#x53CD;&#x8F6C;&#x5F62;&#x5F0F;&#x540C;&#x6837;&#x4E5F;&#x662F;&#x7A7A;&#x5217;&#x8868;&#x3002; &#x4F46;&#x5982;&#x679C;&#x662F;&#x66F4;&#x5927;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x51FD;&#x6570;&#x4F1A;&#x4F7F;&#x5C3E;&#x90E8;&#x53CD;&#x8F6C;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x653E;&#x5728;&#x5934;&#x90E8;&#x524D;&#x9762;&#x3002;</p>
+<pre><code>(fun {reverse l} {
+  if (== l {})
+    {{}}
+    {join (reverse (tail l)) (head l)}
+})
+</code></pre><p>&#x6211;&#x4EEC;&#x5C06;&#x4F7F;&#x7528;&#x9012;&#x5F52;&#x6765;&#x6784;&#x5EFA;&#x8BB8;&#x591A;&#x51FD;&#x6570;&#x3002; &#x56E0;&#x4E3A;&#x8FD9;&#x5C06;&#x6210;&#x4E3A;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x8BED;&#x8A00;&#x4E2D;&#x5B9E;&#x73B0;&#x5FAA;&#x73AF;&#x7684;&#x4E3B;&#x8981;&#x65B9;&#x5F0F;&#x3002;</p>
+<h2 id="&#x5F69;&#x86CB;"><a name="&#x5F69;&#x86CB;" class="anchor-navigation-ex-anchor" href="#&#x5F69;&#x86CB;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x5F69;&#x86CB;</h2>
+<ul>
+<li>&#x5B9E;&#x73B0;&#x5185;&#x7F6E;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;&#x6216;<code>||</code>&#xFF0C;&#x4E0E;<code>&amp;&amp;</code>&#x4EE5;&#x53CA;&#x975E;<code>not</code>&#x5E76;&#x628A;&#x5B83;&#x4EEC;&#x6DFB;&#x52A0;&#x5230;&#x6211;&#x4EEC;&#x7684;Lisp&#x4E2D;&#x3002;</li>
+<li>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;Lisp&#x9012;&#x5F52;&#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x5217;&#x8868;&#x7684;&#x7B2C;n&#x9879;&#x3002;</li>
+<li>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;Lisp&#x9012;&#x5F52;&#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x5224;&#x65AD;&#x5143;&#x7D20;&#x662F;&#x5426;&#x5728;&#x5217;&#x8868;&#x4E2D;&#xFF0C;&#x662F;&#x8FD4;&#x56DE;<code>1</code>&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;<code>0</code>&#x3002;</li>
+<li>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;Lisp&#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x5217;&#x8868;&#x6700;&#x540E;&#x4E00;&#x9879;&#x3002;</li>
+<li>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;Lisp&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;&#x51FD;&#x6570;&#x6BD4;&#x5982;<code>or</code>&#xFF0C;<code>and</code>&#x548C;<code>not</code>&#x3002;</li>
+<li>&#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x53D8;&#x91CF;<code>true</code>&#x548C;<code>false</code>&#x4E3A;&#x6211;&#x4EEC;&#x7684;Lisp&#x6DFB;&#x52A0;&#x7279;&#x5B9A;&#x7684;&#x5E03;&#x5C14;&#x7C7B;&#x578B;&#x3002;</li>
+</ul>
+<h2 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. &#x53C2;&#x8003;</h2>
+<p><details><summary>conditionals.c</summary><pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;mpc.h&quot;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> _WIN32</span>
+
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> buffer[<span class="hljs-number">2048</span>];
+
+<span class="hljs-function"><span class="hljs-keyword">char</span>* <span class="hljs-title">readline</span><span class="hljs-params">(<span class="hljs-keyword">char</span>* prompt)</span> </span>{
+  <span class="hljs-built_in">fputs</span>(prompt, <span class="hljs-built_in">stdout</span>);
+  fgets(buffer, <span class="hljs-number">2048</span>, <span class="hljs-built_in">stdin</span>);
+  <span class="hljs-keyword">char</span>* cpy = <span class="hljs-built_in">malloc</span>(<span class="hljs-built_in">strlen</span>(buffer)+<span class="hljs-number">1</span>);
+  <span class="hljs-built_in">strcpy</span>(cpy, buffer);
+  cpy[<span class="hljs-built_in">strlen</span>(cpy)<span class="hljs-number">-1</span>] = <span class="hljs-string">&apos;\0&apos;</span>;
+  <span class="hljs-keyword">return</span> cpy;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">add_history</span><span class="hljs-params">(<span class="hljs-keyword">char</span>* unused)</span> </span>{}
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">else</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;editline/readline.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;editline/history.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+
+<span class="hljs-comment">/* Forward Declarations */</span>
+
+<span class="hljs-keyword">struct</span> lval;
+<span class="hljs-keyword">struct</span> lenv;
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> lval lval;
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> lenv lenv;
+
+<span class="hljs-comment">/* Lisp Value */</span>
+
+<span class="hljs-keyword">enum</span> { LVAL_ERR, LVAL_NUM, LVAL_SYM, LVAL_FUN, LVAL_SEXPR, LVAL_QEXPR };
+
+<span class="hljs-keyword">typedef</span> lval*(*lbuiltin)(lenv*, lval*);
+
+<span class="hljs-keyword">struct</span> lval {
+  <span class="hljs-keyword">int</span> type;
+
+  <span class="hljs-comment">/* Basic */</span>
+  <span class="hljs-keyword">long</span> num;
+  <span class="hljs-keyword">char</span>* err;
+  <span class="hljs-keyword">char</span>* sym;
+
+  <span class="hljs-comment">/* Function */</span>
+  lbuiltin builtin;
+  lenv* env;
+  lval* formals;
+  lval* body;
+
+  <span class="hljs-comment">/* Expression */</span>
+  <span class="hljs-keyword">int</span> count;
+  lval** cell;
+};
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_num</span><span class="hljs-params">(<span class="hljs-keyword">long</span> x)</span> </span>{
+  lval* v = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval));
+  v-&gt;type = LVAL_NUM;
+  v-&gt;num = x;
+  <span class="hljs-keyword">return</span> v;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_err</span><span class="hljs-params">(<span class="hljs-keyword">char</span>* fmt, ...)</span> </span>{
+  lval* v = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval));
+  v-&gt;type = LVAL_ERR;  
+  va_list va;
+  va_start(va, fmt);  
+  v-&gt;err = <span class="hljs-built_in">malloc</span>(<span class="hljs-number">512</span>);  
+  vsnprintf(v-&gt;err, <span class="hljs-number">511</span>, fmt, va);  
+  v-&gt;err = <span class="hljs-built_in">realloc</span>(v-&gt;err, <span class="hljs-built_in">strlen</span>(v-&gt;err)+<span class="hljs-number">1</span>);
+  va_end(va);  
+  <span class="hljs-keyword">return</span> v;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_sym</span><span class="hljs-params">(<span class="hljs-keyword">char</span>* s)</span> </span>{
+  lval* v = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval));
+  v-&gt;type = LVAL_SYM;
+  v-&gt;sym = <span class="hljs-built_in">malloc</span>(<span class="hljs-built_in">strlen</span>(s) + <span class="hljs-number">1</span>);
+  <span class="hljs-built_in">strcpy</span>(v-&gt;sym, s);
+  <span class="hljs-keyword">return</span> v;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_builtin</span><span class="hljs-params">(lbuiltin func)</span> </span>{
+  lval* v = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval));
+  v-&gt;type = LVAL_FUN;
+  v-&gt;builtin = func;
+  <span class="hljs-keyword">return</span> v;
+}
+
+<span class="hljs-function">lenv* <span class="hljs-title">lenv_new</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_lambda</span><span class="hljs-params">(lval* formals, lval* body)</span> </span>{
+  lval* v = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval));
+  v-&gt;type = LVAL_FUN;  
+  v-&gt;builtin = <span class="hljs-literal">NULL</span>;  
+  v-&gt;env = lenv_new();  
+  v-&gt;formals = formals;
+  v-&gt;body = body;
+  <span class="hljs-keyword">return</span> v;  
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_sexpr</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>{
+  lval* v = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval));
+  v-&gt;type = LVAL_SEXPR;
+  v-&gt;count = <span class="hljs-number">0</span>;
+  v-&gt;cell = <span class="hljs-literal">NULL</span>;
+  <span class="hljs-keyword">return</span> v;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_qexpr</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>{
+  lval* v = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval));
+  v-&gt;type = LVAL_QEXPR;
+  v-&gt;count = <span class="hljs-number">0</span>;
+  v-&gt;cell = <span class="hljs-literal">NULL</span>;
+  <span class="hljs-keyword">return</span> v;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lenv_del</span><span class="hljs-params">(lenv* e)</span></span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lval_del</span><span class="hljs-params">(lval* v)</span> </span>{
+
+  <span class="hljs-keyword">switch</span> (v-&gt;type) {
+    <span class="hljs-keyword">case</span> LVAL_NUM: <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_FUN: 
+      <span class="hljs-keyword">if</span> (!v-&gt;builtin) {
+        lenv_del(v-&gt;env);
+        lval_del(v-&gt;formals);
+        lval_del(v-&gt;body);
+      }
+    <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_ERR: <span class="hljs-built_in">free</span>(v-&gt;err); <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_SYM: <span class="hljs-built_in">free</span>(v-&gt;sym); <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_QEXPR:
+    <span class="hljs-keyword">case</span> LVAL_SEXPR:
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; v-&gt;count; i++) {
+        lval_del(v-&gt;cell[i]);
+      }
+      <span class="hljs-built_in">free</span>(v-&gt;cell);
+    <span class="hljs-keyword">break</span>;
+  }
+
+  <span class="hljs-built_in">free</span>(v);
+}
+
+<span class="hljs-function">lenv* <span class="hljs-title">lenv_copy</span><span class="hljs-params">(lenv* e)</span></span>;
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_copy</span><span class="hljs-params">(lval* v)</span> </span>{
+  lval* x = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval));
+  x-&gt;type = v-&gt;type;
+  <span class="hljs-keyword">switch</span> (v-&gt;type) {
+    <span class="hljs-keyword">case</span> LVAL_FUN:
+      <span class="hljs-keyword">if</span> (v-&gt;builtin) {
+        x-&gt;builtin = v-&gt;builtin;
+      } <span class="hljs-keyword">else</span> {
+        x-&gt;builtin = <span class="hljs-literal">NULL</span>;
+        x-&gt;env = lenv_copy(v-&gt;env);
+        x-&gt;formals = lval_copy(v-&gt;formals);
+        x-&gt;body = lval_copy(v-&gt;body);
+      }
+    <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_NUM: x-&gt;num = v-&gt;num; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_ERR: x-&gt;err = <span class="hljs-built_in">malloc</span>(<span class="hljs-built_in">strlen</span>(v-&gt;err) + <span class="hljs-number">1</span>);
+      <span class="hljs-built_in">strcpy</span>(x-&gt;err, v-&gt;err);
+    <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_SYM: x-&gt;sym = <span class="hljs-built_in">malloc</span>(<span class="hljs-built_in">strlen</span>(v-&gt;sym) + <span class="hljs-number">1</span>);
+      <span class="hljs-built_in">strcpy</span>(x-&gt;sym, v-&gt;sym);
+    <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_SEXPR:
+    <span class="hljs-keyword">case</span> LVAL_QEXPR:
+      x-&gt;count = v-&gt;count;
+      x-&gt;cell = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval*) * x-&gt;count);
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; x-&gt;count; i++) {
+        x-&gt;cell[i] = lval_copy(v-&gt;cell[i]);
+      }
+    <span class="hljs-keyword">break</span>;
+  }
+  <span class="hljs-keyword">return</span> x;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_add</span><span class="hljs-params">(lval* v, lval* x)</span> </span>{
+  v-&gt;count++;
+  v-&gt;cell = <span class="hljs-built_in">realloc</span>(v-&gt;cell, <span class="hljs-keyword">sizeof</span>(lval*) * v-&gt;count);
+  v-&gt;cell[v-&gt;count<span class="hljs-number">-1</span>] = x;
+  <span class="hljs-keyword">return</span> v;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_join</span><span class="hljs-params">(lval* x, lval* y)</span> </span>{  
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; y-&gt;count; i++) {
+    x = lval_add(x, y-&gt;cell[i]);
+  }
+  <span class="hljs-built_in">free</span>(y-&gt;cell);
+  <span class="hljs-built_in">free</span>(y);  
+  <span class="hljs-keyword">return</span> x;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_pop</span><span class="hljs-params">(lval* v, <span class="hljs-keyword">int</span> i)</span> </span>{
+  lval* x = v-&gt;cell[i];  
+  memmove(&amp;v-&gt;cell[i],
+    &amp;v-&gt;cell[i+<span class="hljs-number">1</span>], <span class="hljs-keyword">sizeof</span>(lval*) * (v-&gt;count-i<span class="hljs-number">-1</span>));  
+  v-&gt;count--;  
+  v-&gt;cell = <span class="hljs-built_in">realloc</span>(v-&gt;cell, <span class="hljs-keyword">sizeof</span>(lval*) * v-&gt;count);
+  <span class="hljs-keyword">return</span> x;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_take</span><span class="hljs-params">(lval* v, <span class="hljs-keyword">int</span> i)</span> </span>{
+  lval* x = lval_pop(v, i);
+  lval_del(v);
+  <span class="hljs-keyword">return</span> x;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lval_print</span><span class="hljs-params">(lval* v)</span></span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lval_print_expr</span><span class="hljs-params">(lval* v, <span class="hljs-keyword">char</span> open, <span class="hljs-keyword">char</span> close)</span> </span>{
+  <span class="hljs-built_in">putchar</span>(open);
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; v-&gt;count; i++) {
+    lval_print(v-&gt;cell[i]);    
+    <span class="hljs-keyword">if</span> (i != (v-&gt;count<span class="hljs-number">-1</span>)) {
+      <span class="hljs-built_in">putchar</span>(<span class="hljs-string">&apos; &apos;</span>);
+    }
+  }
+  <span class="hljs-built_in">putchar</span>(close);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lval_print</span><span class="hljs-params">(lval* v)</span> </span>{
+  <span class="hljs-keyword">switch</span> (v-&gt;type) {
+    <span class="hljs-keyword">case</span> LVAL_FUN:
+      <span class="hljs-keyword">if</span> (v-&gt;builtin) {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&lt;builtin&gt;&quot;</span>);
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;(\\ &quot;</span>);
+        lval_print(v-&gt;formals);
+        <span class="hljs-built_in">putchar</span>(<span class="hljs-string">&apos; &apos;</span>);
+        lval_print(v-&gt;body);
+        <span class="hljs-built_in">putchar</span>(<span class="hljs-string">&apos;)&apos;</span>);
+      }
+    <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_NUM:   <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%li&quot;</span>, v-&gt;num); <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_ERR:   <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Error: %s&quot;</span>, v-&gt;err); <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_SYM:   <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s&quot;</span>, v-&gt;sym); <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_SEXPR: lval_print_expr(v, <span class="hljs-string">&apos;(&apos;</span>, <span class="hljs-string">&apos;)&apos;</span>); <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_QEXPR: lval_print_expr(v, <span class="hljs-string">&apos;{&apos;</span>, <span class="hljs-string">&apos;}&apos;</span>); <span class="hljs-keyword">break</span>;
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lval_println</span><span class="hljs-params">(lval* v)</span> </span>{ lval_print(v); <span class="hljs-built_in">putchar</span>(<span class="hljs-string">&apos;\n&apos;</span>); }
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">lval_eq</span><span class="hljs-params">(lval* x, lval* y)</span> </span>{
+
+  <span class="hljs-comment">/* Different Types are always unequal */</span>
+  <span class="hljs-keyword">if</span> (x-&gt;type != y-&gt;type) { <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>; }
+
+  <span class="hljs-comment">/* Compare Based upon type */</span>
+  <span class="hljs-keyword">switch</span> (x-&gt;type) {
+    <span class="hljs-comment">/* Compare Number Value */</span>
+    <span class="hljs-keyword">case</span> LVAL_NUM: <span class="hljs-keyword">return</span> (x-&gt;num == y-&gt;num);
+
+    <span class="hljs-comment">/* Compare String Values */</span>
+    <span class="hljs-keyword">case</span> LVAL_ERR: <span class="hljs-keyword">return</span> (<span class="hljs-built_in">strcmp</span>(x-&gt;err, y-&gt;err) == <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">case</span> LVAL_SYM: <span class="hljs-keyword">return</span> (<span class="hljs-built_in">strcmp</span>(x-&gt;sym, y-&gt;sym) == <span class="hljs-number">0</span>);
+
+    <span class="hljs-comment">/* If Builtin compare functions, otherwise compare formals and body */</span>
+    <span class="hljs-keyword">case</span> LVAL_FUN:
+      <span class="hljs-keyword">if</span> (x-&gt;builtin || y-&gt;builtin) {
+        <span class="hljs-keyword">return</span> x-&gt;builtin == y-&gt;builtin;
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">return</span> lval_eq(x-&gt;formals, y-&gt;formals) &amp;&amp; lval_eq(x-&gt;body, y-&gt;body);
+      }
+
+    <span class="hljs-comment">/* If list compare every individual element */</span>
+    <span class="hljs-keyword">case</span> LVAL_QEXPR:
+    <span class="hljs-keyword">case</span> LVAL_SEXPR:
+      <span class="hljs-keyword">if</span> (x-&gt;count != y-&gt;count) { <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>; }
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; x-&gt;count; i++) {
+        <span class="hljs-comment">/* If any element not equal then whole list not equal */</span>
+        <span class="hljs-keyword">if</span> (!lval_eq(x-&gt;cell[i], y-&gt;cell[i])) { <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>; }
+      }
+      <span class="hljs-comment">/* Otherwise lists must be equal */</span>
+      <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">break</span>;
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">char</span>* <span class="hljs-title">ltype_name</span><span class="hljs-params">(<span class="hljs-keyword">int</span> t)</span> </span>{
+  <span class="hljs-keyword">switch</span>(t) {
+    <span class="hljs-keyword">case</span> LVAL_FUN: <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Function&quot;</span>;
+    <span class="hljs-keyword">case</span> LVAL_NUM: <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Number&quot;</span>;
+    <span class="hljs-keyword">case</span> LVAL_ERR: <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Error&quot;</span>;
+    <span class="hljs-keyword">case</span> LVAL_SYM: <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Symbol&quot;</span>;
+    <span class="hljs-keyword">case</span> LVAL_SEXPR: <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;S-Expression&quot;</span>;
+    <span class="hljs-keyword">case</span> LVAL_QEXPR: <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Q-Expression&quot;</span>;
+    <span class="hljs-keyword">default</span>: <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Unknown&quot;</span>;
+  }
+}
+
+<span class="hljs-comment">/* Lisp Environment */</span>
+
+<span class="hljs-keyword">struct</span> lenv {
+  lenv* par;
+  <span class="hljs-keyword">int</span> count;
+  <span class="hljs-keyword">char</span>** syms;
+  lval** vals;
+};
+
+<span class="hljs-function">lenv* <span class="hljs-title">lenv_new</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>{
+  lenv* e = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lenv));
+  e-&gt;par = <span class="hljs-literal">NULL</span>;
+  e-&gt;count = <span class="hljs-number">0</span>;
+  e-&gt;syms = <span class="hljs-literal">NULL</span>;
+  e-&gt;vals = <span class="hljs-literal">NULL</span>;
+  <span class="hljs-keyword">return</span> e;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lenv_del</span><span class="hljs-params">(lenv* e)</span> </span>{
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; e-&gt;count; i++) {
+    <span class="hljs-built_in">free</span>(e-&gt;syms[i]);
+    lval_del(e-&gt;vals[i]);
+  }  
+  <span class="hljs-built_in">free</span>(e-&gt;syms);
+  <span class="hljs-built_in">free</span>(e-&gt;vals);
+  <span class="hljs-built_in">free</span>(e);
+}
+
+<span class="hljs-function">lenv* <span class="hljs-title">lenv_copy</span><span class="hljs-params">(lenv* e)</span> </span>{
+  lenv* n = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lenv));
+  n-&gt;par = e-&gt;par;
+  n-&gt;count = e-&gt;count;
+  n-&gt;syms = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">char</span>*) * n-&gt;count);
+  n-&gt;vals = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval*) * n-&gt;count);
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; e-&gt;count; i++) {
+    n-&gt;syms[i] = <span class="hljs-built_in">malloc</span>(<span class="hljs-built_in">strlen</span>(e-&gt;syms[i]) + <span class="hljs-number">1</span>);
+    <span class="hljs-built_in">strcpy</span>(n-&gt;syms[i], e-&gt;syms[i]);
+    n-&gt;vals[i] = lval_copy(e-&gt;vals[i]);
+  }
+  <span class="hljs-keyword">return</span> n;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lenv_get</span><span class="hljs-params">(lenv* e, lval* k)</span> </span>{
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; e-&gt;count; i++) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(e-&gt;syms[i], k-&gt;sym) == <span class="hljs-number">0</span>) { <span class="hljs-keyword">return</span> lval_copy(e-&gt;vals[i]); }
+  }
+
+  <span class="hljs-keyword">if</span> (e-&gt;par) {
+    <span class="hljs-keyword">return</span> lenv_get(e-&gt;par, k);
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">return</span> lval_err(<span class="hljs-string">&quot;Unbound Symbol &apos;%s&apos;&quot;</span>, k-&gt;sym);
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lenv_put</span><span class="hljs-params">(lenv* e, lval* k, lval* v)</span> </span>{
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; e-&gt;count; i++) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(e-&gt;syms[i], k-&gt;sym) == <span class="hljs-number">0</span>) {
+      lval_del(e-&gt;vals[i]);
+      e-&gt;vals[i] = lval_copy(v);
+      <span class="hljs-keyword">return</span>;
+    }
+  }
+
+  e-&gt;count++;
+  e-&gt;vals = <span class="hljs-built_in">realloc</span>(e-&gt;vals, <span class="hljs-keyword">sizeof</span>(lval*) * e-&gt;count);
+  e-&gt;syms = <span class="hljs-built_in">realloc</span>(e-&gt;syms, <span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">char</span>*) * e-&gt;count);  
+  e-&gt;vals[e-&gt;count<span class="hljs-number">-1</span>] = lval_copy(v);
+  e-&gt;syms[e-&gt;count<span class="hljs-number">-1</span>] = <span class="hljs-built_in">malloc</span>(<span class="hljs-built_in">strlen</span>(k-&gt;sym)+<span class="hljs-number">1</span>);
+  <span class="hljs-built_in">strcpy</span>(e-&gt;syms[e-&gt;count<span class="hljs-number">-1</span>], k-&gt;sym);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lenv_def</span><span class="hljs-params">(lenv* e, lval* k, lval* v)</span> </span>{
+  <span class="hljs-keyword">while</span> (e-&gt;par) { e = e-&gt;par; }
+  lenv_put(e, k, v);
+}
+
+<span class="hljs-comment">/* Builtins */</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> LASSERT(args, cond, fmt, ...) \
+  <span class="hljs-meta-keyword">if</span> (!(cond)) { lval* err = lval_err(fmt, ##__VA_ARGS__); lval_del(args); return err; }</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> LASSERT_TYPE(func, args, index, expect) \
+  LASSERT(args, args-&gt;cell[index]-&gt;type == expect, \
+    <span class="hljs-string">&quot;Function &apos;%s&apos; passed incorrect type for argument %i. Got %s, Expected %s.&quot;</span>, \
+    func, index, ltype_name(args-&gt;cell[index]-&gt;type), ltype_name(expect))</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> LASSERT_NUM(func, args, num) \
+  LASSERT(args, args-&gt;count == num, \
+    <span class="hljs-string">&quot;Function &apos;%s&apos; passed incorrect number of arguments. Got %i, Expected %i.&quot;</span>, \
+    func, args-&gt;count, num)</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> LASSERT_NOT_EMPTY(func, args, index) \
+  LASSERT(args, args-&gt;cell[index]-&gt;count != 0, \
+    <span class="hljs-string">&quot;Function &apos;%s&apos; passed {} for argument %i.&quot;</span>, func, index);</span>
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_eval</span><span class="hljs-params">(lenv* e, lval* v)</span></span>;
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_lambda</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  LASSERT_NUM(<span class="hljs-string">&quot;\\&quot;</span>, a, <span class="hljs-number">2</span>);
+  LASSERT_TYPE(<span class="hljs-string">&quot;\\&quot;</span>, a, <span class="hljs-number">0</span>, LVAL_QEXPR);
+  LASSERT_TYPE(<span class="hljs-string">&quot;\\&quot;</span>, a, <span class="hljs-number">1</span>, LVAL_QEXPR);
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; a-&gt;cell[<span class="hljs-number">0</span>]-&gt;count; i++) {
+    LASSERT(a, (a-&gt;cell[<span class="hljs-number">0</span>]-&gt;cell[i]-&gt;type == LVAL_SYM),
+      <span class="hljs-string">&quot;Cannot define non-symbol. Got %s, Expected %s.&quot;</span>,
+      ltype_name(a-&gt;cell[<span class="hljs-number">0</span>]-&gt;cell[i]-&gt;type), ltype_name(LVAL_SYM));
+  }
+
+  lval* formals = lval_pop(a, <span class="hljs-number">0</span>);
+  lval* body = lval_pop(a, <span class="hljs-number">0</span>);
+  lval_del(a);
+
+  <span class="hljs-keyword">return</span> lval_lambda(formals, body);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_list</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  a-&gt;type = LVAL_QEXPR;
+  <span class="hljs-keyword">return</span> a;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_head</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  LASSERT_NUM(<span class="hljs-string">&quot;head&quot;</span>, a, <span class="hljs-number">1</span>);
+  LASSERT_TYPE(<span class="hljs-string">&quot;head&quot;</span>, a, <span class="hljs-number">0</span>, LVAL_QEXPR);
+  LASSERT_NOT_EMPTY(<span class="hljs-string">&quot;head&quot;</span>, a, <span class="hljs-number">0</span>);
+
+  lval* v = lval_take(a, <span class="hljs-number">0</span>);  
+  <span class="hljs-keyword">while</span> (v-&gt;count &gt; <span class="hljs-number">1</span>) { lval_del(lval_pop(v, <span class="hljs-number">1</span>)); }
+  <span class="hljs-keyword">return</span> v;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_tail</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  LASSERT_NUM(<span class="hljs-string">&quot;tail&quot;</span>, a, <span class="hljs-number">1</span>);
+  LASSERT_TYPE(<span class="hljs-string">&quot;tail&quot;</span>, a, <span class="hljs-number">0</span>, LVAL_QEXPR);
+  LASSERT_NOT_EMPTY(<span class="hljs-string">&quot;tail&quot;</span>, a, <span class="hljs-number">0</span>);
+
+  lval* v = lval_take(a, <span class="hljs-number">0</span>);  
+  lval_del(lval_pop(v, <span class="hljs-number">0</span>));
+  <span class="hljs-keyword">return</span> v;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_eval</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  LASSERT_NUM(<span class="hljs-string">&quot;eval&quot;</span>, a, <span class="hljs-number">1</span>);
+  LASSERT_TYPE(<span class="hljs-string">&quot;eval&quot;</span>, a, <span class="hljs-number">0</span>, LVAL_QEXPR);
+
+  lval* x = lval_take(a, <span class="hljs-number">0</span>);
+  x-&gt;type = LVAL_SEXPR;
+  <span class="hljs-keyword">return</span> lval_eval(e, x);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_join</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; a-&gt;count; i++) {
+    LASSERT_TYPE(<span class="hljs-string">&quot;join&quot;</span>, a, i, LVAL_QEXPR);
+  }
+
+  lval* x = lval_pop(a, <span class="hljs-number">0</span>);
+
+  <span class="hljs-keyword">while</span> (a-&gt;count) {
+    lval* y = lval_pop(a, <span class="hljs-number">0</span>);
+    x = lval_join(x, y);
+  }
+
+  lval_del(a);
+  <span class="hljs-keyword">return</span> x;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_op</span><span class="hljs-params">(lenv* e, lval* a, <span class="hljs-keyword">char</span>* op)</span> </span>{
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; a-&gt;count; i++) {
+    LASSERT_TYPE(op, a, i, LVAL_NUM);
+  }
+
+  lval* x = lval_pop(a, <span class="hljs-number">0</span>);
+
+  <span class="hljs-keyword">if</span> ((<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;-&quot;</span>) == <span class="hljs-number">0</span>) &amp;&amp; a-&gt;count == <span class="hljs-number">0</span>) { x-&gt;num = -x-&gt;num; }
+
+  <span class="hljs-keyword">while</span> (a-&gt;count &gt; <span class="hljs-number">0</span>) {  
+    lval* y = lval_pop(a, <span class="hljs-number">0</span>);
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;+&quot;</span>) == <span class="hljs-number">0</span>) { x-&gt;num += y-&gt;num; }
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;-&quot;</span>) == <span class="hljs-number">0</span>) { x-&gt;num -= y-&gt;num; }
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;*&quot;</span>) == <span class="hljs-number">0</span>) { x-&gt;num *= y-&gt;num; }
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;/&quot;</span>) == <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">if</span> (y-&gt;num == <span class="hljs-number">0</span>) {
+        lval_del(x); lval_del(y);
+        x = lval_err(<span class="hljs-string">&quot;Division By Zero.&quot;</span>);
+        <span class="hljs-keyword">break</span>;
+      }
+      x-&gt;num /= y-&gt;num;
+    }
+
+    lval_del(y);
+  }
+
+  lval_del(a);
+  <span class="hljs-keyword">return</span> x;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_add</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{ <span class="hljs-keyword">return</span> builtin_op(e, a, <span class="hljs-string">&quot;+&quot;</span>); }
+<span class="hljs-function">lval* <span class="hljs-title">builtin_sub</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{ <span class="hljs-keyword">return</span> builtin_op(e, a, <span class="hljs-string">&quot;-&quot;</span>); }
+<span class="hljs-function">lval* <span class="hljs-title">builtin_mul</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{ <span class="hljs-keyword">return</span> builtin_op(e, a, <span class="hljs-string">&quot;*&quot;</span>); }
+<span class="hljs-function">lval* <span class="hljs-title">builtin_div</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{ <span class="hljs-keyword">return</span> builtin_op(e, a, <span class="hljs-string">&quot;/&quot;</span>); }
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_var</span><span class="hljs-params">(lenv* e, lval* a, <span class="hljs-keyword">char</span>* func)</span> </span>{
+  LASSERT_TYPE(func, a, <span class="hljs-number">0</span>, LVAL_QEXPR);
+
+  lval* syms = a-&gt;cell[<span class="hljs-number">0</span>];
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; syms-&gt;count; i++) {
+    LASSERT(a, (syms-&gt;cell[i]-&gt;type == LVAL_SYM),
+      <span class="hljs-string">&quot;Function &apos;%s&apos; cannot define non-symbol. &quot;</span>
+      <span class="hljs-string">&quot;Got %s, Expected %s.&quot;</span>,
+      func, ltype_name(syms-&gt;cell[i]-&gt;type), ltype_name(LVAL_SYM));
+  }
+
+  LASSERT(a, (syms-&gt;count == a-&gt;count<span class="hljs-number">-1</span>),
+    <span class="hljs-string">&quot;Function &apos;%s&apos; passed too many arguments for symbols. &quot;</span>
+    <span class="hljs-string">&quot;Got %i, Expected %i.&quot;</span>,
+    func, syms-&gt;count, a-&gt;count<span class="hljs-number">-1</span>);
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; syms-&gt;count; i++) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(func, <span class="hljs-string">&quot;def&quot;</span>) == <span class="hljs-number">0</span>) { lenv_def(e, syms-&gt;cell[i], a-&gt;cell[i+<span class="hljs-number">1</span>]); }
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(func, <span class="hljs-string">&quot;=&quot;</span>)   == <span class="hljs-number">0</span>) { lenv_put(e, syms-&gt;cell[i], a-&gt;cell[i+<span class="hljs-number">1</span>]); } 
+  }
+
+  lval_del(a);
+  <span class="hljs-keyword">return</span> lval_sexpr();
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_def</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{ <span class="hljs-keyword">return</span> builtin_var(e, a, <span class="hljs-string">&quot;def&quot;</span>); }
+<span class="hljs-function">lval* <span class="hljs-title">builtin_put</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{ <span class="hljs-keyword">return</span> builtin_var(e, a, <span class="hljs-string">&quot;=&quot;</span>); }
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_ord</span><span class="hljs-params">(lenv* e, lval* a, <span class="hljs-keyword">char</span>* op)</span> </span>{
+  LASSERT_NUM(op, a, <span class="hljs-number">2</span>);
+  LASSERT_TYPE(op, a, <span class="hljs-number">0</span>, LVAL_NUM);
+  LASSERT_TYPE(op, a, <span class="hljs-number">1</span>, LVAL_NUM);
+
+  <span class="hljs-keyword">int</span> r;
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;&gt;&quot;</span>)  == <span class="hljs-number">0</span>) {
+    r = (a-&gt;cell[<span class="hljs-number">0</span>]-&gt;num &gt;  a-&gt;cell[<span class="hljs-number">1</span>]-&gt;num);
+  }
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;&lt;&quot;</span>)  == <span class="hljs-number">0</span>) {
+    r = (a-&gt;cell[<span class="hljs-number">0</span>]-&gt;num &lt;  a-&gt;cell[<span class="hljs-number">1</span>]-&gt;num);
+  }
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;&gt;=&quot;</span>) == <span class="hljs-number">0</span>) {
+    r = (a-&gt;cell[<span class="hljs-number">0</span>]-&gt;num &gt;= a-&gt;cell[<span class="hljs-number">1</span>]-&gt;num);
+  }
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;&lt;=&quot;</span>) == <span class="hljs-number">0</span>) {
+    r = (a-&gt;cell[<span class="hljs-number">0</span>]-&gt;num &lt;= a-&gt;cell[<span class="hljs-number">1</span>]-&gt;num);
+  }
+  lval_del(a);
+  <span class="hljs-keyword">return</span> lval_num(r);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_gt</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  <span class="hljs-keyword">return</span> builtin_ord(e, a, <span class="hljs-string">&quot;&gt;&quot;</span>);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_lt</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  <span class="hljs-keyword">return</span> builtin_ord(e, a, <span class="hljs-string">&quot;&lt;&quot;</span>);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_ge</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  <span class="hljs-keyword">return</span> builtin_ord(e, a, <span class="hljs-string">&quot;&gt;=&quot;</span>);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_le</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  <span class="hljs-keyword">return</span> builtin_ord(e, a, <span class="hljs-string">&quot;&lt;=&quot;</span>);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_cmp</span><span class="hljs-params">(lenv* e, lval* a, <span class="hljs-keyword">char</span>* op)</span> </span>{
+  LASSERT_NUM(op, a, <span class="hljs-number">2</span>);
+  <span class="hljs-keyword">int</span> r;
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;==&quot;</span>) == <span class="hljs-number">0</span>) {
+    r =  lval_eq(a-&gt;cell[<span class="hljs-number">0</span>], a-&gt;cell[<span class="hljs-number">1</span>]);
+  }
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;!=&quot;</span>) == <span class="hljs-number">0</span>) {
+    r = !lval_eq(a-&gt;cell[<span class="hljs-number">0</span>], a-&gt;cell[<span class="hljs-number">1</span>]);
+  }
+  lval_del(a);
+  <span class="hljs-keyword">return</span> lval_num(r);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_eq</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  <span class="hljs-keyword">return</span> builtin_cmp(e, a, <span class="hljs-string">&quot;==&quot;</span>);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_ne</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  <span class="hljs-keyword">return</span> builtin_cmp(e, a, <span class="hljs-string">&quot;!=&quot;</span>);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_if</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  LASSERT_NUM(<span class="hljs-string">&quot;if&quot;</span>, a, <span class="hljs-number">3</span>);
+  LASSERT_TYPE(<span class="hljs-string">&quot;if&quot;</span>, a, <span class="hljs-number">0</span>, LVAL_NUM);
+  LASSERT_TYPE(<span class="hljs-string">&quot;if&quot;</span>, a, <span class="hljs-number">1</span>, LVAL_QEXPR);
+  LASSERT_TYPE(<span class="hljs-string">&quot;if&quot;</span>, a, <span class="hljs-number">2</span>, LVAL_QEXPR);
+
+  <span class="hljs-comment">/* Mark Both Expressions as evaluable */</span>
+  lval* x;
+  a-&gt;cell[<span class="hljs-number">1</span>]-&gt;type = LVAL_SEXPR;
+  a-&gt;cell[<span class="hljs-number">2</span>]-&gt;type = LVAL_SEXPR;
+
+  <span class="hljs-keyword">if</span> (a-&gt;cell[<span class="hljs-number">0</span>]-&gt;num) {
+    <span class="hljs-comment">/* If condition is true evaluate first expression */</span>
+    x = lval_eval(e, lval_pop(a, <span class="hljs-number">1</span>));
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">/* Otherwise evaluate second expression */</span>
+    x = lval_eval(e, lval_pop(a, <span class="hljs-number">2</span>));
+  }
+
+  <span class="hljs-comment">/* Delete argument list and return */</span>
+  lval_del(a);
+  <span class="hljs-keyword">return</span> x;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lenv_add_builtin</span><span class="hljs-params">(lenv* e, <span class="hljs-keyword">char</span>* name, lbuiltin func)</span> </span>{
+  lval* k = lval_sym(name);
+  lval* v = lval_builtin(func);
+  lenv_put(e, k, v);
+  lval_del(k); lval_del(v);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lenv_add_builtins</span><span class="hljs-params">(lenv* e)</span> </span>{
+  <span class="hljs-comment">/* Variable Functions */</span>
+  lenv_add_builtin(e, <span class="hljs-string">&quot;\\&quot;</span>,  builtin_lambda); 
+  lenv_add_builtin(e, <span class="hljs-string">&quot;def&quot;</span>, builtin_def);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;=&quot;</span>,   builtin_put);
+
+  <span class="hljs-comment">/* List Functions */</span>
+  lenv_add_builtin(e, <span class="hljs-string">&quot;list&quot;</span>, builtin_list);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;head&quot;</span>, builtin_head);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;tail&quot;</span>, builtin_tail);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;eval&quot;</span>, builtin_eval);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;join&quot;</span>, builtin_join);
+
+  <span class="hljs-comment">/* Mathematical Functions */</span>
+  lenv_add_builtin(e, <span class="hljs-string">&quot;+&quot;</span>, builtin_add);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;-&quot;</span>, builtin_sub);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;*&quot;</span>, builtin_mul);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;/&quot;</span>, builtin_div);
+
+  <span class="hljs-comment">/* Comparison Functions */</span>
+  lenv_add_builtin(e, <span class="hljs-string">&quot;if&quot;</span>,    builtin_if);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;==&quot;</span>,    builtin_eq);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;!=&quot;</span>,    builtin_ne);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;&gt;&quot;</span>,  builtin_gt);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;&lt;&quot;</span>,  builtin_lt);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;&gt;=&quot;</span>, builtin_ge);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;&lt;=&quot;</span>, builtin_le);
+}
+
+<span class="hljs-comment">/* Evaluation */</span>
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_call</span><span class="hljs-params">(lenv* e, lval* f, lval* a)</span> </span>{
+
+  <span class="hljs-keyword">if</span> (f-&gt;builtin) { <span class="hljs-keyword">return</span> f-&gt;builtin(e, a); }
+
+  <span class="hljs-keyword">int</span> given = a-&gt;count;
+  <span class="hljs-keyword">int</span> total = f-&gt;formals-&gt;count;
+
+  <span class="hljs-keyword">while</span> (a-&gt;count) {
+
+    <span class="hljs-keyword">if</span> (f-&gt;formals-&gt;count == <span class="hljs-number">0</span>) {
+      lval_del(a);
+      <span class="hljs-keyword">return</span> lval_err(<span class="hljs-string">&quot;Function passed too many arguments. &quot;</span>
+        <span class="hljs-string">&quot;Got %i, Expected %i.&quot;</span>, given, total); 
+    }
+
+    lval* sym = lval_pop(f-&gt;formals, <span class="hljs-number">0</span>);
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(sym-&gt;sym, <span class="hljs-string">&quot;&amp;&quot;</span>) == <span class="hljs-number">0</span>) {
+
+      <span class="hljs-keyword">if</span> (f-&gt;formals-&gt;count != <span class="hljs-number">1</span>) {
+        lval_del(a);
+        <span class="hljs-keyword">return</span> lval_err(<span class="hljs-string">&quot;Function format invalid. &quot;</span>
+          <span class="hljs-string">&quot;Symbol &apos;&amp;&apos; not followed by single symbol.&quot;</span>);
+      }
+
+      lval* nsym = lval_pop(f-&gt;formals, <span class="hljs-number">0</span>);
+      lenv_put(f-&gt;env, nsym, builtin_list(e, a));
+      lval_del(sym); lval_del(nsym);
+      <span class="hljs-keyword">break</span>;
+    }
+
+    lval* val = lval_pop(a, <span class="hljs-number">0</span>);    
+    lenv_put(f-&gt;env, sym, val);    
+    lval_del(sym); lval_del(val);
+  }
+
+  lval_del(a);
+
+  <span class="hljs-keyword">if</span> (f-&gt;formals-&gt;count &gt; <span class="hljs-number">0</span> &amp;&amp;
+    <span class="hljs-built_in">strcmp</span>(f-&gt;formals-&gt;cell[<span class="hljs-number">0</span>]-&gt;sym, <span class="hljs-string">&quot;&amp;&quot;</span>) == <span class="hljs-number">0</span>) {
+
+    <span class="hljs-keyword">if</span> (f-&gt;formals-&gt;count != <span class="hljs-number">2</span>) {
+      <span class="hljs-keyword">return</span> lval_err(<span class="hljs-string">&quot;Function format invalid. &quot;</span>
+        <span class="hljs-string">&quot;Symbol &apos;&amp;&apos; not followed by single symbol.&quot;</span>);
+    }
+
+    lval_del(lval_pop(f-&gt;formals, <span class="hljs-number">0</span>));
+
+    lval* sym = lval_pop(f-&gt;formals, <span class="hljs-number">0</span>);
+    lval* val = lval_qexpr();    
+    lenv_put(f-&gt;env, sym, val);
+    lval_del(sym); lval_del(val);
+  }
+
+  <span class="hljs-keyword">if</span> (f-&gt;formals-&gt;count == <span class="hljs-number">0</span>) {  
+    f-&gt;env-&gt;par = e;    
+    <span class="hljs-keyword">return</span> builtin_eval(f-&gt;env, lval_add(lval_sexpr(), lval_copy(f-&gt;body)));
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">return</span> lval_copy(f);
+  }
+
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_eval_sexpr</span><span class="hljs-params">(lenv* e, lval* v)</span> </span>{
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; v-&gt;count; i++) { v-&gt;cell[i] = lval_eval(e, v-&gt;cell[i]); }
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; v-&gt;count; i++) { <span class="hljs-keyword">if</span> (v-&gt;cell[i]-&gt;type == LVAL_ERR) { <span class="hljs-keyword">return</span> lval_take(v, i); } }
+
+  <span class="hljs-keyword">if</span> (v-&gt;count == <span class="hljs-number">0</span>) { <span class="hljs-keyword">return</span> v; }  
+  <span class="hljs-keyword">if</span> (v-&gt;count == <span class="hljs-number">1</span>) { <span class="hljs-keyword">return</span> lval_eval(e, lval_take(v, <span class="hljs-number">0</span>)); }
+
+  lval* f = lval_pop(v, <span class="hljs-number">0</span>);
+  <span class="hljs-keyword">if</span> (f-&gt;type != LVAL_FUN) {
+    lval* err = lval_err(
+      <span class="hljs-string">&quot;S-Expression starts with incorrect type. &quot;</span>
+      <span class="hljs-string">&quot;Got %s, Expected %s.&quot;</span>,
+      ltype_name(f-&gt;type), ltype_name(LVAL_FUN));
+    lval_del(f); lval_del(v);
+    <span class="hljs-keyword">return</span> err;
+  }
+
+  lval* result = lval_call(e, f, v);
+  lval_del(f);
+  <span class="hljs-keyword">return</span> result;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_eval</span><span class="hljs-params">(lenv* e, lval* v)</span> </span>{
+  <span class="hljs-keyword">if</span> (v-&gt;type == LVAL_SYM) {
+    lval* x = lenv_get(e, v);
+    lval_del(v);
+    <span class="hljs-keyword">return</span> x;
+  }
+  <span class="hljs-keyword">if</span> (v-&gt;type == LVAL_SEXPR) { <span class="hljs-keyword">return</span> lval_eval_sexpr(e, v); }
+  <span class="hljs-keyword">return</span> v;
+}
+
+<span class="hljs-comment">/* Reading */</span>
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_read_num</span><span class="hljs-params">(mpc_ast_t* t)</span> </span>{
+  errno = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">long</span> x = strtol(t-&gt;contents, <span class="hljs-literal">NULL</span>, <span class="hljs-number">10</span>);
+  <span class="hljs-keyword">return</span> errno != ERANGE ? lval_num(x) : lval_err(<span class="hljs-string">&quot;Invalid Number.&quot;</span>);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_read</span><span class="hljs-params">(mpc_ast_t* t)</span> </span>{
+
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strstr</span>(t-&gt;tag, <span class="hljs-string">&quot;number&quot;</span>)) { <span class="hljs-keyword">return</span> lval_read_num(t); }
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strstr</span>(t-&gt;tag, <span class="hljs-string">&quot;symbol&quot;</span>)) { <span class="hljs-keyword">return</span> lval_sym(t-&gt;contents); }
+
+  lval* x = <span class="hljs-literal">NULL</span>;
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(t-&gt;tag, <span class="hljs-string">&quot;&gt;&quot;</span>) == <span class="hljs-number">0</span>) { x = lval_sexpr(); } 
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strstr</span>(t-&gt;tag, <span class="hljs-string">&quot;sexpr&quot;</span>))  { x = lval_sexpr(); }
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strstr</span>(t-&gt;tag, <span class="hljs-string">&quot;qexpr&quot;</span>))  { x = lval_qexpr(); }
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; t-&gt;children_num; i++) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(t-&gt;children[i]-&gt;contents, <span class="hljs-string">&quot;(&quot;</span>) == <span class="hljs-number">0</span>) { <span class="hljs-keyword">continue</span>; }
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(t-&gt;children[i]-&gt;contents, <span class="hljs-string">&quot;)&quot;</span>) == <span class="hljs-number">0</span>) { <span class="hljs-keyword">continue</span>; }
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(t-&gt;children[i]-&gt;contents, <span class="hljs-string">&quot;}&quot;</span>) == <span class="hljs-number">0</span>) { <span class="hljs-keyword">continue</span>; }
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(t-&gt;children[i]-&gt;contents, <span class="hljs-string">&quot;{&quot;</span>) == <span class="hljs-number">0</span>) { <span class="hljs-keyword">continue</span>; }
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(t-&gt;children[i]-&gt;tag,  <span class="hljs-string">&quot;regex&quot;</span>) == <span class="hljs-number">0</span>) { <span class="hljs-keyword">continue</span>; }
+    x = lval_add(x, lval_read(t-&gt;children[i]));
+  }
+
+  <span class="hljs-keyword">return</span> x;
+}
+
+<span class="hljs-comment">/* Main */</span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span>** argv)</span> </span>{
+
+  <span class="hljs-keyword">mpc_parser_t</span>* Number = mpc_new(<span class="hljs-string">&quot;number&quot;</span>);
+  <span class="hljs-keyword">mpc_parser_t</span>* Symbol = mpc_new(<span class="hljs-string">&quot;symbol&quot;</span>);
+  <span class="hljs-keyword">mpc_parser_t</span>* Sexpr  = mpc_new(<span class="hljs-string">&quot;sexpr&quot;</span>);
+  <span class="hljs-keyword">mpc_parser_t</span>* Qexpr  = mpc_new(<span class="hljs-string">&quot;qexpr&quot;</span>);
+  <span class="hljs-keyword">mpc_parser_t</span>* Expr   = mpc_new(<span class="hljs-string">&quot;expr&quot;</span>);
+  <span class="hljs-keyword">mpc_parser_t</span>* Lispy  = mpc_new(<span class="hljs-string">&quot;lispy&quot;</span>);
+
+  mpca_lang(MPCA_LANG_DEFAULT,
+    <span class="hljs-string">&quot;                                                     \
+      number : /-?[0-9]+/ ;                               \
+      symbol : /[a-zA-Z0-9_+\\-*\\/\\\\=&lt;&gt;!&amp;]+/ ;         \
+      sexpr  : &apos;(&apos; &lt;expr&gt;* &apos;)&apos; ;                          \
+      qexpr  : &apos;{&apos; &lt;expr&gt;* &apos;}&apos; ;                          \
+      expr   : &lt;number&gt; | &lt;symbol&gt; | &lt;sexpr&gt; | &lt;qexpr&gt; ;  \
+      lispy  : /^/ &lt;expr&gt;* /$/ ;                          \
+    &quot;</span>,
+    Number, Symbol, Sexpr, Qexpr, Expr, Lispy);
+
+  <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Lispy Version 0.0.0.0.9&quot;</span>);
+  <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Press Ctrl+c to Exit\n&quot;</span>);
+
+  lenv* e = lenv_new();
+  lenv_add_builtins(e);
+
+  <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+
+    <span class="hljs-keyword">char</span>* input = readline(<span class="hljs-string">&quot;lispy&gt; &quot;</span>);
+    add_history(input);
+
+    <span class="hljs-keyword">mpc_result_t</span> r;
+    <span class="hljs-keyword">if</span> (mpc_parse(<span class="hljs-string">&quot;&lt;stdin&gt;&quot;</span>, input, Lispy, &amp;r)) {
+
+      lval* x = lval_eval(e, lval_read(r.output));
+      lval_println(x);
+      lval_del(x);
+
+      mpc_ast_delete(r.output);
+    } <span class="hljs-keyword">else</span> {    
+      mpc_err_print(r.error);
+      mpc_err_delete(r.error);
+    }
+
+    <span class="hljs-built_in">free</span>(input);
+
+  }
+
+  lenv_del(e);
+
+  mpc_cleanup(<span class="hljs-number">6</span>, Number, Symbol, Sexpr, Qexpr, Expr, Lispy);
+
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+</details></p>
+<script src="_gitbook_plugin_analytics.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="12.Functions.html" class="navigation navigation-prev " aria-label="Previous page: 第十二章 • 函数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="14.Strings.html" class="navigation navigation-next " aria-label="Next page: 第十四章 • 字符串">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第十三章 • 条件分支","level":"1.14","depth":1,"next":{"title":"第十四章 • 字符串","level":"1.15","depth":1,"path":"14.Strings.md","ref":"14.Strings.md","articles":[]},"previous":{"title":"第十二章 • 函数","level":"1.13","depth":1,"path":"12.Functions.md","ref":"12.Functions.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","anchor-navigation-ex-toc","theme-gestalt@git+https://github.com/NoahDragon/gitbook-plugin-theme-gestalt.git","-theme-default","styles-sass-fix","analytics","collapse"],"styles":{"website":"website-1573318305263.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"buildyourownlispcn"},"styles-sass-fix":{},"theme-gestalt":{"showLevel":false,"styles":{"website":"styles/website.css"},"logo":"./assets/logo.png","favicon":"./assets/logo.png","baseUrl":null,"excludeDefaultStyles":true,"doNotHideChildrenChapters":false},"analytics":{"google":"UA-48498357-5"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"collapse":{},"anchor-navigation-ex-toc":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-edit":{"repo":"NoahDragon/BuildYourOwnLispCn","branch":"master"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"学C语言写Lisp","language":"zh","gitbook":"*"},"file":{"path":"13.Conditionals.md","mtime":"2019-11-09T16:49:30.170Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-09T16:51:43.819Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-collapse/collapse.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

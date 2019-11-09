@@ -1,0 +1,1085 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第十五章 • 标准库 · 学C语言写Lisp</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex-toc/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-collapse/collapse.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="website-1573318305263.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    
+        <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    
+    
+    
+
+    
+    <link rel="next" href="16.Bonus-Projects.html" />
+    
+    
+    <link rel="prev" href="14.Strings.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            <div class="book-logo">   
+                
+                <img src="./assets/logo.png"/>
+                
+            </div>
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.1" 
+            data-path="./">
+
+            
+                <a href="./">
+            
+                    
+                    第零零章 • 关于
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.2" 
+            data-path="01.Introduction.html">
+
+            
+                <a href="01.Introduction.html">
+            
+                    
+                    第零一章 • 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.3" 
+            data-path="02.Installation.html">
+
+            
+                <a href="02.Installation.html">
+            
+                    
+                    第零二章 • 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.4" 
+            data-path="03.Basics.html">
+
+            
+                <a href="03.Basics.html">
+            
+                    
+                    第零三章 • 基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.5" 
+            data-path="04.Interactive.html">
+
+            
+                <a href="04.Interactive.html">
+            
+                    
+                    第零四章 • 交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.6" 
+            data-path="05.Languages.html">
+
+            
+                <a href="05.Languages.html">
+            
+                    
+                    第零五章 • 编程语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.7" 
+            data-path="06.Parsing.html">
+
+            
+                <a href="06.Parsing.html">
+            
+                    
+                    第零六章 • 语法分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.8" 
+            data-path="07.Evaluation.html">
+
+            
+                <a href="07.Evaluation.html">
+            
+                    
+                    第零七章 • 计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.9" 
+            data-path="08.Error-Handling.html">
+
+            
+                <a href="08.Error-Handling.html">
+            
+                    
+                    第零八章 • 错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.10" 
+            data-path="09.S-Expressions.html">
+
+            
+                <a href="09.S-Expressions.html">
+            
+                    
+                    第零九章 • S-表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.11" 
+            data-path="10.Q-Expressions.html">
+
+            
+                <a href="10.Q-Expressions.html">
+            
+                    
+                    第零十章 • Q-表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.12" 
+            data-path="11.Variables.html">
+
+            
+                <a href="11.Variables.html">
+            
+                    
+                    第十一章 • 变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.13" 
+            data-path="12.Functions.html">
+
+            
+                <a href="12.Functions.html">
+            
+                    
+                    第十二章 • 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.14" 
+            data-path="13.Conditionals.html">
+
+            
+                <a href="13.Conditionals.html">
+            
+                    
+                    第十三章 • 条件分支
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.15" 
+            data-path="14.Strings.html">
+
+            
+                <a href="14.Strings.html">
+            
+                    
+                    第十四章 • 字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+            active  selected  "
+            data-level="1.16" 
+            data-path="15.Standard-Library.html">
+
+            
+                <a href="15.Standard-Library.html">
+            
+                    
+                    第十五章 • 标准库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.17" 
+            data-path="16.Bonus-Projects.html">
+
+            
+                <a href="16.Bonus-Projects.html">
+            
+                    
+                    第十六章 • 彩蛋
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.18" 
+            data-path="Appendix.html">
+
+            
+                <a href="Appendix.html">
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.19" 
+            >
+
+            
+                <a target="_blank" href="https://github.com/NoahDragon/BuildYourOwnLispCn/raw/master/source.tar.gz">
+            
+                    
+                    源代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.20" 
+            >
+
+            
+                <a target="_blank" href="http://buildyourownlisp.com/contents">
+            
+                    
+                    英文原版在线阅读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.21" 
+            >
+
+            
+                <a target="_blank" href="https://github.com/NoahDragon/BuildYourOwnLispCn">
+            
+                    
+                    Github
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >第十五章 • 标准库</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7DP27M&placement=abnerchoume" id="_carbonads_js"></script>
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x7B2C;&#x5341;&#x4E94;&#x7AE0;&#xB7;&#x6807;&#x51C6;&#x5E93;"><b>1. </b>&#x7B2C;&#x5341;&#x4E94;&#x7AE0;&#xB7;&#x6807;&#x51C6;&#x5E93;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6781;&#x7B80;&#x4E3B;&#x4E49;"><b>1.1. </b>&#x6781;&#x7B80;&#x4E3B;&#x4E49;</a></li><li><span class="title-icon "></span><a href="#&#x539F;&#x5B50;"><b>1.2. </b>&#x539F;&#x5B50;</a></li><li><span class="title-icon "></span><a href="#&#x6784;&#x7B51;&#x6A21;&#x5757;"><b>1.3. </b>&#x6784;&#x7B51;&#x6A21;&#x5757;</a></li><li><span class="title-icon "></span><a href="#&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;"><b>1.4. </b>&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#&#x8F85;&#x52A9;&#x51FD;&#x6570;"><b>1.5. </b>&#x8F85;&#x52A9;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x5217;&#x8868;&#x51FD;&#x6570;"><b>1.6. </b>&#x5217;&#x8868;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x6761;&#x4EF6;&#x51FD;&#x6570;"><b>1.7. </b>&#x6761;&#x4EF6;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x6590;&#x6CE2;&#x90A3;&#x5951;"><b>1.8. </b>&#x6590;&#x6CE2;&#x90A3;&#x5951;</a></li><li><span class="title-icon "></span><a href="#&#x5F69;&#x86CB;"><b>1.9. </b>&#x5F69;&#x86CB;</a></li><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b>1.10. </b>&#x53C2;&#x8003;</a></li></ul></ul></div><a href="#&#x7B2C;&#x5341;&#x4E94;&#x7AE0;&#xB7;&#x6807;&#x51C6;&#x5E93;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7B2C;&#x5341;&#x4E94;&#x7AE0;&#xB7;&#x6807;&#x51C6;&#x5E93;"><a name="&#x7B2C;&#x5341;&#x4E94;&#x7AE0;&#xB7;&#x6807;&#x51C6;&#x5E93;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x5341;&#x4E94;&#x7AE0;&#xB7;&#x6807;&#x51C6;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x7B2C;&#x5341;&#x4E94;&#x7AE0;&#xB7;&#x6807;&#x51C6;&#x5E93;</h1>
+<h2 id="&#x6781;&#x7B80;&#x4E3B;&#x4E49;"><a name="&#x6781;&#x7B80;&#x4E3B;&#x4E49;" class="anchor-navigation-ex-anchor" href="#&#x6781;&#x7B80;&#x4E3B;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x6781;&#x7B80;&#x4E3B;&#x4E49;</h2>
+<p>&#x6211;&#x4EEC;&#x6709;&#x76EE;&#x7684;&#x6027;&#x5730;&#x6700;&#x5C0F;&#x5316;&#x8BBE;&#x8BA1;&#x4E86; Lisp &#x3002;&#x6211;&#x4EEC;&#x53EA;&#x6DFB;&#x52A0;&#x4E86;&#x6700;&#x5C11;&#x6570;&#x91CF;&#x7684;&#x6838;&#x5FC3;&#x7ED3;&#x6784;&#x548C;&#x5185;&#x7F6E;&#x7ED3;&#x6784;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x63A5;&#x4E0B;&#x6765;&#x548C;&#x4E4B;&#x524D;&#x4E00;&#x6837;&#x5C0F;&#x5FC3;&#x5730;&#x5BF9;&#x8FD9;&#x4E9B;&#x8FDB;&#x884C;&#x9009;&#x62E9;&#xFF0C;&#x8FD9;&#x5C06;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x5411;&#x5B83;&#x6DFB;&#x52A0;&#x6240;&#x6709;&#x5B83;&#x6240;&#x9700;&#x8981;&#x7684;&#x4E1C;&#x897F;&#x3002;</p>
+<p>&#x6781;&#x7B80;&#x4E3B;&#x4E49;&#x80CC;&#x540E;&#x662F;&#x53CC;&#x91CD;&#x7684;&#x52A8;&#x673A;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x4F18;&#x70B9;&#x662F;&#x5B83;&#x4F7F;&#x6838;&#x5FC3;&#x8BED;&#x8A00;&#x6613;&#x4E8E;&#x8C03;&#x8BD5;&#x548C;&#x6613;&#x4E8E;&#x5B66;&#x4E60;&#x3002;&#x8FD9;&#x5BF9;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x548C;&#x7528;&#x6237;&#x6765;&#x8BF4;&#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x5927;&#x7684;&#x597D;&#x5904;&#x3002;&#x5C31;&#x50CF; <a href="http://en.wikipedia.org/wiki/Occam%27s_razor" target="_blank">&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;</a> &#x4E00;&#x6837;&#xFF0C;&#x5982;&#x679C;&#x5B83;&#x6700;&#x7EC8;&#x6210;&#x4E3A;&#x540C;&#x6837;&#x5BCC;&#x6709;&#x8868;&#x73B0;&#x529B;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x51E0;&#x4E4E;&#x603B;&#x662F;&#x66F4;&#x597D;&#x5730;&#x6D88;&#x9664;&#x4EFB;&#x4F55;&#x6D6A;&#x8D39;&#x3002;&#x7B2C;&#x4E8C;&#x4E2A;&#x4F18;&#x70B9;&#x662F;&#xFF0C;&#x4F7F;&#x7528;&#x5C0F;&#x7684;&#x8BED;&#x8A00;&#x662F;&#x4E00;&#x79CD;&#x66F4;&#x597D;&#x7684;&#x7F8E;&#x5B66;&#x3002;&#x770B;&#x5230;&#x6211;&#x4EEC;&#x80FD;&#x591F;&#x521B;&#x9020;&#x4E00;&#x6B3E;&#x6838;&#x5FC3;&#x591A;&#x5C0F;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x5E76;&#x4E14;&#x4ECD;&#x80FD;&#x4ECE;&#x5176;&#x5B83;&#x65B9;&#x9762;&#x83B7;&#x5F97;&#x6709;&#x7528;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x79CD;&#x806A;&#x660E;&#x4E14;&#x6709;&#x8DA3;&#x7684;&#x5B66;&#x4E60;&#x65B9;&#x5F0F;&#x3002;&#x4F5C;&#x4E3A;&#x524D;&#x536B;&#x7A0B;&#x5E8F;&#x5458;&#xFF0C;&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x5C31;&#x5E94;&#x8BE5;&#x8FD9;&#x6837;&#xFF0C;&#x8FD9;&#x662F;&#x6211;&#x4EEC;&#x559C;&#x6B22;&#x7684;&#x4E1C;&#x897F;&#x3002;</p>
+<h2 id="&#x539F;&#x5B50;"><a name="&#x539F;&#x5B50;" class="anchor-navigation-ex-anchor" href="#&#x539F;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x539F;&#x5B50;</h2>
+<p>&#x5728;&#x5904;&#x7406;&#x6761;&#x4EF6;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x6CA1;&#x6709;&#x4E3A;&#x6211;&#x4EEC;&#x7684;&#x8BED;&#x8A00;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x5E03;&#x5C14;&#x7C7B;&#x578B;&#x3002;&#x6B63;&#x56E0;&#x4E3A;&#x5982;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x6CA1;&#x6709;&#x6DFB;&#x52A0;<code>true</code>&#x6216;<code>false</code>&#x4E24;&#x79CD;&#x3002;&#x76F8;&#x53CD;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x4F7F;&#x7528;&#x6570;&#x5B57;&#x3002;&#x53EF;&#x8BFB;&#x6027;&#x4ECD;&#x7136;&#x5F88;&#x91CD;&#x8981;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E00;&#x4E9B;&#x5E38;&#x91CF;&#x6765;&#x8868;&#x793A;&#x8FD9;&#x4E9B;&#x503C;&#x3002;</p>
+<p>&#x5728;&#x7C7B;&#x4F3C;&#x7684;&#x8BF4;&#x660E;&#x4E2D;&#xFF0C;&#x8BB8;&#x591A; Lisps &#x4F7F;&#x7528; <code>nil</code> &#x8FD9;&#x4E2A;&#x8BCD;&#x6765;&#x8868;&#x793A;&#x7A7A;&#x5217;&#x8868; <code>{}</code> &#x3002;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x5B83;&#x3002;&#x8FD9;&#x4E9B;&#x5E38;&#x6570;&#x6709;&#x65F6;&#x88AB;&#x79F0;&#x4E3A;<em>&#x539F;&#x5B50;</em>&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x662F;&#x57FA;&#x672C;&#x7684;&#x548C;&#x4E0D;&#x53D8;&#x7684;&#x3002;</p>
+<p>&#x7528;&#x6237;&#x4E0D;&#x5FC5;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x5DF2;&#x547D;&#x540D;&#x5E38;&#x91CF;&#xFF0C;&#x800C;&#x662F;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x6570;&#x5B57;&#x548C;&#x7A7A;&#x5217;&#x8868;&#x3002;&#x8FD9;&#x79CD;&#x9009;&#x62E9;&#x8D4B;&#x4E88;&#x4E86;&#x7528;&#x6237;&#x80FD;&#x591F;&#x53BB;&#x4FE1;&#x4EFB;&#x7684;&#x4E1C;&#x897F;&#x3002;</p>
+<pre><code>; Atoms
+(def {nil} {})
+(def {true} 1)
+(def {false} 0)
+</code></pre><h2 id="&#x6784;&#x7B51;&#x6A21;&#x5757;"><a name="&#x6784;&#x7B51;&#x6A21;&#x5757;" class="anchor-navigation-ex-anchor" href="#&#x6784;&#x7B51;&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x6784;&#x7B51;&#x6A21;&#x5757;</h2>
+<p>&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x63D0;&#x51FA;&#x4E86;&#x4E00;&#x4E9B;&#x5728;&#x793A;&#x4F8B;&#x4E2D;&#x4F7F;&#x7528;&#x8FC7;&#x7684;&#x5F88;&#x9177;&#x7684;&#x51FD;&#x6570;&#x3002;&#x5176;&#x4E2D;&#x4E4B;&#x4E00;&#x5C31;&#x662F;<code>fun</code>&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x4EE5;&#x66F4;&#x6574;&#x6D01;&#x7684;&#x65B9;&#x5F0F;&#x58F0;&#x660E;&#x51FD;&#x6570;&#x3002;&#x6211;&#x4EEC;&#x7EDD;&#x5BF9;&#x5E94;&#x8BE5;&#x5C06;&#x5B83;&#x653E;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x6807;&#x51C6;&#x5E93;&#x4E2D;&#x3002;</p>
+<pre><code>; Function Definitions
+(def {fun} (\ {f b} {
+  def (head f) (\ (tail f) b)
+}))
+</code></pre><p>&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x4E5F;&#x5E94;&#x8BE5;&#x6709;&#x6211;&#x4EEC;&#x7684;<code>unpack</code>&#x548C;<code>pack</code>&#x51FD;&#x6570;&#x3002;&#x8FD9;&#x4E9B;&#x5BF9;&#x7528;&#x6237;&#x6765;&#x8BF4;&#x4E5F;&#x662F;&#x5FC5;&#x4E0D;&#x53EF;&#x5C11;&#x7684;&#x3002;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x5C06;&#x5B83;&#x4EEC;&#x4EE5;&#x53CA;&#x5B83;&#x4EEC;&#x7684;<code>curry</code>&#x548C;<code>uncurry</code>&#x522B;&#x540D;&#x4E00;&#x8D77;&#x5305;&#x62EC;&#x5728;&#x5185;&#x3002;</p>
+<pre><code>; Unpack List for Function
+(fun {unpack f l} {
+  eval (join (list f) l)
+})
+
+; Pack List for Function
+(fun {pack f &amp; xs} {f xs})
+
+; Curried and Uncurried calling
+(def {curry} unpack)
+(def {uncurry} pack)
+</code></pre><p>&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x6309;&#x987A;&#x5E8F;&#x505A;&#x51E0;&#x4EF6;&#x4E8B;&#x3002;&#x6211;&#x4EEC;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x529E;&#x6CD5;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x4E3A;&#x5C06;&#x6BCF;&#x4E2A;&#x4E8B;&#x4EF6;&#x8BBE;&#x7F6E;&#x4E3A;&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#x3002;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x53C2;&#x6570;&#x6309;&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#x7684;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#xFF0C;&#x8FD9;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x5BF9;&#x5404;&#x4E2A;&#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x3002;&#x5BF9;&#x4E8E;&#x8BF8;&#x5982;&#x6B64;&#x7C7B;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4F8B;&#x5982;<code>print</code>&#xFF0C;<code>load</code> &#x7B49;&#xFF0C;&#x6211;&#x4EEC;&#x5E76;&#x4E0D;&#x5173;&#x5FC3;&#x4ED6;&#x4EEC;&#x6240;&#x8BA1;&#x7B97;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x800C;&#x662F;&#x5173;&#x5FC3;&#x5B83;&#x53D1;&#x751F;&#x7684;&#x987A;&#x5E8F;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <code>do</code> &#x51FD;&#x6570;&#xFF0C;&#x6309;&#x987A;&#x5E8F;&#x8BA1;&#x7B97;&#x591A;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x5E76;&#x8FD4;&#x56DE;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x3002;&#x8FD9;&#x4F9D;&#x8D56;&#x4E8E; <code>last</code> &#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x4F1A;&#x8FD4;&#x56DE;&#x5217;&#x8868;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x3002;&#x6211;&#x4EEC;&#x7A0D;&#x540E;&#x4F1A;&#x5B9A;&#x4E49;&#x5B83;&#x3002;</p>
+<pre><code>; Perform Several things in Sequence
+(fun {do &amp; l} {
+  if (== l nil)
+    {nil}
+    {last l}
+})
+</code></pre><p>&#x6709;&#x65F6;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x4F7F;&#x7528;<code>=</code>&#x8FD0;&#x7B97;&#x7B26;&#x5C06;&#x7ED3;&#x679C;&#x4FDD;&#x5B58;&#x5230;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x3002;&#x5F53;&#x6211;&#x4EEC;&#x5728;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x65F6;&#xFF0C;&#x8FD9;&#x5C06;&#x9690;&#x5F0F;&#x5730;&#x4EC5;&#x5728;&#x672C;&#x5730;&#x4FDD;&#x5B58;&#x7ED3;&#x679C;&#xFF0C;&#x4F46;&#x6709;&#x65F6;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x6253;&#x5F00;&#x5176;&#x66F4;&#x52A0;&#x5E7F;&#x9614;&#x7684;&#x672C;&#x5730;&#x8303;&#x56F4;&#x3002;&#x4E3A;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x51FD;&#x6570;<code>let</code>&#xFF0C;&#x4E3A;&#x4EE3;&#x7801;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7A7A;&#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#x3002;</p>
+<pre><code>; Open new scope
+(fun {let b} {
+  ((\ {_} b) ())
+})
+</code></pre><p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7ED3;&#x5408; <code>do</code> &#x4F7F;&#x7528;&#x5B83;&#x6765;&#x786E;&#x4FDD;&#x53D8;&#x91CF;&#x4E0D;&#x4F1A;&#x6CC4;&#x6F0F;&#x5230;&#x5176;&#x8303;&#x56F4;&#x4E4B;&#x5916;&#x3002;</p>
+<pre><code>lispy&gt; let {do (= {x} 100) (x)}
+100
+lispy&gt; x
+Error: Unbound Symbol &apos;x&apos;
+lispy&gt;
+</code></pre><h2 id="&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;"><a name="&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;</h2>
+<p>&#x6211;&#x4EEC;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#x4EFB;&#x4F55;&#x672C;&#x5730;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x5982;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x8BED;&#x8A00;&#x4E2D;&#x7684;<code>and</code>&#x548C;<code>or</code>&#x3002;&#x8FD9;&#x53EF;&#x80FD;&#x662F;&#x53EF;&#x4EE5;&#x5728;&#x4EE5;&#x540E;&#x624D;&#x6DFB;&#x52A0;&#x7684;&#x597D;&#x4E1C;&#x897F;&#x3002;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;&#x6765;&#x6A21;&#x62DF;&#x5B83;&#x4EEC;&#x3002;&#x8003;&#x8651;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x5728;&#x5404;&#x79CD;&#x8F93;&#x5165;&#x9047;&#x5230;<code>0</code>&#x6216;<code>1</code>&#x65F6;&#x5019;&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#x3002;</p>
+<pre><code>; Logical Functions
+(fun {not x}   {- 1 x})
+(fun {or x y}  {+ x y})
+(fun {and x y} {* x y})
+</code></pre><h2 id="&#x8F85;&#x52A9;&#x51FD;&#x6570;"><a name="&#x8F85;&#x52A9;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x8F85;&#x52A9;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x8F85;&#x52A9;&#x51FD;&#x6570;</h2>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E9B;&#x5E76;&#x4E0D;&#x662F;&#x9002;&#x5408;&#x4EFB;&#x4F55;&#x60C5;&#x5883;&#x4E2D;&#x7684;&#x8F85;&#x52A9;&#x529F;&#x80FD;&#x3002;&#x770B;&#x770B;&#x60A8;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x731C;&#x51FA;&#x5B83;&#x4EEC;&#x7684;&#x9884;&#x671F;&#x529F;&#x80FD;&#x3002;</p>
+<pre><code>(fun {flip f a b} {f b a})
+(fun {ghost &amp; xs} {eval xs})
+(fun {comp f g x} {f (g x)})
+</code></pre><p>&#x8BE5;<code>flip</code>&#x51FD;&#x6570;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x51FD;&#x6570;<code>f</code>&#x548C;&#x4E24;&#x4E2A;&#x53C2;&#x6570;<code>a</code>&#x548C;<code>b</code>&#x3002;&#x7136;&#x540E;&#x5B83;&#x4F7F;&#x5F97;<code>f</code>&#x5148;&#x5904;&#x7406;<code>b</code>&#x800C;&#x540E;&#x518D;&#x5904;&#x7406;<code>a</code>&#xFF0C;&#x8FD9;&#x662F;&#x76F8;&#x53CD;&#x7684;&#x987A;&#x5E8F;&#x3002;&#x5F53;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x51FD;&#x6570;&#x4EC5;<em>&#x90E8;&#x5206;&#x8BA1;&#x7B97;</em>&#x65F6;&#xFF0C;&#x8FD9;&#x53EF;&#x80FD;&#x5F88;&#x6709;&#x7528;&#x3002;&#x5728;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x901A;&#x8FC7;&#x8FDB;&#x4F20;&#x9012;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x5C31;&#x80FD;&#x591F;&#x90E8;&#x5206;&#x8BA1;&#x7B97;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x80FD;&#x591F;&#x4F7F;&#x7528;<code>flip</code>&#x6765;&#x7ED9;&#x6211;&#x4EEC;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x80FD;&#x591F;&#x5C06;&#x6700;&#x521D;&#x7684;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x4EE5;&#x76F8;&#x53CD;&#x7684;&#x987A;&#x5E8F;&#x8F93;&#x5165;&#x3002;</p>
+<p>&#x8FD9;&#x610F;&#x5473;&#x7740;&#x5982;&#x679C;&#x8981;&#x5E94;&#x7528;&#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x53EA;&#x9700;&#x5C06;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5E94;&#x7528;&#x4E8E;&#x6B64;&#x51FD;&#x6570;&#x7684;<code>flip</code>&#x5373;&#x53EF;&#x3002;</p>
+<pre><code>lispy&gt; (flip def) 1 {x}
+()
+lispy&gt; x
+1
+lispy&gt; def {define-one} ((flip def) 1)
+()
+lispy&gt; define-one {y}
+()
+lispy&gt; y
+1
+lispy&gt;
+</code></pre><p>&#x6211;&#x60F3;&#x4E0D;&#x51FA;&#x8FD9;&#x4E2A;<code>ghost</code>&#x51FD;&#x6570;&#x7684;&#x7528;&#x9014;&#xFF0C;&#x4F46;&#x5B83;&#x770B;&#x8D77;&#x6765;&#x5F88;&#x6709;&#x8DA3;&#x3002;&#x5B83;&#x63A5;&#x53D7;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;&#x53C2;&#x6570;&#x5E76;&#x5C06;&#x5B83;&#x4EEC;&#x4F5C;&#x4E3A;&#x8868;&#x8FBE;&#x5F0F;&#x672C;&#x8EAB;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#x3002;&#x6240;&#x4EE5;&#x5B83;&#x53EA;&#x662F;&#x4F4D;&#x4E8E;&#x50CF;&#x9B3C;&#x4E00;&#x6837;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x524D;&#x9762;&#xFF0C;&#x6839;&#x672C;&#x4E0D;&#x4E0E;&#x7A0B;&#x5E8F;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x6216;&#x6539;&#x53D8;&#x7A0B;&#x5E8F;&#x7684;&#x884C;&#x4E3A;&#x3002;&#x5982;&#x679C;&#x60A8;&#x80FD;&#x60F3;&#x5230;&#x5B83;&#x7684;&#x7528;&#x9014;&#xFF0C;&#x6211;&#x5F88;&#x4E50;&#x610F;&#x503E;&#x542C;&#x60A8;&#x7684;&#x60F3;&#x6CD5;&#x3002;</p>
+<pre><code>lispy&gt; ghost + 2 2
+4
+</code></pre><p><code>comp</code>&#x51FD;&#x6570;&#x7528;&#x4E8E;&#x7EC4;&#x5408;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x3002;&#x5B83;&#x7684;&#x8F93;&#x5165;&#x4E3A;<code>f</code>&#xFF0C;<code>g</code>&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;&#x4F20;&#x9012;&#x5230;<code>g</code>&#x7684;&#x53C2;&#x6570;&#x3002;&#x7136;&#x540E;&#x5B83;&#x5C06;&#x6B64;&#x53C2;&#x6570;&#x5E94;&#x7528;&#x5230;<code>g</code>&#x540E;&#xFF0C;&#x518D;&#x628A;&#x7ED3;&#x679C;&#x5E94;&#x7528;&#x5230;<code>f</code>&#x5F53;&#x4E2D;&#x53BB;&#x3002;&#x8FD9;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x5C06;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x7EC4;&#x5408;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x51FD;&#x6570;&#xFF0C;&#x4E32;&#x8054;&#x5730;&#x5E94;&#x7528;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x3002;&#x50CF;&#x4EE5;&#x524D;&#x4E00;&#x6837;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x5B83;&#x4E0E;&#x90E8;&#x5206;&#x8BA1;&#x7B97;&#x7ED3;&#x5408;&#x8D77;&#x6765;&#xFF0C;&#x4ECE;&#x7B80;&#x5355;&#x7684;&#x51FD;&#x6570;&#x4E2D;&#x6784;&#x5EFA;&#x590D;&#x6742;&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7EC4;&#x5408;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x3002;&#x4E00;&#x4E2A;&#x5426;&#x5B9A;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x89E3;&#x5305;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x5217;&#x8868;&#xFF0C;&#x5E76;&#x7528;<code>*</code>&#x8FDB;&#x884C;&#x76F8;&#x4E58;&#x3002;</p>
+<pre><code>lispy&gt; (unpack *) {2 2}
+4
+lispy&gt; - ((unpack *) {2 2})
+-4
+lispy&gt; comp - (unpack *)
+(\ {x} {f (g x)})
+lispy&gt; def {mul-neg} (comp - (unpack *))
+()
+lispy&gt; mul-neg {2 8}
+-16
+lispy&gt;
+</code></pre><h2 id="&#x5217;&#x8868;&#x51FD;&#x6570;"><a name="&#x5217;&#x8868;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x5217;&#x8868;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x5217;&#x8868;&#x51FD;&#x6570;</h2>
+<p><code>head</code>&#x51FD;&#x6570;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x4F46;&#x5B83;&#x8FD4;&#x56DE;&#x7684;&#x5185;&#x5BB9;&#x4ECD;&#x7136;&#x5305;&#x542B;&#x5728;&#x5217;&#x8868;&#x4E2D;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x4ECE;&#x8FD9;&#x4E2A;&#x5217;&#x8868;&#x4E2D;&#x5B9E;&#x9645;&#x5730;&#x83B7;&#x53D6;&#x5143;&#x7D20;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4EE5;&#x67D0;&#x79CD;&#x65B9;&#x5F0F;&#x63D0;&#x53D6;&#x5B83;&#x3002;</p>
+<p>&#x5355;&#x4E2A;&#x5143;&#x7D20;&#x5217;&#x8868;&#x4EC5;&#x8BA1;&#x7B97;&#x8BE5;&#x5143;&#x7D20;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8BE5;<code>eval</code>&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x63D0;&#x53D6;&#x3002;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E00;&#x4E9B;&#x8F85;&#x52A9;&#x51FD;&#x6570;&#x6765;&#x5E2E;&#x52A9;&#x63D0;&#x53D6;&#x5217;&#x8868;&#x7684;&#x7B2C;&#x4E00;&#xFF0C;&#x7B2C;&#x4E8C;&#x548C;&#x7B2C;&#x4E09;&#x4E2A;&#x5143;&#x7D20;&#x3002;&#x6211;&#x4EEC;&#x7A0D;&#x540E;&#x4F1A;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x3002;</p>
+<pre><code>; First, Second, or Third Item in List
+(fun {fst l} { eval (head l) })
+(fun {snd l} { eval (head (tail l)) })
+(fun {trd l} { eval (head (tail (tail l))) })
+</code></pre><p>&#x51E0;&#x7AE0;&#x524D;&#x6211;&#x4EEC;&#x7B80;&#x8981;&#x4ECB;&#x7ECD;&#x4E86;&#x4E00;&#x4E9B;&#x9012;&#x5F52;&#x5217;&#x8868;&#x51FD;&#x6570;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x6280;&#x672F;&#x6765;&#x5B9A;&#x4E49;&#x66F4;&#x591A;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x627E;&#x5230;&#x5217;&#x8868;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x9012;&#x5F52;&#x5B83;&#xFF0C;&#x4E3A;&#x5C3E;&#x90E8;&#x7684;&#x957F;&#x5EA6;&#x589E;&#x52A0;<code>1</code>&#x3002;&#x4E3A;&#x4E86;&#x627E;&#x5230;&#x5217;&#x8868;&#x7684;<code>nth</code>&#x5143;&#x7D20;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6267;&#x884C;<code>tail</code>&#x64CD;&#x4F5C;&#x5E76;&#x8FDB;&#x884C;&#x5012;&#x8BA1;&#x6570;&#x76F4;&#x5230;&#x6211;&#x4EEC;&#x5230;&#x8FBE;<code>0</code>&#x3002;&#x8981;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8BBF;&#x95EE;&#x603B;&#x957F;&#x5EA6;&#x51CF;&#x53BB;1&#x7684;&#x4F4D;&#x7F6E;&#x7684;&#x5143;&#x7D20;&#x5373;&#x53EF;&#x3002;</p>
+<pre><code>; List Length
+(fun {len l} {
+  if (== l nil)
+    {0}
+    {+ 1 (len (tail l))}
+})
+</code></pre><pre><code>; Nth item in List
+(fun {nth n l} {
+  if (== n 0)
+    {fst l}
+    {nth (- n 1) (tail l)}
+})
+</code></pre><pre><code>; Last item in List
+(fun {last l} {nth (- (len l) 1) l})
+</code></pre><p>&#x6709;&#x8BB8;&#x591A;&#x5176;&#x4ED6;&#x6709;&#x7528;&#x7684;&#x51FD;&#x6570;&#x9075;&#x5FAA;&#x76F8;&#x540C;&#x7684;&#x6A21;&#x5F0F;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x548C;&#x5220;&#x9664;&#x5217;&#x8868;&#x524D;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x6216;&#x8005;&#x7528;&#x4E8E;&#x68C0;&#x67E5;&#x503C;&#x662F;&#x5426;&#x662F;&#x5217;&#x8868;&#x5143;&#x7D20;&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<pre><code>; Take N items
+(fun {take n l} {
+  if (== n 0)
+    {nil}
+    {join (head l) (take (- n 1) (tail l))}
+})
+</code></pre><pre><code>; Drop N items
+(fun {drop n l} {
+  if (== n 0)
+    {l}
+    {drop (- n 1) (tail l)}
+})
+</code></pre><pre><code>; Split at N
+(fun {split n l} {list (take n l) (drop n l)})
+</code></pre><pre><code>; Element of List
+(fun {elem x l} {
+  if (== l nil)
+    {false}
+    {if (== x (fst l)) {true} {elem x (tail l)}}
+})
+</code></pre><p>&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x90FD;&#x9075;&#x5FAA;&#x7C7B;&#x4F3C;&#x7684;&#x6A21;&#x5F0F;&#x3002;&#x5982;&#x679C;&#x6709;&#x67D0;&#x79CD;&#x65B9;&#x6CD5;&#x6765;&#x63D0;&#x53D6;&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x4F1A;&#x5F88;&#x597D;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x4E0D;&#x5FC5;&#x6BCF;&#x6B21;&#x90FD;&#x9700;&#x8981;&#x5199;&#x4EE3;&#x7801;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x60F3;&#x8981;&#x4E00;&#x79CD;&#x53EF;&#x4EE5;&#x5BF9;&#x5217;&#x8868;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x6267;&#x884C;&#x67D0;&#x4E9B;&#x529F;&#x80FD;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x662F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E3A;<code>map</code>&#x7684;&#x51FD;&#x6570; &#x3002;&#x5B83;&#x9700;&#x8981;&#x8F93;&#x5165;&#x4E00;&#x4E9B;&#x529F;&#x80FD;&#x548C;&#x4E00;&#x4E9B;&#x5217;&#x8868;&#x3002;&#x5BF9;&#x4E8E;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x53EA;&#x8981;&#x662F;&#x4F7F;&#x7528;<code>f</code>&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x90FD;&#x5C06;&#x5176;&#x8FFD;&#x52A0;&#x5230;&#x5217;&#x8868;&#x7684;&#x524D;&#x9762;&#x3002;&#x7136;&#x540E;&#x5B83;&#x5C06;&#x88AB;<code>map</code>&#x7528;&#x4E8E;&#x5217;&#x8868;&#x7684;&#x5C3E;&#x90E8;&#x3002;</p>
+<pre><code>; Apply Function to List
+(fun {map f l} {
+  if (== l nil)
+    {nil}
+    {join (list (f (fst l))) (map f (tail l))}
+})
+</code></pre><p>&#x6709;&#x4E86;&#x8FD9;&#x4E2A;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x505A;&#x4E00;&#x4E9B;&#x770B;&#x8D77;&#x6765;&#x6709;&#x70B9;&#x50CF;&#x5FAA;&#x73AF;&#x7684;&#x6574;&#x6D01;&#x7684;&#x4E1C;&#x897F;&#x3002;&#x5728;&#x67D0;&#x4E9B;&#x65B9;&#x9762;&#xFF0C;&#x8FD9;&#x4E2A;&#x6982;&#x5FF5;&#x6BD4;&#x5FAA;&#x73AF;&#x66F4;&#x5F3A;&#x5927;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x7ACB;&#x5373;&#x5BF9;&#x6240;&#x6709;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x8003;&#x8651;&#x4F9D;&#x6B21;&#x5BF9;&#x5217;&#x8868;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x6267;&#x884C;&#x67D0;&#x4E9B;&#x529F;&#x80FD;&#x3002;&#x6211;&#x4EEC;<em>&#x6620;&#x5C04;&#x5217;&#x8868;</em>&#x800C;&#x4E0D;&#x662F;<em>&#x66F4;&#x6539;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;</em>&#x3002;</p>
+<pre><code>lispy&gt; map - {5 6 7 8 2 22 44}
+{-5 -6 -7 -8 -2 -22 -44}
+lispy&gt; map (\ {x} {+ x 10}) {5 2 11}
+{15 12 21}
+lispy&gt; print {&quot;hello&quot; &quot;world&quot;}
+{&quot;hello&quot; &quot;world&quot;}
+()
+lispy&gt; map print {&quot;hello&quot; &quot;world&quot;}
+&quot;hello&quot;
+&quot;world&quot;
+{() ()}
+lispy&gt;
+</code></pre><p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x4E00;&#x4E0B;&#x8FD9;&#x4E2A;&#x60F3;&#x6CD5;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x79CD;<code>filter</code>&#x529F;&#x80FD;&#xFF0C;&#x5B83;&#x63A5;&#x53D7;&#x4E00;&#x4E9B;&#x529F;&#x80FD;&#x6761;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;&#x4EC5;&#x5305;&#x62EC;&#x4E0E;&#x8BE5;&#x6761;&#x4EF6;&#x5339;&#x914D;&#x7684;&#x5217;&#x8868;&#x9879;&#x3002;</p>
+<pre><code>; Apply Filter to List
+(fun {filter f l} {
+  if (== l nil)
+    {nil}
+    {join (if (f (fst l)) {head l} {nil}) (filter f (tail l))}
+})
+</code></pre><p>&#x8FD9;&#x5C31;&#x662F;&#x5B83;&#x5728;&#x5B9E;&#x8DF5;&#x4E2D;&#x7684;&#x6837;&#x5B50;&#x3002;</p>
+<pre><code>lispy&gt; filter (\ {x} {&gt; x 2}) {5 2 11 -7 8 1}
+{5 11 8}
+</code></pre><p>&#x67D0;&#x4E9B;&#x5FAA;&#x73AF;&#x5E76;&#x4E0D;&#x5B8C;&#x5168;&#x4F5C;&#x7528;&#x4E8E;&#x5217;&#x8868;&#xFF0C;&#x800C;&#x662F;&#x7D2F;&#x79EF;&#x4E00;&#x4E9B;&#x5FAA;&#x73AF;&#x6216;&#x5C06;&#x5217;&#x8868;&#x538B;&#x7F29;&#x4E3A;&#x5355;&#x4E2A;&#x503C;&#x3002;&#x8FD9;&#x4E9B;&#x662F;&#x8BF8;&#x5982;&#x6C42;&#x548C;&#x548C;&#x9636;&#x4E58;&#x4E4B;&#x7C7B;&#x7684;&#x5FAA;&#x73AF;&#x3002;&#x8FD9;&#x4E9B;&#x53EF;&#x4EE5;&#x4E0E;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5B9A;&#x4E49;&#x7684;<code>len</code>&#x51FD;&#x6570;&#x7684;&#x8868;&#x8FBE;&#x975E;&#x5E38;&#x76F8;&#x4F3C;&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x88AB;&#x79F0;&#x4E3A;<em>&#x6298;&#x53E0;</em>&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;&#x5982;&#x4E0B;&#x3002;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x51FD;&#x6570;<code>f</code>&#xFF0C;&#x4E00;&#x4E2A;<em>&#x57FA;&#x503C;</em><code>z</code>&#x548C;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x5B83;&#x4EEC;&#x5C06;&#x5217;&#x8868;<code>l</code>&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x4E0E;&#x603B;&#x503C;&#x5408;&#x5E76;&#xFF0C;&#x4ECE;&#x57FA;&#x503C;&#x5F00;&#x59CB;&#x3002;</p>
+<pre><code>; Fold Left
+(fun {foldl f z l} {
+  if (== l nil)
+    {z}
+    {foldl f (f z (fst l)) (tail l)}
+})
+</code></pre><p>&#x4F7F;&#x7528;&#x6298;&#x53E0;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x975E;&#x5E38;&#x4F18;&#x96C5;&#x7684;&#x65B9;&#x5F0F;&#x5B9A;&#x4E49;<code>sum</code>&#x548C;<code>product</code>&#x529F;&#x80FD;&#x3002;</p>
+<pre><code>(fun {sum l} {foldl + 0 l})
+(fun {product l} {foldl * 1 l})
+</code></pre><h2 id="&#x6761;&#x4EF6;&#x51FD;&#x6570;"><a name="&#x6761;&#x4EF6;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x6761;&#x4EF6;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. &#x6761;&#x4EF6;&#x51FD;&#x6570;</h2>
+<p>&#x901A;&#x8FC7;&#x5B9A;&#x4E49;&#x6211;&#x4EEC;&#x7684;<code>fun</code>&#x51FD;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5C55;&#x793A;&#x4E86;&#x6211;&#x4EEC;&#x7684;&#x8BED;&#x8A00;&#x5728;&#x5B9A;&#x4E49;&#x770B;&#x8D77;&#x6765;&#x50CF;&#x65B0;&#x8BED;&#x6CD5;&#x7684;&#x51FD;&#x6570;&#x65B9;&#x9762;&#x7684;&#x5F3A;&#x5927;&#x529F;&#x80FD;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x5728;&#x6211;&#x4EEC;&#x5C1D;&#x8BD5;&#x6A21;&#x62DF; C &#x7684;<code>switch</code>&#x548C;<code>case</code>&#x8BED;&#x53E5;&#x65F6;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x3002;&#x5728;C&#x4E2D;&#xFF0C;&#x8FD9;&#x4E9B;&#x5185;&#x7F6E;&#x4E8E;&#x8BED;&#x8A00;&#x4E2D;&#xFF0C;&#x4F46;&#x5BF9;&#x4E8E;&#x6211;&#x4EEC;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x5B83;&#x4EEC;&#x5B9A;&#x4E49;&#x4E3A;&#x5E93;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x51FD;&#x6570;<code>select</code> &#xFF0C;&#x5B83;&#x63A5;&#x53D7;&#x96F6;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x53CC;&#x5143;&#x7D20;&#x5217;&#x8868;&#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#x3002;&#x5BF9;&#x4E8E;&#x53C2;&#x6570;&#x4E2D;&#x7684;&#x6BCF;&#x53CC;&#x5143;&#x7D20;&#x5217;&#x8868;&#xFF0C;&#x5B83;&#x9996;&#x5148;&#x8BC4;&#x4F30;&#x8BE5;&#x5143;&#x7D20;&#x5BF9;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x662F;&#x771F;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x4F1A;&#x8BA1;&#x7B97;&#x5E76;&#x8FD4;&#x56DE;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5426;&#x5219;&#x5B83;&#x4F1A;&#x5728;&#x5217;&#x8868;&#x7684;&#x5176;&#x4F59;&#x90E8;&#x5206;&#x518D;&#x6B21;&#x6267;&#x884C;&#x76F8;&#x540C;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+<pre><code>(fun {select &amp; cs} {
+  if (== cs nil)
+    {error &quot;No Selection Found&quot;}
+    {if (fst (fst cs)) {snd (fst cs)} {unpack select (tail cs)}}
+})
+</code></pre><p>&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x59CB;&#x7EC8;&#x8BA1;&#x7B97;&#x4E3A;<code>true</code>&#x7684;<code>otherwise</code>&#x51FD;&#x6570;&#x3002;&#x8FD9;&#x6709;&#x70B9;&#x50CF; C &#x4E2D;&#x7684;&#x5173;&#x952E;&#x5B57;<code>default</code>&#x3002;</p>
+<pre><code>; Default Case
+(def {otherwise} true)
+
+; Print Day of Month suffix
+(fun {month-day-suffix i} {
+  select
+    {(== i 0)  &quot;st&quot;}
+    {(== i 1)  &quot;nd&quot;}
+    {(== i 3)  &quot;rd&quot;}
+    {otherwise &quot;th&quot;}
+})
+</code></pre><p>&#x8FD9;&#x5B9E;&#x9645;&#x4E0A;&#x6BD4; C &#x4E2D;&#x7684;<code>switch</code>&#x8BED;&#x53E5;&#x66F4;&#x5F3A;&#x5927;&#x3002;&#x5728; C &#x800C;&#x4E0D;&#x662F;&#x6761;&#x4EF6;&#x4F20;&#x9012;&#x8BED;&#x53E5;&#x4E2D;&#xFF0C;&#x8F93;&#x5165;&#x503C;&#x4EC5;&#x4E0E;&#x6761;&#x4EF6;&#x7684;&#x5E38;&#x6570;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x3002;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x5728; Lisp &#x4E2D;&#x5B9A;&#x4E49;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4E00;&#x4E2A;&#x503C;&#x4E0E;&#x4E00;&#x4E9B;&#x5019;&#x9009;&#x8005;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x518D;&#x53D6;&#x4E00;&#x4E9B;&#x503C;&#xFF0C;<code>x</code>&#x540E;&#x8DDF;&#x96F6;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x4E24;&#x5143;&#x7D20;&#x5217;&#x8868;&#x3002;&#x5982;&#x679C;&#x53CC;&#x5143;&#x7D20;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7B49;&#x4E8E;<code>x</code>&#xFF0C;&#x5219;&#x8BC4;&#x4F30;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5426;&#x5219;&#x8BE5;&#x8FC7;&#x7A0B;&#x7EE7;&#x7EED;&#x6CBF;&#x7740;&#x5217;&#x8868;&#x7EE7;&#x7EED;&#x3002;</p>
+<pre><code>(fun {case x &amp; cs} {
+  if (== cs nil)
+    {error &quot;No Case Found&quot;}
+    {if (== x (fst (fst cs))) {snd (fst cs)} {
+      unpack case (join (list x) (tail cs))}}
+})
+</code></pre><p>&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x8BED;&#x6CD5;&#x5C06;&#x4F1A;&#x53D8;&#x5F97;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x3002;&#x8BD5;&#x7740;&#x770B;&#x770B;&#x4F60;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x63A7;&#x5236;&#x7ED3;&#x6784;&#x6216;&#x6709;&#x7528;&#x51FD;&#x6570;&#x3002;</p>
+<pre><code>(fun {day-name x} {
+  case x
+    {0 &quot;Monday&quot;}
+    {1 &quot;Tuesday&quot;}
+    {2 &quot;Wednesday&quot;}
+    {3 &quot;Thursday&quot;}
+    {4 &quot;Friday&quot;}
+    {5 &quot;Saturday&quot;}
+    {6 &quot;Sunday&quot;}
+})
+</code></pre><h2 id="&#x6590;&#x6CE2;&#x90A3;&#x5951;"><a name="&#x6590;&#x6CE2;&#x90A3;&#x5951;" class="anchor-navigation-ex-anchor" href="#&#x6590;&#x6CE2;&#x90A3;&#x5951;"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. &#x6590;&#x6CE2;&#x90A3;&#x5951;</h2>
+<p>&#x6CA1;&#x6709;&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x51FD;&#x6570;&#x7684;&#x5F3A;&#x5236;&#x6027;&#x5B9A;&#x4E49;&#xFF0C;&#x6807;&#x51C6;&#x5E93;&#x5C31;&#x4E0D;&#x662F;&#x5B8C;&#x6574;&#x7684;&#x3002;&#x4F7F;&#x7528;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x7684;&#x6240;&#x6709;&#x4E0A;&#x8FF0;&#x5185;&#x5BB9;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x53EF;&#x7231;&#x7684;&#x5C0F;<code>fib</code>&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x975E;&#x5E38;&#x6613;&#x8BFB;&#xFF0C;&#x5E76;&#x4E14;&#x8BED;&#x4E49;&#x6E05;&#x6670;&#x3002;</p>
+<pre><code>; Fibonacci
+(fun {fib n} {
+  select
+    { (== n 0) 0 }
+    { (== n 1) 1 }
+    { otherwise (+ (fib (- n 1)) (fib (- n 2))) }
+})
+</code></pre><p>&#x8FD9;&#x662F;&#x6211;&#x4E4B;&#x524D;&#x5199;&#x7684;&#x6807;&#x51C6;&#x5E93;&#x7684;&#x7ED3;&#x5C3E;&#x3002;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x6807;&#x51C6;&#x5E93;&#x662F;&#x8BED;&#x8A00;&#x8BBE;&#x8BA1;&#x7684;&#x4E00;&#x4E2A;&#x6709;&#x8DA3;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x56E0;&#x4E3A;&#x60A8;&#x53EF;&#x4EE5;&#x5BF9;&#x6240;&#x53D1;&#x751F;&#x7684;&#x4E8B;&#x60C5;&#x4FDD;&#x6301;&#x521B;&#x9020;&#x53C8;&#x6216;&#x8005;&#x56FA;&#x6267;&#x5DF1;&#x89C1;&#x3002;&#x8BD5;&#x7740;&#x60F3;&#x51FA;&#x4E00;&#x4E9B;&#x60A8;&#x611F;&#x5230;&#x4E50;&#x8DA3;&#x7684;&#x4E1C;&#x897F;&#x3002;&#x63A2;&#x7D22;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x548C;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x53EF;&#x80FD;&#x975E;&#x5E38;&#x6709;&#x8DA3;&#x3002;</p>
+<h2 id="&#x5F69;&#x86CB;"><a name="&#x5F69;&#x86CB;" class="anchor-navigation-ex-anchor" href="#&#x5F69;&#x86CB;"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. &#x5F69;&#x86CB;</h2>
+<ul>
+<li>&#x4F7F;&#x7528;<code>foldl</code>&#x91CD;&#x5199;&#x51FD;&#x6570;<code>len</code>&#x3002;</li>
+<li>&#x4F7F;&#x7528;<code>foldl</code>&#x91CD;&#x5199;&#x51FD;&#x6570;<code>elem</code>&#x3002;</li>
+<li>&#x5C06;&#x6807;&#x51C6;&#x5E93;&#x76F4;&#x63A5;&#x5408;&#x5E76;&#x5230;&#x8BED;&#x8A00;&#x4E2D;&#x3002;&#x5728;&#x542F;&#x52A8;&#x65F6;&#x52A0;&#x8F7D;&#x3002;</li>
+<li>&#x4E3A;&#x60A8;&#x7684;&#x6807;&#x51C6;&#x5E93;&#x7F16;&#x5199;&#x4E00;&#x4E9B;&#x6587;&#x6863;&#xFF0C;&#x89E3;&#x91CA;&#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x529F;&#x80FD;&#x3002;</li>
+<li>&#x4F7F;&#x7528;&#x6807;&#x51C6;&#x5E93;&#x7F16;&#x5199;&#x4E00;&#x4E9B;&#x793A;&#x4F8B;&#x7A0B;&#x5E8F;&#xFF0C;&#x4F9B;&#x7528;&#x6237;&#x5B66;&#x4E60;&#x3002;</li>
+<li>&#x4E3A;&#x6807;&#x51C6;&#x5E93;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#x7F16;&#x5199;&#x4E00;&#x4E9B;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x3002;</li>
+</ul>
+<h2 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>1.10. &#x53C2;&#x8003;</h2>
+<p><details><summary>prelude.lspy</summary><pre><code>
+;;;
+;;;   Lispy Standard Prelude
+;;;
+
+;;; Atoms
+(def {nil} {})
+(def {true} 1)
+(def {false} 0)
+
+;;; Functional Functions
+
+; Function Definitions
+(def {fun} (\ {f b} {
+  def (head f) (\ (tail f) b)
+}))
+
+; Open new scope
+(fun {let b} {
+  ((\ {_} b) ())
+})
+
+; Unpack List to Function
+(fun {unpack f l} {
+  eval (join (list f) l)
+})
+
+; Unapply List to Function
+(fun {pack f &amp; xs} {f xs})
+
+; Curried and Uncurried calling
+(def {curry} unpack)
+(def {uncurry} pack)
+
+; Perform Several things in Sequence
+(fun {do &amp; l} {
+  if (== l nil)
+    {nil}
+    {last l}
+})
+
+;;; Logical Functions
+
+; Logical Functions
+(fun {not x}   {- 1 x})
+(fun {or x y}  {+ x y})
+(fun {and x y} {* x y})
+
+
+;;; Numeric Functions
+
+; Minimum of Arguments
+(fun {min &amp; xs} {
+  if (== (tail xs) nil) {fst xs}
+    {do 
+      (= {rest} (unpack min (tail xs)))
+      (= {item} (fst xs))
+      (if (&lt; item rest) {item} {rest})
+    }
+})
+
+; Maximum of Arguments
+(fun {max &amp; xs} {
+  if (== (tail xs) nil) {fst xs}
+    {do 
+      (= {rest} (unpack max (tail xs)))
+      (= {item} (fst xs))
+      (if (&gt; item rest) {item} {rest})
+    }  
+})
+
+;;; Conditional Functions
+
+(fun {select &amp; cs} {
+  if (== cs nil)
+    {error &quot;No Selection Found&quot;}
+    {if (fst (fst cs)) {snd (fst cs)} {unpack select (tail cs)}}
+})
+
+(fun {case x &amp; cs} {
+  if (== cs nil)
+    {error &quot;No Case Found&quot;}
+    {if (== x (fst (fst cs))) {snd (fst cs)} {
+      unpack case (join (list x) (tail cs))}}
+})
+
+(def {otherwise} true)
+
+
+;;; Misc Functions
+
+(fun {flip f a b} {f b a})
+(fun {ghost &amp; xs} {eval xs})
+(fun {comp f g x} {f (g x)})
+
+;;; List Functions
+
+; First, Second, or Third Item in List
+(fun {fst l} { eval (head l) })
+(fun {snd l} { eval (head (tail l)) })
+(fun {trd l} { eval (head (tail (tail l))) })
+
+; List Length
+(fun {len l} {
+  if (== l nil)
+    {0}
+    {+ 1 (len (tail l))}
+})
+
+; Nth item in List
+(fun {nth n l} {
+  if (== n 0)
+    {fst l}
+    {nth (- n 1) (tail l)}
+})
+
+; Last item in List
+(fun {last l} {nth (- (len l) 1) l})
+
+; Apply Function to List
+(fun {map f l} {
+  if (== l nil)
+    {nil}
+    {join (list (f (fst l))) (map f (tail l))}
+})
+
+; Apply Filter to List
+(fun {filter f l} {
+  if (== l nil)
+    {nil}
+    {join (if (f (fst l)) {head l} {nil}) (filter f (tail l))}
+})
+
+; Return all of list but last element
+(fun {init l} {
+  if (== (tail l) nil)
+    {nil}
+    {join (head l) (init (tail l))}
+})
+
+; Reverse List
+(fun {reverse l} {
+  if (== l nil)
+    {nil}
+    {join (reverse (tail l)) (head l)}
+})
+
+; Fold Left
+(fun {foldl f z l} {
+  if (== l nil) 
+    {z}
+    {foldl f (f z (fst l)) (tail l)}
+})
+
+; Fold Right
+(fun {foldr f z l} {
+  if (== l nil) 
+    {z}
+    {f (fst l) (foldr f z (tail l))}
+})
+
+(fun {sum l} {foldl + 0 l})
+(fun {product l} {foldl * 1 l})
+
+; Take N items
+(fun {take n l} {
+  if (== n 0)
+    {nil}
+    {join (head l) (take (- n 1) (tail l))}
+})
+
+; Drop N items
+(fun {drop n l} {
+  if (== n 0)
+    {l}
+    {drop (- n 1) (tail l)}
+})
+
+; Split at N
+(fun {split n l} {list (take n l) (drop n l)})
+
+; Take While
+(fun {take-while f l} {
+  if (not (unpack f (head l)))
+    {nil}
+    {join (head l) (take-while f (tail l))}
+})
+
+; Drop While
+(fun {drop-while f l} {
+  if (not (unpack f (head l)))
+    {l}
+    {drop-while f (tail l)}
+})
+
+; Element of List
+(fun {elem x l} {
+  if (== l nil)
+    {false}
+    {if (== x (fst l)) {true} {elem x (tail l)}}
+})
+
+; Find element in list of pairs
+(fun {lookup x l} {
+  if (== l nil)
+    {error &quot;No Element Found&quot;}
+    {do
+      (= {key} (fst (fst l)))
+      (= {val} (snd (fst l)))
+      (if (== key x) {val} {lookup x (tail l)})
+    }
+})
+
+; Zip two lists together into a list of pairs
+(fun {zip x y} {
+  if (or (== x nil) (== y nil))
+    {nil}
+    {join (list (join (head x) (head y))) (zip (tail x) (tail y))}
+})
+
+; Unzip a list of pairs into two lists
+(fun {unzip l} {
+  if (== l nil)
+    {{nil nil}}
+    {do
+      (= {x} (fst l))
+      (= {xs} (unzip (tail l)))
+      (list (join (head x) (fst xs)) (join (tail x) (snd xs)))
+    }
+})
+
+;;; Other Fun
+
+; Fibonacci
+(fun {fib n} {
+  select
+    { (== n 0) 0 }
+    { (== n 1) 1 }
+    { otherwise (+ (fib (- n 1)) (fib (- n 2))) }
+})
+</code></pre></details></p>
+<script src="_gitbook_plugin_analytics.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="14.Strings.html" class="navigation navigation-prev " aria-label="Previous page: 第十四章 • 字符串">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="16.Bonus-Projects.html" class="navigation navigation-next " aria-label="Next page: 第十六章 • 彩蛋">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第十五章 • 标准库","level":"1.16","depth":1,"next":{"title":"第十六章 • 彩蛋","level":"1.17","depth":1,"path":"16.Bonus-Projects.md","ref":"16.Bonus-Projects.md","articles":[]},"previous":{"title":"第十四章 • 字符串","level":"1.15","depth":1,"path":"14.Strings.md","ref":"14.Strings.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","anchor-navigation-ex-toc","theme-gestalt@git+https://github.com/NoahDragon/gitbook-plugin-theme-gestalt.git","-theme-default","styles-sass-fix","analytics","collapse"],"styles":{"website":"website-1573318305263.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"buildyourownlispcn"},"styles-sass-fix":{},"theme-gestalt":{"showLevel":false,"styles":{"website":"styles/website.css"},"logo":"./assets/logo.png","favicon":"./assets/logo.png","baseUrl":null,"excludeDefaultStyles":true,"doNotHideChildrenChapters":false},"analytics":{"google":"UA-48498357-5"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"collapse":{},"anchor-navigation-ex-toc":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-edit":{"repo":"NoahDragon/BuildYourOwnLispCn","branch":"master"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"学C语言写Lisp","language":"zh","gitbook":"*"},"file":{"path":"15.Standard-Library.md","mtime":"2019-11-09T16:49:30.170Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-09T16:51:43.819Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-collapse/collapse.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

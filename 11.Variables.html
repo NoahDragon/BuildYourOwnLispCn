@@ -1,0 +1,1690 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第十一章 • 变量 · 学C语言写Lisp</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex-toc/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-collapse/collapse.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="website-1573318305263.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    
+        <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    
+    
+    
+
+    
+    <link rel="next" href="12.Functions.html" />
+    
+    
+    <link rel="prev" href="10.Q-Expressions.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            <div class="book-logo">   
+                
+                <img src="./assets/logo.png"/>
+                
+            </div>
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.1" 
+            data-path="./">
+
+            
+                <a href="./">
+            
+                    
+                    第零零章 • 关于
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.2" 
+            data-path="01.Introduction.html">
+
+            
+                <a href="01.Introduction.html">
+            
+                    
+                    第零一章 • 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.3" 
+            data-path="02.Installation.html">
+
+            
+                <a href="02.Installation.html">
+            
+                    
+                    第零二章 • 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.4" 
+            data-path="03.Basics.html">
+
+            
+                <a href="03.Basics.html">
+            
+                    
+                    第零三章 • 基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.5" 
+            data-path="04.Interactive.html">
+
+            
+                <a href="04.Interactive.html">
+            
+                    
+                    第零四章 • 交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.6" 
+            data-path="05.Languages.html">
+
+            
+                <a href="05.Languages.html">
+            
+                    
+                    第零五章 • 编程语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.7" 
+            data-path="06.Parsing.html">
+
+            
+                <a href="06.Parsing.html">
+            
+                    
+                    第零六章 • 语法分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.8" 
+            data-path="07.Evaluation.html">
+
+            
+                <a href="07.Evaluation.html">
+            
+                    
+                    第零七章 • 计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.9" 
+            data-path="08.Error-Handling.html">
+
+            
+                <a href="08.Error-Handling.html">
+            
+                    
+                    第零八章 • 错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.10" 
+            data-path="09.S-Expressions.html">
+
+            
+                <a href="09.S-Expressions.html">
+            
+                    
+                    第零九章 • S-表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.11" 
+            data-path="10.Q-Expressions.html">
+
+            
+                <a href="10.Q-Expressions.html">
+            
+                    
+                    第零十章 • Q-表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+            active  selected  "
+            data-level="1.12" 
+            data-path="11.Variables.html">
+
+            
+                <a href="11.Variables.html">
+            
+                    
+                    第十一章 • 变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.13" 
+            data-path="12.Functions.html">
+
+            
+                <a href="12.Functions.html">
+            
+                    
+                    第十二章 • 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.14" 
+            data-path="13.Conditionals.html">
+
+            
+                <a href="13.Conditionals.html">
+            
+                    
+                    第十三章 • 条件分支
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.15" 
+            data-path="14.Strings.html">
+
+            
+                <a href="14.Strings.html">
+            
+                    
+                    第十四章 • 字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.16" 
+            data-path="15.Standard-Library.html">
+
+            
+                <a href="15.Standard-Library.html">
+            
+                    
+                    第十五章 • 标准库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.17" 
+            data-path="16.Bonus-Projects.html">
+
+            
+                <a href="16.Bonus-Projects.html">
+            
+                    
+                    第十六章 • 彩蛋
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.18" 
+            data-path="Appendix.html">
+
+            
+                <a href="Appendix.html">
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.19" 
+            >
+
+            
+                <a target="_blank" href="https://github.com/NoahDragon/BuildYourOwnLispCn/raw/master/source.tar.gz">
+            
+                    
+                    源代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.20" 
+            >
+
+            
+                <a target="_blank" href="http://buildyourownlisp.com/contents">
+            
+                    
+                    英文原版在线阅读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.21" 
+            >
+
+            
+                <a target="_blank" href="https://github.com/NoahDragon/BuildYourOwnLispCn">
+            
+                    
+                    Github
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >第十一章 • 变量</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7DP27M&placement=abnerchoume" id="_carbonads_js"></script>
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#chapter-11-variables"><b>1. </b>Chapter 11 Variables</a></li><ul><li><span class="title-icon "></span><a href="#immutability"><b>1.1. </b>Immutability</a></li><li><span class="title-icon "></span><a href="#symbol-syntax"><b>1.2. </b>Symbol Syntax</a></li><li><span class="title-icon "></span><a href="#function-pointers"><b>1.3. </b>Function Pointers</a></li><li><span class="title-icon "></span><a href="#cyclic-types"><b>1.4. </b>Cyclic Types</a></li><li><span class="title-icon "></span><a href="#function-type"><b>1.5. </b>Function Type</a></li><li><span class="title-icon "></span><a href="#environment"><b>1.6. </b>Environment</a></li><li><span class="title-icon "></span><a href="#variable-evaluation"><b>1.7. </b>Variable Evaluation</a></li><li><span class="title-icon "></span><a href="#builtins"><b>1.8. </b>Builtins</a></li><li><span class="title-icon "></span><a href="#define-function"><b>1.9. </b>Define Function</a></li><li><span class="title-icon "></span><a href="#error-reporting"><b>1.10. </b>Error Reporting</a></li><li><span class="title-icon "></span><a href="#bonus-marks"><b>1.11. </b>Bonus Marks</a></li><li><span class="title-icon "></span><a href="#reference"><b>1.12. </b>Reference</a></li></ul></ul></div><a href="#chapter-11-variables" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="chapter-11-variables"><a name="chapter-11-variables" class="anchor-navigation-ex-anchor" href="#chapter-11-variables"><i class="fa fa-link" aria-hidden="true"></i></a>1. Chapter 11 Variables</h1>
+<h2 id="immutability"><a name="immutability" class="anchor-navigation-ex-anchor" href="#immutability"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Immutability</h2>
+<p>In the previous chapters we&apos;ve made considerable progress on the infrastructure of our language.</p>
+<p>Already we can do a number of cool things that other languages can&apos;t, such as putting code inside lists. Now is the time to start adding in the features which will make our language practical. The first one of these is going to be variables.</p>
+<p>They&apos;re called variables, but it&apos;s a misleading name, because our variables won&apos;t vary. Our variables are immutable meaning they cannot change. Everything in our language so far has acted as if it is immutable. When we evaluate an expression we have imagined that the previous thing has been deleted and a new thing returned. In implementation often it is easier for us to reuse the data from the previous thing to build the new thing, but conceptually it is a good way to think about how our language works.</p>
+<p>So actually our variables are simply a way of naming values. They let us assign a name to a value, and then let us get a copy of that value later on when we need it.</p>
+<p>To allow for naming values we need to create a structure which stores the name and value of everything named in our program. We call this the environment. When we start a new interactive prompt we want to create a new environment to go along with it, in which each new bit of input is evaluated. Then we can store and recall variables as we program.</p>
+<blockquote>
+<h4 id="what-happens-when-we-re-assign-a-name-to-something-new-isnt-this-like-mutability"><a name="what-happens-when-we-re-assign-a-name-to-something-new-isnt-this-like-mutability" class="anchor-navigation-ex-anchor" href="#what-happens-when-we-re-assign-a-name-to-something-new-isnt-this-like-mutability"><i class="fa fa-link" aria-hidden="true"></i></a>What happens when we re-assign a name to something new? Isn&apos;t this like mutability?</h4>
+<p>In our Lisp, when we re-assign a name we&apos;re going to delete the old association and create a new one. This gives the illusion that the thing assigned to that name has changed, and is mutable, but in fact we have deleted the old thing and assigned it a new thing. This is different to C where we really can change the data pointed to by a pointer, or stored in a struct, without deleting it and creating a new one.</p>
+</blockquote>
+<h2 id="symbol-syntax"><a name="symbol-syntax" class="anchor-navigation-ex-anchor" href="#symbol-syntax"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Symbol Syntax</h2>
+<p>Now that we&apos;re going to allow for user defined variables we need to update the grammar for symbols to be more flexible. Rather than just our builtin functions it should match any possible valid symbol. Unlike in C, where the name a variable can be given is fairly restrictive, we&apos;re going to allow for all sorts of characters in the name of a variable.</p>
+<p>We can create a regular expression that expresses the range of characters available as follows.</p>
+<pre><code>/[a-zA-Z0-9_+\\-*\\/\\\\=&lt;&gt;!&amp;]+/
+</code></pre><p>On first glance this looks like we&apos;ve just bashed our hands into keyboard. Actually it is a regular expression using a big range specifier <code>[]</code>. Inside range specifiers special characters lose their meaning, but some of these characters still need to be escaped with backslashes. Because this is part of a C string we need to put two backslashes to represent a single backslash character in the input.</p>
+<p>This rule lets symbols be any of the normal C identifier characters <code>a-zA-Z0-9_</code> the arithmetic operator characters <code>+\\-*\\/</code> the backslash character <code>\\\\</code> the comparison operator characters <code>=&lt;&gt;!</code> or an ampersands <code>&amp;</code>. This will give us all the flexibility we need for defining new and existing symbols.</p>
+<pre><code class="lang-c">mpca_lang(MPCA_LANG_DEFAULT,
+  <span class="hljs-string">&quot;                                                     \
+    number : /-?[0-9]+/ ;                               \
+    symbol : /[a-zA-Z0-9_+\\-*\\/\\\\=&lt;&gt;!&amp;]+/ ;         \
+    sexpr  : &apos;(&apos; &lt;expr&gt;* &apos;)&apos; ;                          \
+    qexpr  : &apos;{&apos; &lt;expr&gt;* &apos;}&apos; ;                          \
+    expr   : &lt;number&gt; | &lt;symbol&gt; | &lt;sexpr&gt; | &lt;qexpr&gt; ;  \
+    lispy  : /^/ &lt;expr&gt;* /$/ ;                          \
+  &quot;</span>,
+  Number, Symbol, Sexpr, Qexpr, Expr, Lispy);
+</code></pre>
+<h2 id="function-pointers"><a name="function-pointers" class="anchor-navigation-ex-anchor" href="#function-pointers"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. Function Pointers</h2>
+<p>Once we introduce variables, symbols will no longer represent functions in our language, but rather they will represent a name for us to look up into our environment and get some new value back from.</p>
+<p>Therefore we need a new value to represent functions in our language, which we can return once one of the builtin symbols is encountered. To create this new type of <code>lval</code> we are going to use something called a <em>function pointer</em>.</p>
+<p>Function pointers are a great feature of C that lets you store and pass around pointers to functions. It doesn&apos;t make sense to edit the data pointed to by these pointers. Instead we use them to call the function they point to, as if it were a normal function.</p>
+<p>Like normal pointers, function pointers have some type associated with them. This type specifies the type of the function pointed to, not the type of the data pointed to. This lets the compiler work out if it has been called correctly.</p>
+<p>In the previous chapter our builtin functions took a lval<em> as input and returned a `lval</em><code>as output. In this chapter our builtin functions will take an extra pointer to the environment</code>lenv*<code>as input. We can declare a new function pointer type called</code>lbuiltin`, for this type of function, like this.</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> lval*(*lbuiltin)(lenv*, lval*);
+</code></pre>
+<blockquote>
+<h4 id="why-is-that-syntax-so-odd"><a name="why-is-that-syntax-so-odd" class="anchor-navigation-ex-anchor" href="#why-is-that-syntax-so-odd"><i class="fa fa-link" aria-hidden="true"></i></a>Why is that syntax so odd?</h4>
+<p>In some places the syntax of C can look particularly weird. It can help if we understand exactly why the syntax is like this. Let us de-construct the syntax in the example above part by part.
+First the <code>typedef</code>. This can be put before any standard variable declaration. It results in the name of the variable, being declared a new type, matching what would be the inferred type of that variable. This is why in the above declaration what looks like the function name becomes the new type name.
+Next all those <code>*</code>. Pointer types in C are actually meant to be written with the star <code>*</code> on the left hand side of the variable name, not the right hand side of the type <code>int *x;</code>. This is because C type syntax works by a kind of inference. Instead of reading &quot;Create a new <code>int</code> pointer <code>x</code>&quot;. It is meant to read &quot;Create a new variable <code>x</code> where to dereference <code>x</code> results in an <code>int</code>.&quot; Therefore <code>x</code> is inferred to be a pointer to an <code>int</code>.
+This idea is extended to function pointers. We can read the above declaration as follows. &quot;To get an <code>lval*</code> we dereference <code>lbuiltin</code> and call it with a <code>lenv*</code> and a <code>lval*</code>.&quot; Therefore lbuiltin must be a function pointer that takes an <code>lenv*</code> and a <code>lval*</code> and returns a <code>lval*</code>.</p>
+</blockquote>
+<h2 id="cyclic-types"><a name="cyclic-types" class="anchor-navigation-ex-anchor" href="#cyclic-types"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. Cyclic Types</h2>
+<p>The <code>lbuiltin</code> type references the <code>lval</code> type and the lenv type. This means that they should be declared first in the source file.</p>
+<p>But we want to make a <code>lbuiltin</code> field in our <code>lval</code> struct so we can create function values. So therefore our lbuiltin declaration must go before our <code>lval</code> declaration. This leads to what is called a cyclic type dependency, where two types depend on each other.</p>
+<p>We&apos;ve come across this problem before with functions which depend on each other. The solution was to create a <em>forward declaration</em> which declared a function but left the body of it empty.</p>
+<p>In C we can do exactly the same with types. First we declare two <code>struct</code> types without a body. Secondly we typedef these to the names <code>lval</code> and <code>lenv</code>. Then we can define our <code>lbuiltin</code> function pointer type. And finally we can define the body of our <code>lval</code> struct. Now all our type issues are resolved and the compiler won&apos;t complain any more.</p>
+<pre><code class="lang-c"><span class="hljs-comment">/* Forward Declarations */</span>
+
+<span class="hljs-keyword">struct</span> lval;
+<span class="hljs-keyword">struct</span> lenv;
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> lval lval;
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> lenv lenv;
+
+<span class="hljs-comment">/* Lisp Value */</span>
+
+<span class="hljs-keyword">enum</span> { LVAL_ERR, LVAL_NUM,   LVAL_SYM,
+       LVAL_FUN, LVAL_SEXPR, LVAL_QEXPR };
+
+<span class="hljs-keyword">typedef</span> lval*(*lbuiltin)(lenv*, lval*);
+
+<span class="hljs-keyword">struct</span> lval {
+  <span class="hljs-keyword">int</span> type;
+
+  <span class="hljs-keyword">long</span> num;
+  <span class="hljs-keyword">char</span>* err;
+  <span class="hljs-keyword">char</span>* sym;
+  lbuiltin fun;
+
+  <span class="hljs-keyword">int</span> count;
+  lval** cell;
+};
+</code></pre>
+<h2 id="function-type"><a name="function-type" class="anchor-navigation-ex-anchor" href="#function-type"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. Function Type</h2>
+<p>As we&apos;ve added a new possible <code>lval</code> type with the enumeration <code>LVAL_FUN</code>. We should update all our relevant functions that work on <code>lvals</code> to deal correctly with this update. In most cases this just means inserting new cases into switch statements.</p>
+<p>We can start by making a new constructor function for this type.</p>
+<pre><code class="lang-c"><span class="hljs-function">lval* <span class="hljs-title">lval_fun</span><span class="hljs-params">(lbuiltin func)</span> </span>{
+  lval* v = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval));
+  v-&gt;type = LVAL_FUN;
+  v-&gt;fun = func;
+  <span class="hljs-keyword">return</span> v;
+}
+</code></pre>
+<p>On <strong>deletion</strong> we don&apos;t need to do anything special for function pointers.</p>
+<pre><code class="lang-c"><span class="hljs-keyword">case</span> LVAL_FUN: <span class="hljs-keyword">break</span>;
+</code></pre>
+<p>On <strong>printing</strong> we can just print out a nominal string.</p>
+<pre><code class="lang-c"><span class="hljs-keyword">case</span> LVAL_FUN:   <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&lt;function&gt;&quot;</span>); <span class="hljs-keyword">break</span>;
+</code></pre>
+<p>We&apos;re also going to add a new function for copying an <code>lval</code>. This is going to come in useful when we put things into, and take things out of, the environment. For numbers and functions we can just copy the relevant fields directly. For strings we need to copy using <code>malloc</code> and <code>strcpy</code>. To copy lists we need to allocate the correct amount of space and then copy each element individually.</p>
+<pre><code class="lang-c"><span class="hljs-function">lval* <span class="hljs-title">lval_copy</span><span class="hljs-params">(lval* v)</span> </span>{
+
+  lval* x = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval));
+  x-&gt;type = v-&gt;type;
+
+  <span class="hljs-keyword">switch</span> (v-&gt;type) {
+
+    <span class="hljs-comment">/* Copy Functions and Numbers Directly */</span>
+    <span class="hljs-keyword">case</span> LVAL_FUN: x-&gt;fun = v-&gt;fun; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_NUM: x-&gt;num = v-&gt;num; <span class="hljs-keyword">break</span>;
+
+    <span class="hljs-comment">/* Copy Strings using malloc and strcpy */</span>
+    <span class="hljs-keyword">case</span> LVAL_ERR:
+      x-&gt;err = <span class="hljs-built_in">malloc</span>(<span class="hljs-built_in">strlen</span>(v-&gt;err) + <span class="hljs-number">1</span>);
+      <span class="hljs-built_in">strcpy</span>(x-&gt;err, v-&gt;err); <span class="hljs-keyword">break</span>;
+
+    <span class="hljs-keyword">case</span> LVAL_SYM:
+      x-&gt;sym = <span class="hljs-built_in">malloc</span>(<span class="hljs-built_in">strlen</span>(v-&gt;sym) + <span class="hljs-number">1</span>);
+      <span class="hljs-built_in">strcpy</span>(x-&gt;sym, v-&gt;sym); <span class="hljs-keyword">break</span>;
+
+    <span class="hljs-comment">/* Copy Lists by copying each sub-expression */</span>
+    <span class="hljs-keyword">case</span> LVAL_SEXPR:
+    <span class="hljs-keyword">case</span> LVAL_QEXPR:
+      x-&gt;count = v-&gt;count;
+      x-&gt;cell = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval*) * x-&gt;count);
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; x-&gt;count; i++) {
+        x-&gt;cell[i] = lval_copy(v-&gt;cell[i]);
+      }
+    <span class="hljs-keyword">break</span>;
+  }
+
+  <span class="hljs-keyword">return</span> x;
+}
+</code></pre>
+<h2 id="environment"><a name="environment" class="anchor-navigation-ex-anchor" href="#environment"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. Environment</h2>
+<p>Our environment structure must encode a list of relationships between names and values. There are many ways to build a structure that can do this sort of thing. We are going to go for the simplest possible method that works well. This is to use two lists of equal length. One is a list of <code>lval*</code>, and the other is a list of <code>char*</code>. Each entry in one list has a corresponding entry in the other list at the same position.</p>
+<p>We&apos;ve already forward declared our lenv struct, so we can define it as follows.</p>
+<pre><code class="lang-c"><span class="hljs-keyword">struct</span> lenv {
+  <span class="hljs-keyword">int</span> count;
+  <span class="hljs-keyword">char</span>** syms;
+  lval** vals;
+};
+</code></pre>
+<p>We need some functions to create and delete this structure. These are pretty simple. Creation initialises the struct fields, while deletion iterates over the items in both lists and deletes or frees them.</p>
+<pre><code class="lang-c"><span class="hljs-function">lenv* <span class="hljs-title">lenv_new</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>{
+  lenv* e = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lenv));
+  e-&gt;count = <span class="hljs-number">0</span>;
+  e-&gt;syms = <span class="hljs-literal">NULL</span>;
+  e-&gt;vals = <span class="hljs-literal">NULL</span>;
+  <span class="hljs-keyword">return</span> e;
+}
+</code></pre>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lenv_del</span><span class="hljs-params">(lenv* e)</span> </span>{
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; e-&gt;count; i++) {
+    <span class="hljs-built_in">free</span>(e-&gt;syms[i]);
+    lval_del(e-&gt;vals[i]);
+  }
+  <span class="hljs-built_in">free</span>(e-&gt;syms);
+  <span class="hljs-built_in">free</span>(e-&gt;vals);
+  <span class="hljs-built_in">free</span>(e);
+}
+</code></pre>
+<p>Next we can create two functions that either get values from the environment or put values into it.</p>
+<p>To get a value from the environment we loop over all the items in the environment and check if the given symbol matches any of the stored strings. If we find a match we can return a copy of the stored value. If no match is found we should return an error.</p>
+<p>The function for putting new variables into the environment is a little bit more complex. First we want to check if a variable with the same name already exists. If this is the case we should replace its value with the new one. To do this we loop over all the existing variables in the environment and check their name. If a match is found we delete the value stored at that location, and store there a copy of the input value.</p>
+<p>If no existing value is found with that name, we need to allocate some more space to put it in. For this we can use <code>realloc</code>, and store a copy of the lval and its name at the newly allocated locations.</p>
+<pre><code class="lang-c"><span class="hljs-function">lval* <span class="hljs-title">lenv_get</span><span class="hljs-params">(lenv* e, lval* k)</span> </span>{
+
+  <span class="hljs-comment">/* Iterate over all items in environment */</span>
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; e-&gt;count; i++) {
+    <span class="hljs-comment">/* Check if the stored string matches the symbol string */</span>
+    <span class="hljs-comment">/* If it does, return a copy of the value */</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(e-&gt;syms[i], k-&gt;sym) == <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">return</span> lval_copy(e-&gt;vals[i]);
+    }
+  }
+  <span class="hljs-comment">/* If no symbol found return error */</span>
+  <span class="hljs-keyword">return</span> lval_err(<span class="hljs-string">&quot;unbound symbol!&quot;</span>);
+}
+</code></pre>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lenv_put</span><span class="hljs-params">(lenv* e, lval* k, lval* v)</span> </span>{
+
+  <span class="hljs-comment">/* Iterate over all items in environment */</span>
+  <span class="hljs-comment">/* This is to see if variable already exists */</span>
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; e-&gt;count; i++) {
+
+    <span class="hljs-comment">/* If variable is found delete item at that position */</span>
+    <span class="hljs-comment">/* And replace with variable supplied by user */</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(e-&gt;syms[i], k-&gt;sym) == <span class="hljs-number">0</span>) {
+      lval_del(e-&gt;vals[i]);
+      e-&gt;vals[i] = lval_copy(v);
+      <span class="hljs-keyword">return</span>;
+    }
+  }
+
+  <span class="hljs-comment">/* If no existing entry found allocate space for new entry */</span>
+  e-&gt;count++;
+  e-&gt;vals = <span class="hljs-built_in">realloc</span>(e-&gt;vals, <span class="hljs-keyword">sizeof</span>(lval*) * e-&gt;count);
+  e-&gt;syms = <span class="hljs-built_in">realloc</span>(e-&gt;syms, <span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">char</span>*) * e-&gt;count);
+
+  <span class="hljs-comment">/* Copy contents of lval and symbol string into new location */</span>
+  e-&gt;vals[e-&gt;count<span class="hljs-number">-1</span>] = lval_copy(v);
+  e-&gt;syms[e-&gt;count<span class="hljs-number">-1</span>] = <span class="hljs-built_in">malloc</span>(<span class="hljs-built_in">strlen</span>(k-&gt;sym)+<span class="hljs-number">1</span>);
+  <span class="hljs-built_in">strcpy</span>(e-&gt;syms[e-&gt;count<span class="hljs-number">-1</span>], k-&gt;sym);
+}
+</code></pre>
+<h2 id="variable-evaluation"><a name="variable-evaluation" class="anchor-navigation-ex-anchor" href="#variable-evaluation"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. Variable Evaluation</h2>
+<p>Our evaluation function now depends on some environment. We should pass this in as an argument and use it to get a value if we encounter a symbol type. Because our environment returns a copy of the value we need to remember to delete the input symbol <code>lval</code>.</p>
+<pre><code class="lang-c"><span class="hljs-function">lval* <span class="hljs-title">lval_eval</span><span class="hljs-params">(lenv* e, lval* v)</span> </span>{
+  <span class="hljs-keyword">if</span> (v-&gt;type == LVAL_SYM) {
+    lval* x = lenv_get(e, v);
+    lval_del(v);
+    <span class="hljs-keyword">return</span> x;
+  }
+  <span class="hljs-keyword">if</span> (v-&gt;type == LVAL_SEXPR) { <span class="hljs-keyword">return</span> lval_eval_sexpr(e, v); }
+  <span class="hljs-keyword">return</span> v;
+}
+</code></pre>
+<p>Because we&apos;ve added a function type, our evaluation of S-Expressions also needs to change. Instead of checking for a symbol type we want to ensure it is a function type. If this condition holds we can call the <code>fun</code> field of the <code>lval</code> using the same notation as standard function calls.</p>
+<pre><code class="lang-c"><span class="hljs-function">lval* <span class="hljs-title">lval_eval_sexpr</span><span class="hljs-params">(lenv* e, lval* v)</span> </span>{
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; v-&gt;count; i++) {
+    v-&gt;cell[i] = lval_eval(e, v-&gt;cell[i]);
+  }
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; v-&gt;count; i++) {
+    <span class="hljs-keyword">if</span> (v-&gt;cell[i]-&gt;type == LVAL_ERR) { <span class="hljs-keyword">return</span> lval_take(v, i); }
+  }
+
+  <span class="hljs-keyword">if</span> (v-&gt;count == <span class="hljs-number">0</span>) { <span class="hljs-keyword">return</span> v; }
+  <span class="hljs-keyword">if</span> (v-&gt;count == <span class="hljs-number">1</span>) { <span class="hljs-keyword">return</span> lval_take(v, <span class="hljs-number">0</span>); }
+
+  <span class="hljs-comment">/* Ensure first element is a function after evaluation */</span>
+  lval* f = lval_pop(v, <span class="hljs-number">0</span>);
+  <span class="hljs-keyword">if</span> (f-&gt;type != LVAL_FUN) {
+    lval_del(v); lval_del(f);
+    <span class="hljs-keyword">return</span> lval_err(<span class="hljs-string">&quot;first element is not a function&quot;</span>);
+  }
+
+  <span class="hljs-comment">/* If so call function to get result */</span>
+  lval* result = f-&gt;fun(e, v);
+  lval_del(f);
+  <span class="hljs-keyword">return</span> result;
+}
+</code></pre>
+<h2 id="builtins"><a name="builtins" class="anchor-navigation-ex-anchor" href="#builtins"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. Builtins</h2>
+<p>Now that our evaluation relies on the new function type we need to make sure we can register all of our builtin functions with the environment before we start the interactive prompt. At the moment our builtin functions are not the correct type. We need to change their type signature such that they take in some environment, and where appropriate change them to pass this environment into other calls that require it. I won&apos;t post the code for this, so go ahead and change the type signatures of the buildin functions to take an <code>lenv*</code> as their first argument now. If you are confused you can look at the sample code for this chapter.</p>
+<p>As an example we can make use of our <code>builtin_op</code> function to define separate builtins for each of the maths functions our language supports.</p>
+<pre><code class="lang-c"><span class="hljs-function">lval* <span class="hljs-title">builtin_add</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  <span class="hljs-keyword">return</span> builtin_op(e, a, <span class="hljs-string">&quot;+&quot;</span>);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_sub</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  <span class="hljs-keyword">return</span> builtin_op(e, a, <span class="hljs-string">&quot;-&quot;</span>);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_mul</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  <span class="hljs-keyword">return</span> builtin_op(e, a, <span class="hljs-string">&quot;*&quot;</span>);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_div</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  <span class="hljs-keyword">return</span> builtin_op(e, a, <span class="hljs-string">&quot;/&quot;</span>);
+}
+</code></pre>
+<p>Once we&apos;ve changed the builtins to the correct type we can create a function that registers all of our builtins into an environment.</p>
+<p>For each builtin we want to create a function <code>lval</code> and symbol <code>lval</code> with the given name. We then register these with the environment using <code>lenv_put</code>. The environment always takes or returns copies of a values, so we need to remember to delete these two <code>lval</code> after registration as we won&apos;t need them any more.</p>
+<p>If we split this task into two functions we can neatly register all of our builtins with some environment.</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lenv_add_builtin</span><span class="hljs-params">(lenv* e, <span class="hljs-keyword">char</span>* name, lbuiltin func)</span> </span>{
+  lval* k = lval_sym(name);
+  lval* v = lval_fun(func);
+  lenv_put(e, k, v);
+  lval_del(k); lval_del(v);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lenv_add_builtins</span><span class="hljs-params">(lenv* e)</span> </span>{
+  <span class="hljs-comment">/* List Functions */</span>
+  lenv_add_builtin(e, <span class="hljs-string">&quot;list&quot;</span>, builtin_list);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;head&quot;</span>, builtin_head);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;tail&quot;</span>, builtin_tail);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;eval&quot;</span>, builtin_eval);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;join&quot;</span>, builtin_join);
+
+  <span class="hljs-comment">/* Mathematical Functions */</span>
+  lenv_add_builtin(e, <span class="hljs-string">&quot;+&quot;</span>, builtin_add);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;-&quot;</span>, builtin_sub);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;*&quot;</span>, builtin_mul);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;/&quot;</span>, builtin_div);
+}
+</code></pre>
+<p>The final step is to call this function before we create the interactive prompt. We also need to remember to delete the environment once we are finished.</p>
+<pre><code class="lang-c">lenv* e = lenv_new();
+lenv_add_builtins(e);
+
+<span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+
+  <span class="hljs-keyword">char</span>* input = readline(<span class="hljs-string">&quot;lispy&gt; &quot;</span>);
+  add_history(input);
+
+  <span class="hljs-keyword">mpc_result_t</span> r;
+  <span class="hljs-keyword">if</span> (mpc_parse(<span class="hljs-string">&quot;&lt;stdin&gt;&quot;</span>, input, Lispy, &amp;r)) {
+
+    lval* x = lval_eval(e, lval_read(r.output));
+    lval_println(x);
+    lval_del(x);
+
+    mpc_ast_delete(r.output);
+  } <span class="hljs-keyword">else</span> {
+    mpc_err_print(r.error);
+    mpc_err_delete(r.error);
+  }
+
+  <span class="hljs-built_in">free</span>(input);
+
+}
+
+lenv_del(e);
+</code></pre>
+<p>If everything is working correctly we should have a play around in the prompt and verify that functions are actually a new type of value now, not symbols.</p>
+<pre><code>lispy&gt; +
+&lt;function&gt;
+lispy&gt; eval (head {5 10 11 15})
+5
+lispy&gt; eval (head {+ - + - * /})
+&lt;function&gt;
+lispy&gt; (eval (head {+ - + - * /})) 10 20
+30
+lispy&gt; hello
+Error: unbound symbol!
+lispy&gt;
+</code></pre><h2 id="define-function"><a name="define-function" class="anchor-navigation-ex-anchor" href="#define-function"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. Define Function</h2>
+<p>We&apos;ve managed to register our builtins as variables but we still don&apos;t have a way for users to define their own variables.</p>
+<p>This is actually a bit awkward. We need to get the user to pass in a symbol to name, as well as the value to assign to it. But symbols can&apos;t appear on their own. Otherwise the evaluation function will attempt to retrieve a value for them from the environment.</p>
+<p>The only way we can pass around symbols without them being evaluated is to put them between <code>{}</code> in a quoted expression. So we&apos;re going to use this technique for our define function. It will take as input a list of symbols, and a number of other values. It will then assign each of the values to each of the symbols.</p>
+<p>This function should act like any other builtin. It first checks for error conditions and then performs some command and returns a value. In this case it first checks that the input arguments are the correct types. It then iterates over each symbol and value and puts them into the environment. If there is an error we can return it, but on success we will return the empty expression <code>()</code>.</p>
+<pre><code class="lang-c"><span class="hljs-function">lval* <span class="hljs-title">builtin_def</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  LASSERT(a, a-&gt;cell[<span class="hljs-number">0</span>]-&gt;type == LVAL_QEXPR,
+    <span class="hljs-string">&quot;Function &apos;def&apos; passed incorrect type!&quot;</span>);
+
+  <span class="hljs-comment">/* First argument is symbol list */</span>
+  lval* syms = a-&gt;cell[<span class="hljs-number">0</span>];
+
+  <span class="hljs-comment">/* Ensure all elements of first list are symbols */</span>
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; syms-&gt;count; i++) {
+    LASSERT(a, syms-&gt;cell[i]-&gt;type == LVAL_SYM,
+      <span class="hljs-string">&quot;Function &apos;def&apos; cannot define non-symbol&quot;</span>);
+  }
+
+  <span class="hljs-comment">/* Check correct number of symbols and values */</span>
+  LASSERT(a, syms-&gt;count == a-&gt;count<span class="hljs-number">-1</span>,
+    <span class="hljs-string">&quot;Function &apos;def&apos; cannot define incorrect &quot;</span>
+    <span class="hljs-string">&quot;number of values to symbols&quot;</span>);
+
+  <span class="hljs-comment">/* Assign copies of values to symbols */</span>
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; syms-&gt;count; i++) {
+    lenv_put(e, syms-&gt;cell[i], a-&gt;cell[i+<span class="hljs-number">1</span>]);
+  }
+
+  lval_del(a);
+  <span class="hljs-keyword">return</span> lval_sexpr();
+}
+</code></pre>
+<p>We need to register this new builtin using our builtin function <code>lenv_add_builtins</code>.</p>
+<pre><code class="lang-c"><span class="hljs-comment">/* Variable Functions */</span>
+lenv_add_builtin(e, <span class="hljs-string">&quot;def&quot;</span>,  builtin_def);
+</code></pre>
+<p>Now we should be able to support user defined variables. Because our <code>def</code> function takes in a list of symbols we can do some cool things storing and manipulating symbols in lists before passing them to be defined. Have a play around in the prompt and ensure everything is working correctly. You should get behaviour as follows. Explore what other complex methods are possible for the definition and evaluation of variables. Once we get to defining functions we&apos;ll really see some of the useful things that can be done with this approach.</p>
+<pre><code>lispy&gt; def {x} 100
+()
+lispy&gt; def {y} 200
+()
+lispy&gt; x
+100
+lispy&gt; y
+200
+lispy&gt; + x y
+300
+lispy&gt; def {a b} 5 6
+()
+lispy&gt; + a b
+11
+lispy&gt; def {arglist} {a b x y}
+()
+lispy&gt; arglist
+{a b x y}
+lispy&gt; def arglist 1 2 3 4
+()
+lispy&gt; list a b x y
+{1 2 3 4}
+lispy&gt;
+</code></pre><h2 id="error-reporting"><a name="error-reporting" class="anchor-navigation-ex-anchor" href="#error-reporting"><i class="fa fa-link" aria-hidden="true"></i></a>1.10. Error Reporting</h2>
+<p>So far our error reporting doesn&apos;t work so well. We can report when an error occurs, and give a vague notion of what the problem was, but we don&apos;t give the user much information about what exactly has gone wrong. For example if there is an unbound symbol we should be able to report exactly which symbol was unbound. This can help the user track down errors, typos, and other trivial problems.</p>
+<p>Wouldn&apos;t it be great if we could write a function that can report errors in a similar way to how <code>printf</code> works. It would be ideal if we could pass in strings, integers, and other data to make our error messages richer.</p>
+<p>The <code>printf</code> function is a special function in C because it takes a variable number of arguments. We can create our own variable argument functions, which is what we&apos;re going to do to make our error reporting better.</p>
+<p>We&apos;ll modify <code>lval_err</code> to act in the same way as <code>printf</code>, taking in a format string, and after that a variable number of arguments to match into this string.</p>
+<p>To declare that a function takes variables arguments in the type signature you use the special syntax of ellipsis <code>...</code>, which represent the rest of the arguments.</p>
+<pre><code class="lang-c"><span class="hljs-function">lval* <span class="hljs-title">lval_err</span><span class="hljs-params">(<span class="hljs-keyword">char</span>* fmt, ...)</span></span>;
+</code></pre>
+<p>Then, inside the function there are standard library functions we can use to examine what the caller has passed in.</p>
+<p>The first step is to create a <code>va_list</code> struct and initialise it with <code>va_start</code>, passing in the last named argument. For other purposes it is possible to examine each argument passed in using <code>va_arg</code>, but we are going to pass our whole variable argument list directly to the vsnprintf function. This function acts like <code>printf</code> but instead writes to a string and takes in a <code>va_list</code>. Once we are done with our variable arguments, we should call <code>va_end</code> to cleanup any resources used.</p>
+<p>The <code>vsnprintf</code> function outputs to a string, which we need to allocate some first. Because we don&apos;t know the size of this string until we&apos;ve run the function we first allocate a buffer <code>512</code> characters big and then reallocate to a smaller buffer once we&apos;ve output to it. If an error message is going to be longer than 512 characters it will just get cut off, but hopefully this won&apos;t happen.</p>
+<p>Putting it all together our new error function looks like this.</p>
+<pre><code class="lang-c"><span class="hljs-function">lval* <span class="hljs-title">lval_err</span><span class="hljs-params">(<span class="hljs-keyword">char</span>* fmt, ...)</span> </span>{
+  lval* v = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval));
+  v-&gt;type = LVAL_ERR;
+
+  <span class="hljs-comment">/* Create a va list and initialize it */</span>
+  va_list va;
+  va_start(va, fmt);
+
+  <span class="hljs-comment">/* Allocate 512 bytes of space */</span>
+  v-&gt;err = <span class="hljs-built_in">malloc</span>(<span class="hljs-number">512</span>);
+
+  <span class="hljs-comment">/* printf the error string with a maximum of 511 characters */</span>
+  vsnprintf(v-&gt;err, <span class="hljs-number">511</span>, fmt, va);
+
+  <span class="hljs-comment">/* Reallocate to number of bytes actually used */</span>
+  v-&gt;err = <span class="hljs-built_in">realloc</span>(v-&gt;err, <span class="hljs-built_in">strlen</span>(v-&gt;err)+<span class="hljs-number">1</span>);
+
+  <span class="hljs-comment">/* Cleanup our va list */</span>
+  va_end(va);
+
+  <span class="hljs-keyword">return</span> v;
+}
+</code></pre>
+<p>Using this we can then start adding in some better error messages to our functions. As an example we can look at <code>lenv_get</code>. When a symbol can&apos;t be found, rather than reporting a generic error, we can actually report the name that was not found.</p>
+<pre><code class="lang-c"><span class="hljs-keyword">return</span> lval_err(<span class="hljs-string">&quot;Unbound Symbol &apos;%s&apos;&quot;</span>, k-&gt;sym);
+</code></pre>
+<p>We can also adapt our <code>LASSERT</code> macro such that it can take variable arguments too. Because this is a macro and not a standard function the syntax is slightly different. On the left hand side of the definition we use the ellipses notation again, but on the right hand side we use a special variable <code>__VA_ARGS__</code> to paste in the contents of all the other arguments.</p>
+<p>We need to prefix this special variable with two hash signs <code>##</code>. This ensures that it is pasted correctly when the macro is passed no extra arguments. In essence what this does is make sure to remove the leading comma <code>,</code> to appear as if no extra arguments were passed in.</p>
+<p>Because we might use <code>args</code> in the construction of the error message we need to make sure we don&apos;t delete it until we&apos;ve created the error value.</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> LASSERT(args, cond, fmt, ...) \
+  <span class="hljs-meta-keyword">if</span> (!(cond)) { \
+    lval* err = lval_err(fmt, ##__VA_ARGS__); \
+    lval_del(args); \
+    return err; \
+  }</span>
+</code></pre>
+<p>Now we can update some of our error messages to make them more informative. For example if the incorrect number of arguments were passed we can specify how many were required and how many were given.</p>
+<pre><code class="lang-c">LASSERT(a, a-&gt;count == <span class="hljs-number">1</span>,
+  <span class="hljs-string">&quot;Function &apos;head&apos; passed too many arguments. &quot;</span>
+  <span class="hljs-string">&quot;Got %i, Expected %i.&quot;</span>,
+  a-&gt;count, <span class="hljs-number">1</span>);
+</code></pre>
+<p>We can also improve our error reporting for type errors. We should attempt to report what type was expected by a function and what type it actually got. Before we can do this it would be useful to have a function that took as input some type enumeration and returned a string representation of that type.</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">char</span>* <span class="hljs-title">ltype_name</span><span class="hljs-params">(<span class="hljs-keyword">int</span> t)</span> </span>{
+  <span class="hljs-keyword">switch</span>(t) {
+    <span class="hljs-keyword">case</span> LVAL_FUN: <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Function&quot;</span>;
+    <span class="hljs-keyword">case</span> LVAL_NUM: <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Number&quot;</span>;
+    <span class="hljs-keyword">case</span> LVAL_ERR: <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Error&quot;</span>;
+    <span class="hljs-keyword">case</span> LVAL_SYM: <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Symbol&quot;</span>;
+    <span class="hljs-keyword">case</span> LVAL_SEXPR: <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;S-Expression&quot;</span>;
+    <span class="hljs-keyword">case</span> LVAL_QEXPR: <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Q-Expression&quot;</span>;
+    <span class="hljs-keyword">default</span>: <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Unknown&quot;</span>;
+  }
+}
+</code></pre>
+<pre><code class="lang-c">LASSERT(a, a-&gt;cell[<span class="hljs-number">0</span>]-&gt;type == LVAL_QEXPR,
+  <span class="hljs-string">&quot;Function &apos;head&apos; passed incorrect type for argument 0. &quot;</span>
+  <span class="hljs-string">&quot;Got %s, Expected %s.&quot;</span>,
+  ltype_name(a-&gt;cell[<span class="hljs-number">0</span>]-&gt;type), ltype_name(LVAL_QEXPR));
+</code></pre>
+<p>Go ahead and use <code>LASSERT</code> to report errors in greater depth throughout the code. This should make debugging many of the next stages much easier as we begin to write complicated code using our new language. See if you can use macros to save on typing and automatically generate code for common methods of error reporting.</p>
+<pre><code>lispy&gt; + 1 {5 6 7}
+Error: Function &apos;+&apos; passed incorrect type for argument 1. Got Q-Expression, Expected Number.
+lispy&gt; head {1 2 3} {4 5 6}
+Error: Function &apos;head&apos; passed incorrect number of arguments. Got 2, Expected 1.
+lispy&gt;
+</code></pre><h2 id="bonus-marks"><a name="bonus-marks" class="anchor-navigation-ex-anchor" href="#bonus-marks"><i class="fa fa-link" aria-hidden="true"></i></a>1.11. Bonus Marks</h2>
+<ul>
+<li>Create a Macro to aid specifically with reporting type errors.</li>
+<li>Create a Macro to aid specifically with reporting argument count errors.</li>
+<li>Create a Macro to aid specifically with reporting empty list errors.</li>
+<li>Change printing a builtin function so that it prints its name.</li>
+<li>Write a function for printing out all the named values in an environment.</li>
+<li>Redefine one of the builtin variables to something different.</li>
+<li>Change redefinition of one of the builtin variables to something different an error.</li>
+<li>Create an <code>exit</code> function for stopping the prompt and exiting.</li>
+</ul>
+<h2 id="reference"><a name="reference" class="anchor-navigation-ex-anchor" href="#reference"><i class="fa fa-link" aria-hidden="true"></i></a>1.12. Reference</h2>
+<p><details><summary>variables.c</summary><pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;mpc.h&quot;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> _WIN32</span>
+
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> buffer[<span class="hljs-number">2048</span>];
+
+<span class="hljs-function"><span class="hljs-keyword">char</span>* <span class="hljs-title">readline</span><span class="hljs-params">(<span class="hljs-keyword">char</span>* prompt)</span> </span>{
+  <span class="hljs-built_in">fputs</span>(prompt, <span class="hljs-built_in">stdout</span>);
+  fgets(buffer, <span class="hljs-number">2048</span>, <span class="hljs-built_in">stdin</span>);
+  <span class="hljs-keyword">char</span>* cpy = <span class="hljs-built_in">malloc</span>(<span class="hljs-built_in">strlen</span>(buffer)+<span class="hljs-number">1</span>);
+  <span class="hljs-built_in">strcpy</span>(cpy, buffer);
+  cpy[<span class="hljs-built_in">strlen</span>(cpy)<span class="hljs-number">-1</span>] = <span class="hljs-string">&apos;\0&apos;</span>;
+  <span class="hljs-keyword">return</span> cpy;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">add_history</span><span class="hljs-params">(<span class="hljs-keyword">char</span>* unused)</span> </span>{}
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">else</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;editline/readline.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;editline/history.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+
+<span class="hljs-comment">/* Forward Declarations */</span>
+
+<span class="hljs-keyword">struct</span> lval;
+<span class="hljs-keyword">struct</span> lenv;
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> lval lval;
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> lenv lenv;
+
+<span class="hljs-comment">/* Lisp Value */</span>
+
+<span class="hljs-keyword">enum</span> { LVAL_ERR, LVAL_NUM,   LVAL_SYM, 
+       LVAL_FUN, LVAL_SEXPR, LVAL_QEXPR };
+
+<span class="hljs-keyword">typedef</span> lval*(*lbuiltin)(lenv*, lval*);
+
+<span class="hljs-keyword">struct</span> lval {
+  <span class="hljs-keyword">int</span> type;
+  <span class="hljs-keyword">long</span> num;
+  <span class="hljs-keyword">char</span>* err;
+  <span class="hljs-keyword">char</span>* sym;
+  lbuiltin fun;
+  <span class="hljs-keyword">int</span> count;
+  lval** cell;
+};
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_num</span><span class="hljs-params">(<span class="hljs-keyword">long</span> x)</span> </span>{
+  lval* v = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval));
+  v-&gt;type = LVAL_NUM;
+  v-&gt;num = x;
+  <span class="hljs-keyword">return</span> v;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_err</span><span class="hljs-params">(<span class="hljs-keyword">char</span>* fmt, ...)</span> </span>{
+  lval* v = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval));
+  v-&gt;type = LVAL_ERR;
+
+  <span class="hljs-comment">/* Create a va list and initialize it */</span>
+  va_list va;
+  va_start(va, fmt);
+
+  <span class="hljs-comment">/* Allocate 512 bytes of space */</span>
+  v-&gt;err = <span class="hljs-built_in">malloc</span>(<span class="hljs-number">512</span>);
+
+  <span class="hljs-comment">/* printf the error string with a maximum of 511 characters */</span>
+  vsnprintf(v-&gt;err, <span class="hljs-number">511</span>, fmt, va);
+
+  <span class="hljs-comment">/* Reallocate to number of bytes actually used */</span>
+  v-&gt;err = <span class="hljs-built_in">realloc</span>(v-&gt;err, <span class="hljs-built_in">strlen</span>(v-&gt;err)+<span class="hljs-number">1</span>);
+
+  <span class="hljs-comment">/* Cleanup our va list */</span>
+  va_end(va);
+
+  <span class="hljs-keyword">return</span> v;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_sym</span><span class="hljs-params">(<span class="hljs-keyword">char</span>* s)</span> </span>{
+  lval* v = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval));
+  v-&gt;type = LVAL_SYM;
+  v-&gt;sym = <span class="hljs-built_in">malloc</span>(<span class="hljs-built_in">strlen</span>(s) + <span class="hljs-number">1</span>);
+  <span class="hljs-built_in">strcpy</span>(v-&gt;sym, s);
+  <span class="hljs-keyword">return</span> v;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_fun</span><span class="hljs-params">(lbuiltin func)</span> </span>{
+  lval* v = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval));
+  v-&gt;type = LVAL_FUN;
+  v-&gt;fun = func;
+  <span class="hljs-keyword">return</span> v;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_sexpr</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>{
+  lval* v = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval));
+  v-&gt;type = LVAL_SEXPR;
+  v-&gt;count = <span class="hljs-number">0</span>;
+  v-&gt;cell = <span class="hljs-literal">NULL</span>;
+  <span class="hljs-keyword">return</span> v;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_qexpr</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>{
+  lval* v = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval));
+  v-&gt;type = LVAL_QEXPR;
+  v-&gt;count = <span class="hljs-number">0</span>;
+  v-&gt;cell = <span class="hljs-literal">NULL</span>;
+  <span class="hljs-keyword">return</span> v;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lval_del</span><span class="hljs-params">(lval* v)</span> </span>{
+
+  <span class="hljs-keyword">switch</span> (v-&gt;type) {
+    <span class="hljs-keyword">case</span> LVAL_NUM: <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_FUN: <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_ERR: <span class="hljs-built_in">free</span>(v-&gt;err); <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_SYM: <span class="hljs-built_in">free</span>(v-&gt;sym); <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_QEXPR:
+    <span class="hljs-keyword">case</span> LVAL_SEXPR:
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; v-&gt;count; i++) {
+        lval_del(v-&gt;cell[i]);
+      }
+      <span class="hljs-built_in">free</span>(v-&gt;cell);
+    <span class="hljs-keyword">break</span>;
+  }
+
+  <span class="hljs-built_in">free</span>(v);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_copy</span><span class="hljs-params">(lval* v)</span> </span>{
+
+  lval* x = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval));
+  x-&gt;type = v-&gt;type;
+
+  <span class="hljs-keyword">switch</span> (v-&gt;type) {
+
+    <span class="hljs-comment">/* Copy Functions and Numbers Directly */</span>
+    <span class="hljs-keyword">case</span> LVAL_FUN: x-&gt;fun = v-&gt;fun; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_NUM: x-&gt;num = v-&gt;num; <span class="hljs-keyword">break</span>;
+
+    <span class="hljs-comment">/* Copy Strings using malloc and strcpy */</span>
+    <span class="hljs-keyword">case</span> LVAL_ERR:
+      x-&gt;err = <span class="hljs-built_in">malloc</span>(<span class="hljs-built_in">strlen</span>(v-&gt;err) + <span class="hljs-number">1</span>);
+      <span class="hljs-built_in">strcpy</span>(x-&gt;err, v-&gt;err); <span class="hljs-keyword">break</span>;
+
+    <span class="hljs-keyword">case</span> LVAL_SYM:
+      x-&gt;sym = <span class="hljs-built_in">malloc</span>(<span class="hljs-built_in">strlen</span>(v-&gt;sym) + <span class="hljs-number">1</span>);
+      <span class="hljs-built_in">strcpy</span>(x-&gt;sym, v-&gt;sym); <span class="hljs-keyword">break</span>;
+
+    <span class="hljs-comment">/* Copy Lists by copying each sub-expression */</span>
+    <span class="hljs-keyword">case</span> LVAL_SEXPR:
+    <span class="hljs-keyword">case</span> LVAL_QEXPR:
+      x-&gt;count = v-&gt;count;
+      x-&gt;cell = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lval*) * x-&gt;count);
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; x-&gt;count; i++) {
+        x-&gt;cell[i] = lval_copy(v-&gt;cell[i]);
+      }
+    <span class="hljs-keyword">break</span>;
+  }
+
+  <span class="hljs-keyword">return</span> x;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_add</span><span class="hljs-params">(lval* v, lval* x)</span> </span>{
+  v-&gt;count++;
+  v-&gt;cell = <span class="hljs-built_in">realloc</span>(v-&gt;cell, <span class="hljs-keyword">sizeof</span>(lval*) * v-&gt;count);
+  v-&gt;cell[v-&gt;count<span class="hljs-number">-1</span>] = x;
+  <span class="hljs-keyword">return</span> v;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_join</span><span class="hljs-params">(lval* x, lval* y)</span> </span>{  
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; y-&gt;count; i++) {
+    x = lval_add(x, y-&gt;cell[i]);
+  }
+  <span class="hljs-built_in">free</span>(y-&gt;cell);
+  <span class="hljs-built_in">free</span>(y);  
+  <span class="hljs-keyword">return</span> x;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_pop</span><span class="hljs-params">(lval* v, <span class="hljs-keyword">int</span> i)</span> </span>{
+  lval* x = v-&gt;cell[i];  
+  memmove(&amp;v-&gt;cell[i], &amp;v-&gt;cell[i+<span class="hljs-number">1</span>],
+    <span class="hljs-keyword">sizeof</span>(lval*) * (v-&gt;count-i<span class="hljs-number">-1</span>));  
+  v-&gt;count--;  
+  v-&gt;cell = <span class="hljs-built_in">realloc</span>(v-&gt;cell, <span class="hljs-keyword">sizeof</span>(lval*) * v-&gt;count);
+  <span class="hljs-keyword">return</span> x;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_take</span><span class="hljs-params">(lval* v, <span class="hljs-keyword">int</span> i)</span> </span>{
+  lval* x = lval_pop(v, i);
+  lval_del(v);
+  <span class="hljs-keyword">return</span> x;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lval_print</span><span class="hljs-params">(lval* v)</span></span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lval_print_expr</span><span class="hljs-params">(lval* v, <span class="hljs-keyword">char</span> open, <span class="hljs-keyword">char</span> close)</span> </span>{
+  <span class="hljs-built_in">putchar</span>(open);
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; v-&gt;count; i++) {
+    lval_print(v-&gt;cell[i]);    
+    <span class="hljs-keyword">if</span> (i != (v-&gt;count<span class="hljs-number">-1</span>)) {
+      <span class="hljs-built_in">putchar</span>(<span class="hljs-string">&apos; &apos;</span>);
+    }
+  }
+  <span class="hljs-built_in">putchar</span>(close);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lval_print</span><span class="hljs-params">(lval* v)</span> </span>{
+  <span class="hljs-keyword">switch</span> (v-&gt;type) {
+    <span class="hljs-keyword">case</span> LVAL_FUN:   <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&lt;function&gt;&quot;</span>); <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_NUM:   <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%li&quot;</span>, v-&gt;num); <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_ERR:   <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Error: %s&quot;</span>, v-&gt;err); <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_SYM:   <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s&quot;</span>, v-&gt;sym); <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_SEXPR: lval_print_expr(v, <span class="hljs-string">&apos;(&apos;</span>, <span class="hljs-string">&apos;)&apos;</span>); <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> LVAL_QEXPR: lval_print_expr(v, <span class="hljs-string">&apos;{&apos;</span>, <span class="hljs-string">&apos;}&apos;</span>); <span class="hljs-keyword">break</span>;
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lval_println</span><span class="hljs-params">(lval* v)</span> </span>{ lval_print(v); <span class="hljs-built_in">putchar</span>(<span class="hljs-string">&apos;\n&apos;</span>); }
+
+<span class="hljs-function"><span class="hljs-keyword">char</span>* <span class="hljs-title">ltype_name</span><span class="hljs-params">(<span class="hljs-keyword">int</span> t)</span> </span>{
+  <span class="hljs-keyword">switch</span>(t) {
+    <span class="hljs-keyword">case</span> LVAL_FUN: <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Function&quot;</span>;
+    <span class="hljs-keyword">case</span> LVAL_NUM: <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Number&quot;</span>;
+    <span class="hljs-keyword">case</span> LVAL_ERR: <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Error&quot;</span>;
+    <span class="hljs-keyword">case</span> LVAL_SYM: <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Symbol&quot;</span>;
+    <span class="hljs-keyword">case</span> LVAL_SEXPR: <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;S-Expression&quot;</span>;
+    <span class="hljs-keyword">case</span> LVAL_QEXPR: <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Q-Expression&quot;</span>;
+    <span class="hljs-keyword">default</span>: <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Unknown&quot;</span>;
+  }
+}
+
+<span class="hljs-comment">/* Lisp Environment */</span>
+
+<span class="hljs-keyword">struct</span> lenv {
+  <span class="hljs-keyword">int</span> count;
+  <span class="hljs-keyword">char</span>** syms;
+  lval** vals;
+};
+
+<span class="hljs-function">lenv* <span class="hljs-title">lenv_new</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>{
+
+  <span class="hljs-comment">/* Initialize struct */</span>
+  lenv* e = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(lenv));
+  e-&gt;count = <span class="hljs-number">0</span>;
+  e-&gt;syms = <span class="hljs-literal">NULL</span>;
+  e-&gt;vals = <span class="hljs-literal">NULL</span>;
+  <span class="hljs-keyword">return</span> e;
+
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lenv_del</span><span class="hljs-params">(lenv* e)</span> </span>{
+
+  <span class="hljs-comment">/* Iterate over all items in environment deleting them */</span>
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; e-&gt;count; i++) {
+    <span class="hljs-built_in">free</span>(e-&gt;syms[i]);
+    lval_del(e-&gt;vals[i]);
+  }
+
+  <span class="hljs-comment">/* Free allocated memory for lists */</span>
+  <span class="hljs-built_in">free</span>(e-&gt;syms);
+  <span class="hljs-built_in">free</span>(e-&gt;vals);
+  <span class="hljs-built_in">free</span>(e);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lenv_get</span><span class="hljs-params">(lenv* e, lval* k)</span> </span>{
+
+  <span class="hljs-comment">/* Iterate over all items in environment */</span>
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; e-&gt;count; i++) {
+    <span class="hljs-comment">/* Check if the stored string matches the symbol string */</span>
+    <span class="hljs-comment">/* If it does, return a copy of the value */</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(e-&gt;syms[i], k-&gt;sym) == <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">return</span> lval_copy(e-&gt;vals[i]);
+    }
+  }
+  <span class="hljs-comment">/* If no symbol found return error */</span>
+  <span class="hljs-keyword">return</span> lval_err(<span class="hljs-string">&quot;Unbound Symbol &apos;%s&apos;&quot;</span>, k-&gt;sym);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lenv_put</span><span class="hljs-params">(lenv* e, lval* k, lval* v)</span> </span>{
+
+  <span class="hljs-comment">/* Iterate over all items in environment */</span>
+  <span class="hljs-comment">/* This is to see if variable already exists */</span>
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; e-&gt;count; i++) {
+
+    <span class="hljs-comment">/* If variable is found delete item at that position */</span>
+    <span class="hljs-comment">/* And replace with variable supplied by user */</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(e-&gt;syms[i], k-&gt;sym) == <span class="hljs-number">0</span>) {
+      lval_del(e-&gt;vals[i]);
+      e-&gt;vals[i] = lval_copy(v);
+      <span class="hljs-keyword">return</span>;
+    }
+  }
+
+  <span class="hljs-comment">/* If no existing entry found allocate space for new entry */</span>
+  e-&gt;count++;
+  e-&gt;vals = <span class="hljs-built_in">realloc</span>(e-&gt;vals, <span class="hljs-keyword">sizeof</span>(lval*) * e-&gt;count);
+  e-&gt;syms = <span class="hljs-built_in">realloc</span>(e-&gt;syms, <span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">char</span>*) * e-&gt;count);
+
+  <span class="hljs-comment">/* Copy contents of lval and symbol string into new location */</span>
+  e-&gt;vals[e-&gt;count<span class="hljs-number">-1</span>] = lval_copy(v);
+  e-&gt;syms[e-&gt;count<span class="hljs-number">-1</span>] = <span class="hljs-built_in">malloc</span>(<span class="hljs-built_in">strlen</span>(k-&gt;sym)+<span class="hljs-number">1</span>);
+  <span class="hljs-built_in">strcpy</span>(e-&gt;syms[e-&gt;count<span class="hljs-number">-1</span>], k-&gt;sym);
+}
+
+<span class="hljs-comment">/* Builtins */</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> LASSERT(args, cond, fmt, ...) \
+  <span class="hljs-meta-keyword">if</span> (!(cond)) { lval* err = lval_err(fmt, ##__VA_ARGS__); lval_del(args); return err; }</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> LASSERT_TYPE(func, args, index, expect) \
+  LASSERT(args, args-&gt;cell[index]-&gt;type == expect, \
+    <span class="hljs-string">&quot;Function &apos;%s&apos; passed incorrect type for argument %i. Got %s, Expected %s.&quot;</span>, \
+    func, index, ltype_name(args-&gt;cell[index]-&gt;type), ltype_name(expect))</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> LASSERT_NUM(func, args, num) \
+  LASSERT(args, args-&gt;count == num, \
+    <span class="hljs-string">&quot;Function &apos;%s&apos; passed incorrect number of arguments. Got %i, Expected %i.&quot;</span>, \
+    func, args-&gt;count, num)</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> LASSERT_NOT_EMPTY(func, args, index) \
+  LASSERT(args, args-&gt;cell[index]-&gt;count != 0, \
+    <span class="hljs-string">&quot;Function &apos;%s&apos; passed {} for argument %i.&quot;</span>, func, index);</span>
+
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_eval</span><span class="hljs-params">(lenv* e, lval* v)</span></span>;
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_list</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  a-&gt;type = LVAL_QEXPR;
+  <span class="hljs-keyword">return</span> a;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_head</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  LASSERT_NUM(<span class="hljs-string">&quot;head&quot;</span>, a, <span class="hljs-number">1</span>);
+  LASSERT_TYPE(<span class="hljs-string">&quot;head&quot;</span>, a, <span class="hljs-number">0</span>, LVAL_QEXPR);
+  LASSERT_NOT_EMPTY(<span class="hljs-string">&quot;head&quot;</span>, a, <span class="hljs-number">0</span>);
+
+  lval* v = lval_take(a, <span class="hljs-number">0</span>);  
+  <span class="hljs-keyword">while</span> (v-&gt;count &gt; <span class="hljs-number">1</span>) { lval_del(lval_pop(v, <span class="hljs-number">1</span>)); }
+  <span class="hljs-keyword">return</span> v;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_tail</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  LASSERT_NUM(<span class="hljs-string">&quot;tail&quot;</span>, a, <span class="hljs-number">1</span>);
+  LASSERT_TYPE(<span class="hljs-string">&quot;tail&quot;</span>, a, <span class="hljs-number">0</span>, LVAL_QEXPR);
+  LASSERT_NOT_EMPTY(<span class="hljs-string">&quot;tail&quot;</span>, a, <span class="hljs-number">0</span>);
+
+  lval* v = lval_take(a, <span class="hljs-number">0</span>);  
+  lval_del(lval_pop(v, <span class="hljs-number">0</span>));
+  <span class="hljs-keyword">return</span> v;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_eval</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  LASSERT_NUM(<span class="hljs-string">&quot;eval&quot;</span>, a, <span class="hljs-number">1</span>);
+  LASSERT_TYPE(<span class="hljs-string">&quot;eval&quot;</span>, a, <span class="hljs-number">0</span>, LVAL_QEXPR);
+
+  lval* x = lval_take(a, <span class="hljs-number">0</span>);
+  x-&gt;type = LVAL_SEXPR;
+  <span class="hljs-keyword">return</span> lval_eval(e, x);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_join</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; a-&gt;count; i++) {
+    LASSERT_TYPE(<span class="hljs-string">&quot;join&quot;</span>, a, i, LVAL_QEXPR);
+  }
+
+  lval* x = lval_pop(a, <span class="hljs-number">0</span>);
+
+  <span class="hljs-keyword">while</span> (a-&gt;count) {
+    lval* y = lval_pop(a, <span class="hljs-number">0</span>);
+    x = lval_join(x, y);
+  }
+
+  lval_del(a);
+  <span class="hljs-keyword">return</span> x;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_op</span><span class="hljs-params">(lenv* e, lval* a, <span class="hljs-keyword">char</span>* op)</span> </span>{
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; a-&gt;count; i++) {
+    LASSERT_TYPE(op, a, i, LVAL_NUM);
+  }
+
+  lval* x = lval_pop(a, <span class="hljs-number">0</span>);
+
+  <span class="hljs-keyword">if</span> ((<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;-&quot;</span>) == <span class="hljs-number">0</span>) &amp;&amp; a-&gt;count == <span class="hljs-number">0</span>) {
+    x-&gt;num = -x-&gt;num;
+  }
+
+  <span class="hljs-keyword">while</span> (a-&gt;count &gt; <span class="hljs-number">0</span>) {  
+    lval* y = lval_pop(a, <span class="hljs-number">0</span>);
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;+&quot;</span>) == <span class="hljs-number">0</span>) { x-&gt;num += y-&gt;num; }
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;-&quot;</span>) == <span class="hljs-number">0</span>) { x-&gt;num -= y-&gt;num; }
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;*&quot;</span>) == <span class="hljs-number">0</span>) { x-&gt;num *= y-&gt;num; }
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(op, <span class="hljs-string">&quot;/&quot;</span>) == <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">if</span> (y-&gt;num == <span class="hljs-number">0</span>) {
+        lval_del(x); lval_del(y);
+        x = lval_err(<span class="hljs-string">&quot;Division By Zero.&quot;</span>);
+        <span class="hljs-keyword">break</span>;
+      }
+      x-&gt;num /= y-&gt;num;
+    }
+
+    lval_del(y);
+  }
+
+  lval_del(a);
+  <span class="hljs-keyword">return</span> x;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_add</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  <span class="hljs-keyword">return</span> builtin_op(e, a, <span class="hljs-string">&quot;+&quot;</span>);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_sub</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  <span class="hljs-keyword">return</span> builtin_op(e, a, <span class="hljs-string">&quot;-&quot;</span>);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_mul</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  <span class="hljs-keyword">return</span> builtin_op(e, a, <span class="hljs-string">&quot;*&quot;</span>);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_div</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+  <span class="hljs-keyword">return</span> builtin_op(e, a, <span class="hljs-string">&quot;/&quot;</span>);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">builtin_def</span><span class="hljs-params">(lenv* e, lval* a)</span> </span>{
+
+  LASSERT_TYPE(<span class="hljs-string">&quot;def&quot;</span>, a, <span class="hljs-number">0</span>, LVAL_QEXPR);
+
+  <span class="hljs-comment">/* First argument is symbol list */</span>
+  lval* syms = a-&gt;cell[<span class="hljs-number">0</span>];
+
+  <span class="hljs-comment">/* Ensure all elements of first list are symbols */</span>
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; syms-&gt;count; i++) {
+    LASSERT(a, (syms-&gt;cell[i]-&gt;type == LVAL_SYM),
+      <span class="hljs-string">&quot;Function &apos;def&apos; cannot define non-symbol. &quot;</span>
+      <span class="hljs-string">&quot;Got %s, Expected %s.&quot;</span>,
+      ltype_name(syms-&gt;cell[i]-&gt;type), ltype_name(LVAL_SYM));
+  }
+
+  <span class="hljs-comment">/* Check correct number of symbols and values */</span>
+  LASSERT(a, (syms-&gt;count == a-&gt;count<span class="hljs-number">-1</span>),
+    <span class="hljs-string">&quot;Function &apos;def&apos; passed too many arguments for symbols. &quot;</span>
+    <span class="hljs-string">&quot;Got %i, Expected %i.&quot;</span>,
+    syms-&gt;count, a-&gt;count<span class="hljs-number">-1</span>);
+
+  <span class="hljs-comment">/* Assign copies of values to symbols */</span>
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; syms-&gt;count; i++) {
+    lenv_put(e, syms-&gt;cell[i], a-&gt;cell[i+<span class="hljs-number">1</span>]);
+  }
+
+  lval_del(a);
+  <span class="hljs-keyword">return</span> lval_sexpr();
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lenv_add_builtin</span><span class="hljs-params">(lenv* e, <span class="hljs-keyword">char</span>* name, lbuiltin func)</span> </span>{
+  lval* k = lval_sym(name);
+  lval* v = lval_fun(func);
+  lenv_put(e, k, v);
+  lval_del(k); lval_del(v);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lenv_add_builtins</span><span class="hljs-params">(lenv* e)</span> </span>{
+  <span class="hljs-comment">/* Variable Functions */</span>
+  lenv_add_builtin(e, <span class="hljs-string">&quot;def&quot;</span>, builtin_def);
+
+  <span class="hljs-comment">/* List Functions */</span>
+  lenv_add_builtin(e, <span class="hljs-string">&quot;list&quot;</span>, builtin_list);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;head&quot;</span>, builtin_head);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;tail&quot;</span>, builtin_tail);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;eval&quot;</span>, builtin_eval);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;join&quot;</span>, builtin_join);
+
+  <span class="hljs-comment">/* Mathematical Functions */</span>
+  lenv_add_builtin(e, <span class="hljs-string">&quot;+&quot;</span>, builtin_add);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;-&quot;</span>, builtin_sub);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;*&quot;</span>, builtin_mul);
+  lenv_add_builtin(e, <span class="hljs-string">&quot;/&quot;</span>, builtin_div);
+}
+
+<span class="hljs-comment">/* Evaluation */</span>
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_eval_sexpr</span><span class="hljs-params">(lenv* e, lval* v)</span> </span>{
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; v-&gt;count; i++) {
+    v-&gt;cell[i] = lval_eval(e, v-&gt;cell[i]);
+  }
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; v-&gt;count; i++) {
+    <span class="hljs-keyword">if</span> (v-&gt;cell[i]-&gt;type == LVAL_ERR) { <span class="hljs-keyword">return</span> lval_take(v, i); }
+  }
+
+  <span class="hljs-keyword">if</span> (v-&gt;count == <span class="hljs-number">0</span>) { <span class="hljs-keyword">return</span> v; }  
+  <span class="hljs-keyword">if</span> (v-&gt;count == <span class="hljs-number">1</span>) { <span class="hljs-keyword">return</span> lval_take(v, <span class="hljs-number">0</span>); }
+
+  <span class="hljs-comment">/* Ensure first element is a function after evaluation */</span>
+  lval* f = lval_pop(v, <span class="hljs-number">0</span>);
+  <span class="hljs-keyword">if</span> (f-&gt;type != LVAL_FUN) {
+    lval* err = lval_err(
+      <span class="hljs-string">&quot;S-Expression starts with incorrect type. &quot;</span>
+      <span class="hljs-string">&quot;Got %s, Expected %s.&quot;</span>,
+      ltype_name(f-&gt;type), ltype_name(LVAL_FUN));
+    lval_del(f); lval_del(v);
+    <span class="hljs-keyword">return</span> err;
+  }
+
+  <span class="hljs-comment">/* If so call function to get result */</span>
+  lval* result = f-&gt;fun(e, v);
+  lval_del(f);
+  <span class="hljs-keyword">return</span> result;
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_eval</span><span class="hljs-params">(lenv* e, lval* v)</span> </span>{
+  <span class="hljs-keyword">if</span> (v-&gt;type == LVAL_SYM) {
+    lval* x = lenv_get(e, v);
+    lval_del(v);
+    <span class="hljs-keyword">return</span> x;
+  }
+  <span class="hljs-keyword">if</span> (v-&gt;type == LVAL_SEXPR) { <span class="hljs-keyword">return</span> lval_eval_sexpr(e, v); }
+  <span class="hljs-keyword">return</span> v;
+}
+
+<span class="hljs-comment">/* Reading */</span>
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_read_num</span><span class="hljs-params">(mpc_ast_t* t)</span> </span>{
+  errno = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">long</span> x = strtol(t-&gt;contents, <span class="hljs-literal">NULL</span>, <span class="hljs-number">10</span>);
+  <span class="hljs-keyword">return</span> errno != ERANGE ? lval_num(x) : lval_err(<span class="hljs-string">&quot;Invalid Number.&quot;</span>);
+}
+
+<span class="hljs-function">lval* <span class="hljs-title">lval_read</span><span class="hljs-params">(mpc_ast_t* t)</span> </span>{
+
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strstr</span>(t-&gt;tag, <span class="hljs-string">&quot;number&quot;</span>)) { <span class="hljs-keyword">return</span> lval_read_num(t); }
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strstr</span>(t-&gt;tag, <span class="hljs-string">&quot;symbol&quot;</span>)) { <span class="hljs-keyword">return</span> lval_sym(t-&gt;contents); }
+
+  lval* x = <span class="hljs-literal">NULL</span>;
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(t-&gt;tag, <span class="hljs-string">&quot;&gt;&quot;</span>) == <span class="hljs-number">0</span>) { x = lval_sexpr(); } 
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strstr</span>(t-&gt;tag, <span class="hljs-string">&quot;sexpr&quot;</span>))  { x = lval_sexpr(); }
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strstr</span>(t-&gt;tag, <span class="hljs-string">&quot;qexpr&quot;</span>))  { x = lval_qexpr(); }
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; t-&gt;children_num; i++) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(t-&gt;children[i]-&gt;contents, <span class="hljs-string">&quot;(&quot;</span>) == <span class="hljs-number">0</span>) { <span class="hljs-keyword">continue</span>; }
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(t-&gt;children[i]-&gt;contents, <span class="hljs-string">&quot;)&quot;</span>) == <span class="hljs-number">0</span>) { <span class="hljs-keyword">continue</span>; }
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(t-&gt;children[i]-&gt;contents, <span class="hljs-string">&quot;}&quot;</span>) == <span class="hljs-number">0</span>) { <span class="hljs-keyword">continue</span>; }
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(t-&gt;children[i]-&gt;contents, <span class="hljs-string">&quot;{&quot;</span>) == <span class="hljs-number">0</span>) { <span class="hljs-keyword">continue</span>; }
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(t-&gt;children[i]-&gt;tag,  <span class="hljs-string">&quot;regex&quot;</span>) == <span class="hljs-number">0</span>) { <span class="hljs-keyword">continue</span>; }
+    x = lval_add(x, lval_read(t-&gt;children[i]));
+  }
+
+  <span class="hljs-keyword">return</span> x;
+}
+
+<span class="hljs-comment">/* Main */</span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span>** argv)</span> </span>{
+
+  <span class="hljs-keyword">mpc_parser_t</span>* Number = mpc_new(<span class="hljs-string">&quot;number&quot;</span>);
+  <span class="hljs-keyword">mpc_parser_t</span>* Symbol = mpc_new(<span class="hljs-string">&quot;symbol&quot;</span>);
+  <span class="hljs-keyword">mpc_parser_t</span>* Sexpr  = mpc_new(<span class="hljs-string">&quot;sexpr&quot;</span>);
+  <span class="hljs-keyword">mpc_parser_t</span>* Qexpr  = mpc_new(<span class="hljs-string">&quot;qexpr&quot;</span>);
+  <span class="hljs-keyword">mpc_parser_t</span>* Expr   = mpc_new(<span class="hljs-string">&quot;expr&quot;</span>);
+  <span class="hljs-keyword">mpc_parser_t</span>* Lispy  = mpc_new(<span class="hljs-string">&quot;lispy&quot;</span>);
+
+  mpca_lang(MPCA_LANG_DEFAULT,
+    <span class="hljs-string">&quot;                                                     \
+      number : /-?[0-9]+/ ;                               \
+      symbol : /[a-zA-Z0-9_+\\-*\\/\\\\=&lt;&gt;!&amp;]+/ ;         \
+      sexpr  : &apos;(&apos; &lt;expr&gt;* &apos;)&apos; ;                          \
+      qexpr  : &apos;{&apos; &lt;expr&gt;* &apos;}&apos; ;                          \
+      expr   : &lt;number&gt; | &lt;symbol&gt; | &lt;sexpr&gt; | &lt;qexpr&gt; ;  \
+      lispy  : /^/ &lt;expr&gt;* /$/ ;                          \
+    &quot;</span>,
+    Number, Symbol, Sexpr, Qexpr, Expr, Lispy);
+
+  <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Lispy Version 0.0.0.0.7&quot;</span>);
+  <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Press Ctrl+c to Exit\n&quot;</span>);
+
+  lenv* e = lenv_new();
+  lenv_add_builtins(e);
+
+  <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+
+    <span class="hljs-keyword">char</span>* input = readline(<span class="hljs-string">&quot;lispy&gt; &quot;</span>);
+    add_history(input);
+
+    <span class="hljs-keyword">mpc_result_t</span> r;
+    <span class="hljs-keyword">if</span> (mpc_parse(<span class="hljs-string">&quot;&lt;stdin&gt;&quot;</span>, input, Lispy, &amp;r)) {
+      lval* x = lval_eval(e, lval_read(r.output));
+      lval_println(x);
+      lval_del(x);
+      mpc_ast_delete(r.output);
+    } <span class="hljs-keyword">else</span> {    
+      mpc_err_print(r.error);
+      mpc_err_delete(r.error);
+    }
+
+    <span class="hljs-built_in">free</span>(input);
+
+  }
+
+  lenv_del(e);
+
+  mpc_cleanup(<span class="hljs-number">6</span>, Number, Symbol, Sexpr, Qexpr, Expr, Lispy);
+
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+</details></p>
+<script src="_gitbook_plugin_analytics.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="10.Q-Expressions.html" class="navigation navigation-prev " aria-label="Previous page: 第零十章 • Q-表达式">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="12.Functions.html" class="navigation navigation-next " aria-label="Next page: 第十二章 • 函数">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第十一章 • 变量","level":"1.12","depth":1,"next":{"title":"第十二章 • 函数","level":"1.13","depth":1,"path":"12.Functions.md","ref":"12.Functions.md","articles":[]},"previous":{"title":"第零十章 • Q-表达式","level":"1.11","depth":1,"path":"10.Q-Expressions.md","ref":"10.Q-Expressions.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","anchor-navigation-ex-toc","theme-gestalt@git+https://github.com/NoahDragon/gitbook-plugin-theme-gestalt.git","-theme-default","styles-sass-fix","analytics","collapse"],"styles":{"website":"website-1573318305263.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"buildyourownlispcn"},"styles-sass-fix":{},"theme-gestalt":{"showLevel":false,"styles":{"website":"styles/website.css"},"logo":"./assets/logo.png","favicon":"./assets/logo.png","baseUrl":null,"excludeDefaultStyles":true,"doNotHideChildrenChapters":false},"analytics":{"google":"UA-48498357-5"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"collapse":{},"anchor-navigation-ex-toc":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-edit":{"repo":"NoahDragon/BuildYourOwnLispCn","branch":"master"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"学C语言写Lisp","language":"zh","gitbook":"*"},"file":{"path":"11.Variables.md","mtime":"2019-11-09T16:49:30.170Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-09T16:51:43.819Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-collapse/collapse.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,926 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第零四章 • 交互 · 学C语言写Lisp</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex-toc/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-collapse/collapse.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="website-1573318305263.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    
+        <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    
+    
+    
+
+    
+    <link rel="next" href="05.Languages.html" />
+    
+    
+    <link rel="prev" href="03.Basics.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            <div class="book-logo">   
+                
+                <img src="./assets/logo.png"/>
+                
+            </div>
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.1" 
+            data-path="./">
+
+            
+                <a href="./">
+            
+                    
+                    第零零章 • 关于
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.2" 
+            data-path="01.Introduction.html">
+
+            
+                <a href="01.Introduction.html">
+            
+                    
+                    第零一章 • 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.3" 
+            data-path="02.Installation.html">
+
+            
+                <a href="02.Installation.html">
+            
+                    
+                    第零二章 • 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.4" 
+            data-path="03.Basics.html">
+
+            
+                <a href="03.Basics.html">
+            
+                    
+                    第零三章 • 基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+            active  selected  "
+            data-level="1.5" 
+            data-path="04.Interactive.html">
+
+            
+                <a href="04.Interactive.html">
+            
+                    
+                    第零四章 • 交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.6" 
+            data-path="05.Languages.html">
+
+            
+                <a href="05.Languages.html">
+            
+                    
+                    第零五章 • 编程语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.7" 
+            data-path="06.Parsing.html">
+
+            
+                <a href="06.Parsing.html">
+            
+                    
+                    第零六章 • 语法分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.8" 
+            data-path="07.Evaluation.html">
+
+            
+                <a href="07.Evaluation.html">
+            
+                    
+                    第零七章 • 计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.9" 
+            data-path="08.Error-Handling.html">
+
+            
+                <a href="08.Error-Handling.html">
+            
+                    
+                    第零八章 • 错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.10" 
+            data-path="09.S-Expressions.html">
+
+            
+                <a href="09.S-Expressions.html">
+            
+                    
+                    第零九章 • S-表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.11" 
+            data-path="10.Q-Expressions.html">
+
+            
+                <a href="10.Q-Expressions.html">
+            
+                    
+                    第零十章 • Q-表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.12" 
+            data-path="11.Variables.html">
+
+            
+                <a href="11.Variables.html">
+            
+                    
+                    第十一章 • 变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.13" 
+            data-path="12.Functions.html">
+
+            
+                <a href="12.Functions.html">
+            
+                    
+                    第十二章 • 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.14" 
+            data-path="13.Conditionals.html">
+
+            
+                <a href="13.Conditionals.html">
+            
+                    
+                    第十三章 • 条件分支
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.15" 
+            data-path="14.Strings.html">
+
+            
+                <a href="14.Strings.html">
+            
+                    
+                    第十四章 • 字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.16" 
+            data-path="15.Standard-Library.html">
+
+            
+                <a href="15.Standard-Library.html">
+            
+                    
+                    第十五章 • 标准库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.17" 
+            data-path="16.Bonus-Projects.html">
+
+            
+                <a href="16.Bonus-Projects.html">
+            
+                    
+                    第十六章 • 彩蛋
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.18" 
+            data-path="Appendix.html">
+
+            
+                <a href="Appendix.html">
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.19" 
+            >
+
+            
+                <a target="_blank" href="https://github.com/NoahDragon/BuildYourOwnLispCn/raw/master/source.tar.gz">
+            
+                    
+                    源代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.20" 
+            >
+
+            
+                <a target="_blank" href="http://buildyourownlisp.com/contents">
+            
+                    
+                    英文原版在线阅读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.21" 
+            >
+
+            
+                <a target="_blank" href="https://github.com/NoahDragon/BuildYourOwnLispCn">
+            
+                    
+                    Github
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >第零四章 • 交互</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7DP27M&placement=abnerchoume" id="_carbonads_js"></script>
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x7B2C;&#x96F6;&#x56DB;&#x7AE0;--&#x4EA4;&#x4E92;"><b>1. </b>&#x7B2C;&#x96F6;&#x56DB;&#x7AE0; &#x2022; &#x4EA4;&#x4E92;</a></li><ul><li><span class="title-icon "></span><a href="#&#x8BFB;&#x53D6;-&#x6C42;&#x503C;-&#x8F93;&#x51FA;"><b>1.1. </b>&#x8BFB;&#x53D6;-&#x6C42;&#x503C;-&#x8F93;&#x51FA;</a></li><li><span class="title-icon "></span><a href="#&#x4EA4;&#x4E92;&#x63D0;&#x793A;"><b>1.2. </b>&#x4EA4;&#x4E92;&#x63D0;&#x793A;</a></li><li><span class="title-icon "></span><a href="#&#x7F16;&#x8BD1;"><b>1.3. </b>&#x7F16;&#x8BD1;</a></li><li><span class="title-icon "></span><a href="#&#x7F16;&#x8F91;&#x8F93;&#x5165;"><b>1.4. </b>&#x7F16;&#x8F91;&#x8F93;&#x5165;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;-editline-&#x5E93;"><b>1.5. </b>&#x4F7F;&#x7528; editline &#x5E93;</a></li><li><span class="title-icon "></span><a href="#&#x94FE;&#x63A5;-editline-&#x5E76;&#x7F16;&#x8BD1;"><b>1.6. </b>&#x94FE;&#x63A5; editline &#x5E76;&#x7F16;&#x8BD1;</a></li><li><span class="title-icon "></span><a href="#&#x9884;&#x5904;&#x7406;&#x5668;"><b>1.7. </b>&#x9884;&#x5904;&#x7406;&#x5668;</a></li><li><span class="title-icon "></span><a href="#&#x5F69;&#x86CB;"><b>1.8. </b>&#x5F69;&#x86CB;</a></li><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b>1.9. </b>&#x53C2;&#x8003;</a></li></ul></ul></div><a href="#&#x7B2C;&#x96F6;&#x56DB;&#x7AE0;--&#x4EA4;&#x4E92;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7B2C;&#x96F6;&#x56DB;&#x7AE0;--&#x4EA4;&#x4E92;"><a name="&#x7B2C;&#x96F6;&#x56DB;&#x7AE0;--&#x4EA4;&#x4E92;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x96F6;&#x56DB;&#x7AE0;--&#x4EA4;&#x4E92;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x7B2C;&#x96F6;&#x56DB;&#x7AE0; &#x2022; &#x4EA4;&#x4E92;</h1>
+<h2 id="&#x8BFB;&#x53D6;-&#x6C42;&#x503C;-&#x8F93;&#x51FA;"><a name="&#x8BFB;&#x53D6;-&#x6C42;&#x503C;-&#x8F93;&#x51FA;" class="anchor-navigation-ex-anchor" href="#&#x8BFB;&#x53D6;-&#x6C42;&#x503C;-&#x8F93;&#x51FA;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x8BFB;&#x53D6;-&#x6C42;&#x503C;-&#x8F93;&#x51FA;</h2>
+<p>&#x5728;&#x7F16;&#x5199;&#x6211;&#x4EEC;&#x7684; Lisp &#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5BFB;&#x627E;&#x4E00;&#x79CD;&#x548C;&#x5B83;&#x4EA4;&#x4E92;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x6700;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x4EE3;&#x7801;&#xFF0C;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6B21;&#x8FD0;&#x884C;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6848;&#x867D;&#x7136;&#x7406;&#x8BBA;&#x4E0A;&#x53EF;&#x884C;&#xFF0C;&#x4F46;&#x662F;&#x592A;&#x4E3A;&#x7E41;&#x7410;&#x3002;&#x5982;&#x679C;&#x53EF;&#x4EE5;&#x52A8;&#x6001;&#x5730;&#x548C;&#x7A0B;&#x5E8F;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x5730;&#x6D4B;&#x8BD5;&#x7A0B;&#x5E8F;&#x5728;&#x5404;&#x79CD;&#x6761;&#x4EF6;&#x4E0B;&#x7684;&#x884C;&#x4E3A;&#x3002;&#x6211;&#x4EEC;&#x79F0;&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x4E3A;&#x4EA4;&#x4E92;&#x63D0;&#x793A;&#x3002;</p>
+<p>&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x7A0B;&#x5E8F;&#x8BFB;&#x53D6;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;&#xFF0C;&#x5728;&#x7A0B;&#x5E8F;&#x5185;&#x90E8;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x4E00;&#x4E9B;&#x4FE1;&#x606F;&#x7ED9;&#x7528;&#x6237;&#x3002;&#x8FD9;&#x79CD;&#x7CFB;&#x7EDF;&#x4E5F;&#x88AB;&#x53EB;&#x505A; <em>REPL</em>&#xFF0C;&#x662F; <em>read-evaluate-print loop</em>  (&#x8BFB;&#x53D6;-&#x6C42;&#x503C;-&#x8F93;&#x51FA;&#x5FAA;&#x73AF;) &#x7684;&#x7B80;&#x5199;&#x3002;&#x8FD9;&#x79CD;&#x6280;&#x672F;&#x88AB;&#x5E7F;&#x6CDB;&#x5730;&#x5E94;&#x7528;&#x5728;&#x5404;&#x79CD;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x7684;&#x89E3;&#x91CA;&#x5668;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5B66;&#x8FC7; <em>Python</em>&#xFF0C;&#x90A3;&#x4F60;&#x4E00;&#x5B9A;&#x4E0D;&#x4F1A;&#x964C;&#x751F;&#x3002;</p>
+<p>&#x5728;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684; <em>REPL</em> &#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x7A0B;&#x5E8F;&#xFF1A;&#x8BFB;&#x53D6;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;&#xFF0C;&#x7B80;&#x5355;&#x5904;&#x7406;&#x540E;&#x8FD4;&#x56DE;&#x7ED9;&#x7528;&#x6237;&#x3002;&#x5728;&#x540E;&#x9762;&#x7684;&#x7AE0;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x5BF9;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x4E0D;&#x65AD;&#x6269;&#x5C55;&#xFF0C;&#x6700;&#x540E;&#x80FD;&#x591F;&#x6B63;&#x786E;&#x5730;&#x8BFB;&#x53D6;&#x5E76;&#x89E3;&#x6790;&#x4E00;&#x4E2A;&#x771F;&#x6B63;&#x7684; Lisp &#x7A0B;&#x5E8F;&#xFF0C;&#x5E76;&#x5C06;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x7ED9;&#x7528;&#x6237;&#x3002;</p>
+<h2 id="&#x4EA4;&#x4E92;&#x63D0;&#x793A;"><a name="&#x4EA4;&#x4E92;&#x63D0;&#x793A;" class="anchor-navigation-ex-anchor" href="#&#x4EA4;&#x4E92;&#x63D0;&#x793A;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x4EA4;&#x4E92;&#x63D0;&#x793A;</h2>
+<p>&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x60F3;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5FAA;&#x73AF;&#x4E0D;&#x65AD;&#x6253;&#x5370;&#x4FE1;&#x606F;&#x5E76;&#x7B49;&#x5F85;&#x7528;&#x6237;&#x8F93;&#x5165;&#x3002;&#x4E3A;&#x4E86;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>stdio.h</code> &#x4E2D;&#x7684; <code>fgets</code> &#x51FD;&#x6570;&#x3002;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x4E00;&#x76F4;&#x8BFB;&#x53D6;&#x76F4;&#x5230;&#x9047;&#x5230;&#x6362;&#x884C;&#x7B26;&#x4E3A;&#x6B62;&#x3002;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x627E;&#x4E2A;&#x5730;&#x65B9;&#x5B58;&#x50A8;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;&#x3002;&#x4E3A;&#x6B64;&#x53EF;&#x4EE5;&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x5927;&#x5C0F;&#x7684;&#x6570;&#x7EC4;&#x7F13;&#x51B2;&#x533A;&#x3002;</p>
+<p>&#x4E00;&#x65E6;&#x83B7;&#x53D6;&#x5230;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>printf</code> &#x5C06;&#x5B83;&#x6253;&#x5370;&#x5230;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+
+<span class="hljs-comment">/* Declare a buffer for user input of size 2048 */</span>
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> input[<span class="hljs-number">2048</span>];
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span>** argv)</span> </span>{
+
+  <span class="hljs-comment">/* Print Version and Exit Information */</span>
+  <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Lispy Version 0.0.0.0.1&quot;</span>);
+  <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Press Ctrl+c to Exit\n&quot;</span>);
+
+  <span class="hljs-comment">/* In a never ending loop */</span>
+  <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+
+    <span class="hljs-comment">/* Output our prompt */</span>
+    <span class="hljs-built_in">fputs</span>(<span class="hljs-string">&quot;lispy&gt; &quot;</span>, <span class="hljs-built_in">stdout</span>);
+
+    <span class="hljs-comment">/* Read a line of user input of maximum size 2048 */</span>
+    fgets(input, <span class="hljs-number">2048</span>, <span class="hljs-built_in">stdin</span>);
+
+    <span class="hljs-comment">/* Echo input back to user */</span>
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;No you&apos;re a %s&quot;</span>, input);
+  }
+
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<blockquote>
+<h4 id="&#x4EE3;&#x7801;&#x4E2D;&#x7684;--&#x662F;&#x4EC0;&#x4E48;&#xFF1F;"><a name="&#x4EE3;&#x7801;&#x4E2D;&#x7684;--&#x662F;&#x4EC0;&#x4E48;&#xFF1F;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;&#x4E2D;&#x7684;--&#x662F;&#x4EC0;&#x4E48;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EE3;&#x7801;&#x4E2D;&#x7684; <code>/*...*/</code> &#x662F;&#x4EC0;&#x4E48;&#xFF1F;</h4>
+<p>&#x8FD9;&#x662F; C &#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x6CE8;&#x91CA;&#xFF0C;&#x662F;&#x4E3A;&#x4E86;&#x5411;&#x5176;&#x5B83;&#x9605;&#x8BFB;&#x4EE3;&#x7801;&#x7684;&#x4EBA;&#x89E3;&#x91CA;&#x4EE3;&#x7801;&#x4F5C;&#x7528;&#x7684;&#x3002;&#x5728;&#x7F16;&#x8BD1;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x88AB;&#x7F16;&#x8BD1;&#x5668;&#x5FFD;&#x7565;&#x6389;&#x3002;</p>
+</blockquote>
+<p>&#x73B0;&#x5728;&#x6765;&#x6DF1;&#x5165;&#x89E3;&#x8BFB;&#x4E00;&#x4E0B;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x3002;</p>
+<p><code>static char input[2048];</code> &#x8FD9;&#x884C;&#x4EE3;&#x7801;&#x58F0;&#x660E;&#x4E86;&#x4E00;&#x4E2A;&#x62E5;&#x6709; 2048 &#x4E2A;&#x5B57;&#x7B26;&#x957F;&#x5EA6;&#x7684;&#x5168;&#x5C40;&#x6570;&#x7EC4;&#x3002;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x5728;&#x7A0B;&#x5E8F;&#x7684;&#x4EFB;&#x4F55;&#x5730;&#x65B9;&#x83B7;&#x53D6;&#x5230;&#x3002;&#x6211;&#x4EEC;&#x4F1A;&#x628A;&#x7528;&#x6237;&#x5728;&#x547D;&#x4EE4;&#x4E2D;&#x8F93;&#x5165;&#x7684;&#x8BED;&#x53E5;&#x4FDD;&#x5B58;&#x5230;&#x8FD9;&#x91CC;&#x9762;&#x6765;&#x3002;<code>static</code> &#x5173;&#x952E;&#x5B57;&#x6807;&#x660E;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x4EC5;&#x5728;&#x672C;&#x6587;&#x4EF6;&#x4E2D;&#x53EF;&#x89C1;&#x3002;<code>[2048]</code> &#x8868;&#x660E;&#x4E86;&#x6570;&#x7EC4;&#x7684;&#x5927;&#x5C0F;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>while(1)</code> &#x6765;&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x65E0;&#x9650;&#x5FAA;&#x73AF;&#xFF0C;&#x6761;&#x4EF6;&#x8BED;&#x53E5; <code>1</code> &#x6C38;&#x8FDC;&#x90FD;&#x4E3A;&#x771F;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x4E2A;&#x5FAA;&#x73AF;&#x4F1A;&#x4E00;&#x76F4;&#x6267;&#x884C;&#x4E0B;&#x53BB;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>fputs</code> &#x6253;&#x5370;&#x63D0;&#x793A;&#x4FE1;&#x606F;&#x3002;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x548C;&#x524D;&#x9762;&#x4ECB;&#x7ECD;&#x8FC7;&#x7684; <code>puts</code> &#x51FD;&#x6570;&#x533A;&#x522B;&#x662F; <code>fputs</code> &#x4E0D;&#x4F1A;&#x5728;&#x672B;&#x5C3E;&#x81EA;&#x52A8;&#x52A0;&#x6362;&#x884C;&#x7B26;&#x3002;&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>fgets</code> &#x51FD;&#x6570;&#x6765;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x8F93;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x8FD9;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x90FD;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x5199;&#x5165;&#x6216;&#x8BFB;&#x53D6;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>stdin</code> &#x548C; <code>stdout</code> &#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x3002;&#x8FD9;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x90FD;&#x662F;&#x5728; <code>&lt;stdio.h&gt;</code> &#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#xFF0C;&#x7528;&#x6765;&#x8868;&#x793A;&#x5411;&#x547D;&#x4EE4;&#x884C;&#x8FDB;&#x884C;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x3002;&#x5F53;&#x6211;&#x4EEC;&#x628A; <code>stdin</code> &#x4F20;&#x7ED9; <code>fgets</code> &#x540E;&#xFF0C;&#x5B83;&#x5C31;&#x4F1A;&#x7B49;&#x5F85;&#x7528;&#x6237;&#x8F93;&#x5165;&#x4E00;&#x4E32;&#x5B57;&#x7B26;&#xFF0C;&#x5E76;&#x6309;&#x4E0B;&#x56DE;&#x8F66;&#x952E;&#x3002;&#x5982;&#x679C;&#x5F97;&#x5230;&#x4E86;&#x5B57;&#x4E32;&#xFF0C;&#x5C31;&#x4F1A;&#x628A;&#x5B57;&#x4E32;&#x8FDE;&#x540C;&#x6362;&#x884C;&#x7B26;&#x5B58;&#x653E;&#x5230; <code>input</code> &#x6570;&#x7EC4;&#x4E2D;&#x3002;&#x4E3A;&#x4E86;&#x4E0D;&#x8BA9;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x6570;&#x636E;&#x592A;&#x5927;&#x6570;&#x7EC4;&#x88C5;&#x4E0D;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x8981;&#x6307;&#x5B9A;&#x4E00;&#x4E0B;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x7684;&#x6700;&#x5927;&#x957F;&#x5EA6;&#x4E3A; <code>2048</code>&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>printf</code> &#x51FD;&#x6570;&#x5C06;&#x5904;&#x7406;&#x540E;&#x7684;&#x4FE1;&#x606F;&#x8FD4;&#x56DE;&#x7ED9;&#x7528;&#x6237;&#x3002;<code>printf</code> &#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x540C;&#x65F6;&#x6253;&#x5370;&#x591A;&#x4E2A;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x3002;&#x5B83;&#x4F1A;&#x81EA;&#x52A8;&#x5BF9;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x53C2;&#x6570;&#x4E2D;&#x7684;&#x6A21;&#x5F0F;&#x8FDB;&#x884C;&#x5339;&#x914D;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E2D;&#x770B;&#x5230; <code>%s</code> &#x5B57;&#x6837;&#x3002;<code>printf</code> &#x5C06;&#x81EA;&#x52A8;&#x628A; <code>%s</code> &#x66FF;&#x6362;&#x4E3A;&#x540E;&#x9762;&#x7684;&#x53C2;&#x6570;&#x4E2D;&#x7684;&#x503C;&#x3002;<code>s</code> &#x4EE3;&#x8868;&#x5B57;&#x7B26;&#x4E32;(<code>string</code>)&#x3002;</p>
+<p>&#x66F4;&#x591A;&#x5173;&#x4E8E; <code>printf</code> &#x7684;&#x6A21;&#x5F0F;&#x79CD;&#x7C7B;&#x53CA;&#x5176;&#x7528;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="http://en.cppreference.com/w/c/io/printf" target="_blank">&#x6587;&#x6863;</a>&#x3002;</p>
+<blockquote>
+<h4 id="&#x6211;&#x600E;&#x4E48;&#x624D;&#x80FD;&#x77E5;&#x9053;&#x4E00;&#x4E9B;&#x7C7B;&#x4F3C;&#x4E8E;-fgets-&#x6216;-printf-&#x7684;&#x51FD;&#x6570;&#x7684;&#x7528;&#x6CD5;&#xFF1F;"><a name="&#x6211;&#x600E;&#x4E48;&#x624D;&#x80FD;&#x77E5;&#x9053;&#x4E00;&#x4E9B;&#x7C7B;&#x4F3C;&#x4E8E;-fgets-&#x6216;-printf-&#x7684;&#x51FD;&#x6570;&#x7684;&#x7528;&#x6CD5;&#xFF1F;" class="anchor-navigation-ex-anchor" href="#&#x6211;&#x600E;&#x4E48;&#x624D;&#x80FD;&#x77E5;&#x9053;&#x4E00;&#x4E9B;&#x7C7B;&#x4F3C;&#x4E8E;-fgets-&#x6216;-printf-&#x7684;&#x51FD;&#x6570;&#x7684;&#x7528;&#x6CD5;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6211;&#x600E;&#x4E48;&#x624D;&#x80FD;&#x77E5;&#x9053;&#x4E00;&#x4E9B;&#x7C7B;&#x4F3C;&#x4E8E; <code>fgets</code> &#x6216; <code>printf</code> &#x7684;&#x51FD;&#x6570;&#x7684;&#x7528;&#x6CD5;&#xFF1F;</h4>
+<p>&#x5F88;&#x660E;&#x663E;&#x4F60;&#x4E0D;&#x53EF;&#x80FD;&#x4E00;&#x5F00;&#x59CB;&#x5C31;&#x77E5;&#x9053;&#x8FD9;&#x4E9B;&#x6807;&#x51C6;&#x5E93;&#x51FD;&#x6570;&#x7684;&#x4F5C;&#x7528;&#x548C;&#x7528;&#x6CD5;&#xFF0C;&#x8FD9;&#x4E9B;&#x90FD;&#x9700;&#x8981;&#x7ECF;&#x9A8C;&#x3002;&#x5E78;&#x8FD0;&#x7684;&#x662F;&#xFF0C;C &#x8BED;&#x8A00;&#x7684;&#x6807;&#x51C6;&#x5E93;&#x975E;&#x5E38;&#x7CBE;&#x70BC;&#x3002;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x7684;&#x5E93;&#x51FD;&#x6570;&#x90FD;&#x53EF;&#x4EE5;&#x5728;&#x5E73;&#x65F6;&#x7684;&#x7EC3;&#x4E60;&#x4E2D;&#x4E86;&#x89E3;&#x5E76;&#x5B66;&#x4F1A;&#x4F7F;&#x7528;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x662F;&#x5E95;&#x5C42;&#x7684;&#x3001;&#x57FA;&#x672C;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5173;&#x6CE8;&#x4E00;&#x4E0B;<a href="http://en.cppreference.com/w/c" target="_blank">&#x53C2;&#x8003;&#x6587;&#x6863;</a>&#x4F1A;&#x5927;&#x6709;&#x88E8;&#x76CA;&#xFF0C;&#x56E0;&#x4E3A;&#x5F88;&#x53EF;&#x80FD;&#x6807;&#x51C6;&#x5E93;&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x51FD;&#x6570;&#x6240;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x6B63;&#x662F;&#x4F60;&#x60F3;&#x8981;&#x7684;&#xFF01;</p>
+</blockquote>
+<h2 id="&#x7F16;&#x8BD1;"><a name="&#x7F16;&#x8BD1;" class="anchor-navigation-ex-anchor" href="#&#x7F16;&#x8BD1;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x7F16;&#x8BD1;</h2>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5728;&#x7B2C;&#x4E8C;&#x7AE0;&#x4ECB;&#x7ECD;&#x8FC7;&#x7684;&#x547D;&#x4EE4;&#x6765;&#x7F16;&#x8BD1;&#x4E0A;&#x9762;&#x7684;&#x7A0B;&#x5E8F;&#xFF1A;</p>
+<p><code>cc -std=c99 -Wall prompt.c -o prompt</code></p>
+<p>&#x7F16;&#x8BD1;&#x901A;&#x8FC7;&#x4E4B;&#x540E;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x8BD5;&#x7740;&#x8FD0;&#x884C;&#x5E76;&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x3002;&#x6D4B;&#x8BD5;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>Ctrl+c</code> &#x5FEB;&#x6377;&#x952E;&#x6765;&#x9000;&#x51FA;&#x7A0B;&#x5E8F;&#x3002;&#x5982;&#x679C;&#x4E00;&#x5207;&#x6B63;&#x5E38;&#xFF0C;&#x4F60;&#x4F1A;&#x5F97;&#x5230;&#x7C7B;&#x4F3C;&#x4E8E;&#x4E0B;&#x9762;&#x7684;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>Lispy Version 0.0.0.0.1
+Press Ctrl+c to Exit
+
+lispy&gt; hello
+No You&apos;re a hello
+lispy&gt; my name is Dan
+No You&apos;re a my name is Dan
+lispy&gt; Stop being so rude!
+No You&apos;re a Stop being so rude!
+lispy&gt;
+</code></pre><h2 id="&#x7F16;&#x8F91;&#x8F93;&#x5165;"><a name="&#x7F16;&#x8F91;&#x8F93;&#x5165;" class="anchor-navigation-ex-anchor" href="#&#x7F16;&#x8F91;&#x8F93;&#x5165;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x7F16;&#x8F91;&#x8F93;&#x5165;</h2>
+<p>&#x5982;&#x679C;&#x4F60;&#x7528;&#x7684;&#x662F; Mac &#x6216; Linux&#xFF0C;&#x5F53;&#x4F60;&#x7528;&#x5DE6;&#x53F3;&#x7BAD;&#x5934;&#x952E;&#x7F16;&#x8F91;&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x8F93;&#x5165;&#x65F6;&#xFF0C;&#x4F60;&#x4F1A;&#x9047;&#x5230;&#x4E00;&#x4E2A;&#x5947;&#x602A;&#x7684;&#x95EE;&#x9898;&#xFF1A;</p>
+<pre><code>Lispy Version 0.0.0.0.3
+Press Ctrl+c to Exit
+
+lispy&gt; hel^[[D^[[C
+</code></pre><p>&#x4F7F;&#x7528;&#x7BAD;&#x5934;&#x952E;&#x4E0D;&#x4F1A;&#x524D;&#x540E;&#x79FB;&#x52A8;&#x8F93;&#x5165;&#x7684;&#x5149;&#x6807;&#xFF0C;&#x800C;&#x662F;&#x4F1A;&#x4EA7;&#x751F;&#x50CF; <code>^[[D</code> &#x6216; <code>^[[C</code> &#x8FD9;&#x79CD;&#x5947;&#x602A;&#x7684;&#x5B57;&#x7B26;&#x3002;&#x5F88;&#x660E;&#x663E;&#x8FD9;&#x4E0D;&#x662F;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x800C;&#x5728; Windows &#x4E0A;&#x5219;&#x4E0D;&#x4F1A;&#x6709;&#x8FD9;&#x4E2A;&#x73B0;&#x8C61;&#x3002;</p>
+<p>&#x5728; Mac &#x548C; Linux &#x4E0A;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7528;&#x5230; <code>editline</code> &#x5E93;&#x6765;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;&#x5E76;&#x628A; <code>fputs</code> &#x548C; <code>fgets</code> &#x66FF;&#x6362;&#x4E3A;&#x8FD9;&#x4E2A;&#x5E93;&#x63D0;&#x4F9B;&#x7684;&#x76F8;&#x540C;&#x529F;&#x80FD;&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x7528;&#x7684;&#x662F; Windows &#x7CFB;&#x7EDF;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8DF3;&#x5230;&#x672C;&#x7AE0;&#x7684;&#x6700;&#x540E;&#x3002;&#x56E0;&#x4E3A;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x51E0;&#x4E2A;&#x5C0F;&#x8282;&#x90FD;&#x662F;&#x548C;&#x5B89;&#x88C5;&#x4E0E;&#x914D;&#x7F6E; <code>editline</code> &#x76F8;&#x5173;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<h2 id="&#x4F7F;&#x7528;-editline-&#x5E93;"><a name="&#x4F7F;&#x7528;-editline-&#x5E93;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;-editline-&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x4F7F;&#x7528; editline &#x5E93;</h2>
+<p>&#x6211;&#x4EEC;&#x4F1A;&#x7528;&#x5230; <code>editline</code> &#x5E93;&#x63D0;&#x4F9B;&#x7684;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#xFF1A;<code>readline</code> &#x548C; <code>add_history</code>&#x3002;<code>readline</code> &#x548C; <code>fgets</code> &#x4E00;&#x6837;&#xFF0C;&#x4ECE;&#x547D;&#x4EE4;&#x884C;&#x8BFB;&#x53D6;&#x4E00;&#x884C;&#x8F93;&#x5165;&#xFF0C;&#x5E76;&#x4E14;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x4F7F;&#x7528;&#x5DE6;&#x53F3;&#x7BAD;&#x5934;&#x8FDB;&#x884C;&#x7F16;&#x8F91;&#x3002;<code>add_history</code> &#x53EF;&#x4EE5;&#x7EAA;&#x5F55;&#x4E0B;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x8F93;&#x5165;&#x8FC7;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x4E0A;&#x4E0B;&#x7BAD;&#x5934;&#x6765;&#x83B7;&#x53D6;&#x3002;&#x65B0;&#x7684;&#x7A0B;&#x5E8F;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;editline/readline.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;editline/history.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span>** argv)</span> </span>{
+
+  <span class="hljs-comment">/* Print Version and Exit Information */</span>
+  <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Lispy Version 0.0.0.0.1&quot;</span>);
+  <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Press Ctrl+c to Exit\n&quot;</span>);
+
+  <span class="hljs-comment">/* In a never ending loop */</span>
+  <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+
+    <span class="hljs-comment">/* Output our prompt and get input */</span>
+    <span class="hljs-keyword">char</span>* input = readline(<span class="hljs-string">&quot;lispy&gt; &quot;</span>);
+
+    <span class="hljs-comment">/* Add input to history */</span>
+    add_history(input);
+
+    <span class="hljs-comment">/* Echo input back to user */</span>    
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;No you&apos;re a %s\n&quot;</span>, input);
+
+    <span class="hljs-comment">/* Free retrieved input */</span>
+    <span class="hljs-built_in">free</span>(input);
+
+  }
+
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x589E;&#x52A0;&#x4E86;&#x4E00;&#x4E9B;&#x65B0;&#x7684;&#x5934;&#x6587;&#x4EF6;&#x3002;<code>&lt;stdlib.h&gt;</code> &#x63D0;&#x4F9B;&#x4E86; <code>free</code> &#x51FD;&#x6570;&#x3002;<code>&lt;editline/readline.h&gt;</code> &#x548C; <code>&lt;editline/history.h&gt;</code> &#x63D0;&#x4F9B;&#x4E86; <code>editline</code> &#x5E93;&#x4E2D;&#x7684; <code>readline</code> &#x548C; <code>add_history</code> &#x51FD;&#x6570;&#x3002;</p>
+<p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>readline</code> &#x8BFB;&#x53D6;&#x7528;&#x6237;&#x8F93;&#x5165;&#xFF0C;&#x4F7F;&#x7528; <code>add_history</code> &#x5C06;&#x8BE5;&#x8F93;&#x5165;&#x6DFB;&#x52A0;&#x5230;&#x5386;&#x53F2;&#x7EAA;&#x5F55;&#x5F53;&#x4E2D;&#xFF0C;&#x6700;&#x540E;&#x4F7F;&#x7528; <code>printf</code> &#x5C06;&#x5176;&#x52A0;&#x5DE5;&#x5E76;&#x6253;&#x5370;&#x51FA;&#x6765;&#x3002;</p>
+<p>&#x4E0E; <code>fgets</code> &#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;<code>readline</code> &#x5E76;&#x4E0D;&#x5728;&#x7ED3;&#x5C3E;&#x6DFB;&#x52A0;&#x6362;&#x884C;&#x7B26;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5728; <code>printf</code> &#x51FD;&#x6570;&#x4E2D;&#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x4E2A;&#x6362;&#x884C;&#x7B26;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x4F7F;&#x7528; <code>free</code> &#x51FD;&#x6570;&#x624B;&#x52A8;&#x91CA;&#x653E; <code>readline</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7ED9;&#x6211;&#x4EEC;&#x7684;&#x7F13;&#x51B2;&#x533A; <code>input</code>&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A; <code>readline</code> &#x4E0D;&#x540C;&#x4E8E; <code>fgets</code> &#x51FD;&#x6570;&#xFF0C;&#x540E;&#x8005;&#x4F7F;&#x7528;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x7A7A;&#x95F4;&#xFF0C;&#x800C;&#x524D;&#x8005;&#x4F1A;&#x7533;&#x8BF7;&#x4E00;&#x5757;&#x65B0;&#x7684;&#x5185;&#x5B58;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x624B;&#x52A8;&#x91CA;&#x653E;&#x3002;&#x5185;&#x5B58;&#x7684;&#x7533;&#x8BF7;&#x4E0E;&#x91CA;&#x653E;&#x95EE;&#x9898;&#x6211;&#x4EEC;&#x4F1A;&#x5728;&#x540E;&#x9762;&#x7684;&#x7AE0;&#x8282;&#x4E2D;&#x6DF1;&#x5165;&#x8BA8;&#x8BBA;&#x3002;</p>
+<h2 id="&#x94FE;&#x63A5;-editline-&#x5E76;&#x7F16;&#x8BD1;"><a name="&#x94FE;&#x63A5;-editline-&#x5E76;&#x7F16;&#x8BD1;" class="anchor-navigation-ex-anchor" href="#&#x94FE;&#x63A5;-editline-&#x5E76;&#x7F16;&#x8BD1;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x94FE;&#x63A5; editline &#x5E76;&#x7F16;&#x8BD1;</h2>
+<p>&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x524D;&#x9762;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x6765;&#x7F16;&#x8BD1;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x4F60;&#x4F1A;&#x5F97;&#x5230;&#x7C7B;&#x4F3C;&#x4E8E;&#x4E0B;&#x9762;&#x7684;&#x9519;&#x8BEF;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;&#x4F7F;&#x7528;&#x4E4B;&#x524D;&#xFF0C;&#x4F60;&#x5FC5;&#x987B;&#x5148;&#x5728;&#x7535;&#x8111;&#x4E0A;&#x5B89;&#x88C5; <code>editline</code> &#x5E93;&#x3002;</p>
+<p><code>fatal error: editline/readline.h: No such file or directory #include &lt;editline/readline.h&gt;</code></p>
+<p>&#x5728; Mac &#x4E0A;&#xFF0C;<code>editline</code> &#x5305;&#x542B;&#x5728; <em>Command Line Tools</em> &#x4E2D;&#xFF0C;&#x5B89;&#x88C5;&#x65B9;&#x6CD5;&#x6211;&#x4EEC;&#x5728;&#x7B2C;&#x4E8C;&#x7AE0;&#x6709;&#x8BF4;&#x660E;&#x3002;&#x5B89;&#x88C5;&#x5B8C;&#x540E;&#xFF0C;&#x53EF;&#x80FD;&#x8FD8;&#x662F;&#x4F1A;&#x51FA;&#x73B0;&#x5934;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x7F16;&#x8BD1;&#x9519;&#x8BEF;&#x3002;&#x8FD9;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x79FB;&#x9664; <code>#include &lt;editline/history.h&gt;</code> &#x8FD9;&#x884C;&#x4EE3;&#x7801;&#xFF0C;&#x518D;&#x8BD5;&#x4E00;&#x6B21;&#x3002;</p>
+<p>&#x5728; Linux &#x4E0A;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>sudo apt-get install libedit-dev</code> &#x6765;&#x5B89;&#x88C5; <code>editline</code>&#x3002;&#x5728; Fedora &#x4E0A;&#xFF0C;&#x4F7F;&#x7528; <code>su -c &quot;yum install libedit-dev*&quot;</code> &#x547D;&#x4EE4;&#x5B89;&#x88C5;&#x3002;</p>
+<p>&#x4E00;&#x65E6;&#x4F60;&#x5B89;&#x88C5;&#x597D;&#x4E86; <code>editline</code>&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x518D;&#x6B21;&#x7F16;&#x8BD1;&#x8BD5;&#x4E00;&#x4E0B;&#x3002;&#x7136;&#x540E;&#x5C06;&#x4F1A;&#x5F97;&#x5230;&#x5982;&#x4E0B;&#x7684;&#x9519;&#x8BEF;&#xFF1A;</p>
+<pre><code>undefined reference to `readline&apos;
+undefined reference to `add_history&apos;
+</code></pre><p>&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x5C06; <code>editline</code> &#x94FE;&#x63A5;&#x5230;&#x7A0B;&#x5E8F;&#x4E2D;&#x3002;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F7F;&#x7528; <code>-ledit</code> &#x6807;&#x8BB0;&#x6765;&#x5B8C;&#x6210;&#x94FE;&#x63A5;&#xFF0C;&#x7528;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><code>cc -std=c99 -Wall prompt.c -ledit -o prompt</code></p>
+<p>&#x518D;&#x6B21;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x81EA;&#x7531;&#x5730;&#x7F16;&#x8F91;&#x8F93;&#x5165;&#x7684;&#x6587;&#x5B57;&#x4E86;&#xFF01;</p>
+<blockquote>
+<h4 id="&#x4E3A;&#x4EC0;&#x4E48;&#x6211;&#x7684;&#x7A0B;&#x5E8F;&#x8FD8;&#x662F;&#x4E0D;&#x80FD;&#x7F16;&#x8BD1;&#xFF1F;"><a name="&#x4E3A;&#x4EC0;&#x4E48;&#x6211;&#x7684;&#x7A0B;&#x5E8F;&#x8FD8;&#x662F;&#x4E0D;&#x80FD;&#x7F16;&#x8BD1;&#xFF1F;" class="anchor-navigation-ex-anchor" href="#&#x4E3A;&#x4EC0;&#x4E48;&#x6211;&#x7684;&#x7A0B;&#x5E8F;&#x8FD8;&#x662F;&#x4E0D;&#x80FD;&#x7F16;&#x8BD1;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E3A;&#x4EC0;&#x4E48;&#x6211;&#x7684;&#x7A0B;&#x5E8F;&#x8FD8;&#x662F;&#x4E0D;&#x80FD;&#x7F16;&#x8BD1;&#xFF1F;</h4>
+<p>&#x5728;&#x6709;&#x4E9B;&#x7CFB;&#x7EDF;&#x4E0A;&#xFF0C;<code>editline</code> &#x7684;&#x5B89;&#x88C5;&#x3001;&#x5305;&#x542B;&#x3001;&#x94FE;&#x63A5;&#x7684;&#x65B9;&#x5F0F;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x4E9B;&#x8BB8;&#x5DEE;&#x522B;&#xFF0C;&#x8BF7;&#x5584;&#x7528;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x54E6;&#x3002;</p>
+</blockquote>
+<h2 id="&#x9884;&#x5904;&#x7406;&#x5668;"><a name="&#x9884;&#x5904;&#x7406;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x9884;&#x5904;&#x7406;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. &#x9884;&#x5904;&#x7406;&#x5668;</h2>
+<p>&#x5BF9;&#x4E8E;&#x8FD9;&#x6837;&#x7684;&#x4E00;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;&#x800C;&#x8A00;&#xFF0C;&#x6211;&#x4EEC;&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x7CFB;&#x7EDF;&#x7F16;&#x5199;&#x4E0D;&#x540C;&#x7684;&#x4EE3;&#x7801;&#x662F;&#x53EF;&#x4EE5;&#x7684;&#x3002;&#x4F46;&#x662F;&#x5982;&#x679C;&#x6211;&#x628A;&#x6211;&#x7684;&#x4EE3;&#x7801;&#x53D1;&#x7ED9;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x670B;&#x53CB;&#xFF0C;&#x8BA9;&#x4ED6;&#x5E2E;&#x6211;&#x5B8C;&#x5584;&#x4E00;&#x4E0B;&#x4EE3;&#x7801;&#xFF0C;&#x53EF;&#x80FD;&#x5C31;&#x4F1A;&#x51FA;&#x95EE;&#x9898;&#x4E86;&#x3002;&#x7406;&#x60F3;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x5E0C;&#x671B;&#x6211;&#x7684;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0A;&#x7F16;&#x8BD1;&#x5E76;&#x8FD0;&#x884C;&#x3002;&#x8FD9;&#x5728; C &#x8BED;&#x8A00;&#x4E2D;&#x662F;&#x4E2A;&#x5F88;&#x666E;&#x904D;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x53EB;&#x505A;&#x53EF;&#x79FB;&#x690D;&#x6027;(portability)&#x3002;&#x8FD9;&#x901A;&#x5E38;&#x90FD;&#x662F;&#x4E2A;&#x5F88;&#x68D8;&#x624B;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x4F46;&#x662F; C &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x673A;&#x5236;&#x6765;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#xFF0C;&#x53EB;&#x505A;&#x9884;&#x5904;&#x7406;&#x5668;(preprocessor)&#x3002;</p>
+<p>&#x9884;&#x5904;&#x7406;&#x5668;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x5B83;&#x5728;&#x7F16;&#x8BD1;&#x4E4B;&#x524D;&#x8FD0;&#x884C;&#x3002;&#x5B83;&#x6709;&#x5F88;&#x591A;&#x4F5C;&#x7528;&#x3002;&#x800C;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x5C31;&#x5DF2;&#x7ECF;&#x6084;&#x6084;&#x5730;&#x7528;&#x8FC7;&#x9884;&#x5904;&#x7406;&#x5668;&#x4E86;&#x3002;&#x4EFB;&#x4F55;&#x4EE5;&#x4E95;&#x53F7; <code>#</code> &#x5F00;&#x5934;&#x7684;&#x8BED;&#x53E5;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x9884;&#x5904;&#x7406;&#x547D;&#x4EE4;&#x3002;&#x4E3A;&#x4E86;&#x4F7F;&#x7528;&#x6807;&#x51C6;&#x5E93;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x7528;&#x5B83;&#x6765;&#x5305;&#x542B;(include)&#x8FC7;&#x5934;&#x6587;&#x4EF6;&#x4E86;&#x3002;</p>
+<p>&#x9884;&#x5904;&#x7406;&#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x4F5C;&#x7528;&#x662F;&#x68C0;&#x6D4B;&#x5F53;&#x524D;&#x7684;&#x4EE3;&#x7801;&#x5728;&#x54EA;&#x4E2A;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E2D;&#x8FD0;&#x884C;&#xFF0C;&#x4ECE;&#x800C;&#x6765;&#x4EA7;&#x751F;&#x5E73;&#x53F0;&#x76F8;&#x5173;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x800C;&#x8FD9;&#x4E5F;&#x6B63;&#x662F;&#x6211;&#x4EEC;&#x505A;&#x53EF;&#x79FB;&#x690D;&#x6027;&#x5DE5;&#x4F5C;&#x65F6;&#x6240;&#x9700;&#x8981;&#x7684;&#x3002;</p>
+<p>&#x5728; Windows &#x4E0A;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F2A;&#x9020;&#x4E00;&#x4E2A; <code>readline</code> &#x548C; <code>add_history</code> &#x51FD;&#x6570;&#xFF0C;&#x800C;&#x5728;&#x5176;&#x4ED6;&#x7CFB;&#x7EDF;&#x4E0A;&#x5C31;&#x4F7F;&#x7528; <code>editline</code> &#x5E93;&#x63D0;&#x4F9B;&#x7ED9;&#x6211;&#x4EEC;&#x7684;&#x771F;&#x6B63;&#x6709;&#x4F5C;&#x7528;&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x8FBE;&#x5230;&#x8FD9;&#x4E2A;&#x76EE;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x628A;&#x5E73;&#x53F0;&#x76F8;&#x5173;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x5728;<code>#ifdef</code>&#x3001;<code>#else</code> &#x548C; <code>#endif</code> &#x9884;&#x5904;&#x7406;&#x547D;&#x4EE4;&#x4E2D;&#x3002;&#x5982;&#x679C;&#x6761;&#x4EF6;&#x4E3A;&#x771F;&#xFF0C;&#x5305;&#x88F9;&#x5728; <code>#ifdef</code> &#x548C; <code>#else</code> &#x4E4B;&#x95F4;&#x7684;&#x4EE3;&#x7801;&#x5C31;&#x4F1A;&#x88AB;&#x6267;&#x884C;&#xFF0C;&#x5426;&#x5219;&#xFF0C;<code>#else</code> &#x548C; <code>endif</code> &#x4E4B;&#x95F4;&#x7684;&#x4EE3;&#x7801;&#x88AB;&#x6267;&#x884C;&#x3002;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x80FD;&#x5199;&#x51FA;&#x5728; Windows&#x3001;Linux &#x548C; Mac &#x4E09;&#x5927;&#x5E73;&#x53F0;&#x4E0A;&#x90FD;&#x80FD;&#x6B63;&#x786E;&#x7F16;&#x8BD1;&#x7684;&#x4EE3;&#x7801;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+
+<span class="hljs-comment">/* If we are compiling on Windows compile these functions */</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> _WIN32</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span>
+
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> buffer[<span class="hljs-number">2048</span>];
+
+<span class="hljs-comment">/* Fake readline function */</span>
+<span class="hljs-function"><span class="hljs-keyword">char</span>* <span class="hljs-title">readline</span><span class="hljs-params">(<span class="hljs-keyword">char</span>* prompt)</span> </span>{
+  <span class="hljs-built_in">fputs</span>(prompt, <span class="hljs-built_in">stdout</span>);
+  fgets(buffer, <span class="hljs-number">2048</span>, <span class="hljs-built_in">stdin</span>);
+  <span class="hljs-keyword">char</span>* cpy = <span class="hljs-built_in">malloc</span>(<span class="hljs-built_in">strlen</span>(buffer)+<span class="hljs-number">1</span>);
+  <span class="hljs-built_in">strcpy</span>(cpy, buffer);
+  cpy[<span class="hljs-built_in">strlen</span>(cpy)<span class="hljs-number">-1</span>] = <span class="hljs-string">&apos;\0&apos;</span>;
+  <span class="hljs-keyword">return</span> cpy;
+}
+
+<span class="hljs-comment">/* Fake add_history function */</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">add_history</span><span class="hljs-params">(<span class="hljs-keyword">char</span>* unused)</span> </span>{}
+
+<span class="hljs-comment">/* Otherwise include the editline headers */</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">else</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;editline/readline.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;editline/history.h&gt;</span> // &#x8BD1;&#x6CE8;&#xFF1A;&#x5982;&#x679C;&#x662F;Mac&#x7CFB;&#x7EDF;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x5305;&#x542B;history.h&#x5934;&#x6587;&#x4EF6;&#x3002;</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+<span class="hljs-comment">/* &#x8BD1;&#x6CE8;
+&#x4E0A;&#x6BB5;#else&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x6539;&#x5F97;&#x66F4;&#x901A;&#x7528;&#x4E00;&#x4E9B;&#xFF1A;
+#else
+#ifdef __linux__
+#include &lt;editline/readline.h&gt;
+#include &lt;editline/history.h&gt;
+#endif
+
+#ifdef __MACH__
+#include &lt;editline/readline.h&gt;
+#endif
+#endif
+*/</span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span>** argv)</span> </span>{
+
+  <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Lispy Version 0.0.0.0.1&quot;</span>);
+  <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Press Ctrl+c to Exit\n&quot;</span>);
+
+  <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+
+    <span class="hljs-comment">/* Now in either case readline will be correctly defined */</span>
+    <span class="hljs-keyword">char</span>* input = readline(<span class="hljs-string">&quot;lispy&gt; &quot;</span>);
+    add_history(input);
+
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;No you&apos;re a %s\n&quot;</span>, input);
+    <span class="hljs-built_in">free</span>(input);
+
+  }
+
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h2 id="&#x5F69;&#x86CB;"><a name="&#x5F69;&#x86CB;" class="anchor-navigation-ex-anchor" href="#&#x5F69;&#x86CB;"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. &#x5F69;&#x86CB;</h2>
+<ul>
+<li>&#x5C06;&#x63D0;&#x793A;&#x4FE1;&#x606F; <code>lispy&gt;</code> &#x6362;&#x6210;&#x5176;&#x4ED6;&#x4F60;&#x559C;&#x6B22;&#x7684;&#x3002;</li>
+<li>&#x4FEE;&#x6539;&#x6253;&#x5370;&#x7684;&#x4FE1;&#x606F;&#x3002;</li>
+<li>&#x5728;&#x7A0B;&#x5E8F;&#x5F00;&#x5934;&#x7684;&#x63D0;&#x793A;&#x4FE1;&#x606F;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x7684;&#x4FE1;&#x606F;&#x3002;</li>
+<li>&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#xFF0C;<code>\n</code> &#x8868;&#x793A;&#x4EC0;&#x4E48;&#xFF1F;</li>
+<li><code>printf</code> &#x8FD8;&#x6709;&#x54EA;&#x4E9B;&#x8F93;&#x51FA;&#x6A21;&#x5F0F;&#xFF1F;</li>
+<li>&#x5982;&#x679C;&#x4F60;&#x5411; <code>printf</code> &#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x4E0E;&#x6A21;&#x5F0F;&#x4E0D;&#x5339;&#x914D;&#x7684;&#x503C;&#x4F1A;&#x600E;&#x6837;&#xFF1F;</li>
+<li>&#x9884;&#x5904;&#x7406;&#x5668; <code>#ifndef</code> &#x6709;&#x4EC0;&#x4E48;&#x7528;&#xFF1F;</li>
+<li>&#x9884;&#x5904;&#x7406;&#x5668; <code>#define</code> &#x6709;&#x4EC0;&#x4E48;&#x7528;&#xFF1F;</li>
+<li><code>_WIN32</code> &#x5728; Windows &#x4E2D;&#x6709;&#x5B9A;&#x4E49;&#xFF0C;&#x90A3;&#x5728; Linux &#x548C; Mac &#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;</li>
+</ul>
+<h2 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. &#x53C2;&#x8003;</h2>
+<p><details><summary>prompt_unix.c</summary><pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;editline/readline.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;editline/history.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span>** argv)</span> </span>{
+
+  <span class="hljs-comment">/* Print Version and Exit Information */</span>
+  <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Lispy Version 0.0.0.0.1&quot;</span>);
+  <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Press Ctrl+c to Exit\n&quot;</span>);
+
+  <span class="hljs-comment">/* In a never ending loop */</span>
+  <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+
+    <span class="hljs-comment">/* Output our prompt and get input */</span>
+    <span class="hljs-keyword">char</span>* input = readline(<span class="hljs-string">&quot;lispy&gt; &quot;</span>);
+
+    <span class="hljs-comment">/* Add input to history */</span>
+    add_history(input);
+
+    <span class="hljs-comment">/* Echo input back to user */</span>    
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;No you&apos;re a %s\n&quot;</span>, input);
+
+    <span class="hljs-comment">/* Free retrived input */</span>
+    <span class="hljs-built_in">free</span>(input);
+
+  }
+
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+</details></p>
+<p><details><summary>prompt_windows.c</summary><pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+
+<span class="hljs-comment">/* Declare a buffer for user input of size 2048 */</span>
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> input[<span class="hljs-number">2048</span>];
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span>** argv)</span> </span>{
+
+  <span class="hljs-comment">/* Print Version and Exit Information */</span>
+  <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Lispy Version 0.0.0.0.1&quot;</span>);
+  <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Press Ctrl+c to Exit\n&quot;</span>);
+
+  <span class="hljs-comment">/* In a never ending loop */</span>
+  <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+
+    <span class="hljs-comment">/* Output our prompt */</span>
+    <span class="hljs-built_in">fputs</span>(<span class="hljs-string">&quot;lispy&gt; &quot;</span>, <span class="hljs-built_in">stdout</span>);
+
+    <span class="hljs-comment">/* Read a line of user input of maximum size 2048 */</span>
+    fgets(input, <span class="hljs-number">2048</span>, <span class="hljs-built_in">stdin</span>);
+
+    <span class="hljs-comment">/* Echo input back to user */</span>
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;No you&apos;re a %s&quot;</span>, input);
+  }
+
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+</details></p>
+<p><details><summary>prompt.c</summary><pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+
+<span class="hljs-comment">/* If we are compiling on Windows compile these functions */</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> _WIN32</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span>
+
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> buffer[<span class="hljs-number">2048</span>];
+
+<span class="hljs-comment">/* Fake readline function */</span>
+<span class="hljs-function"><span class="hljs-keyword">char</span>* <span class="hljs-title">readline</span><span class="hljs-params">(<span class="hljs-keyword">char</span>* prompt)</span> </span>{
+  <span class="hljs-built_in">fputs</span>(prompt, <span class="hljs-built_in">stdout</span>);
+  fgets(buffer, <span class="hljs-number">2048</span>, <span class="hljs-built_in">stdin</span>);
+  <span class="hljs-keyword">char</span>* cpy = <span class="hljs-built_in">malloc</span>(<span class="hljs-built_in">strlen</span>(buffer)+<span class="hljs-number">1</span>);
+  <span class="hljs-built_in">strcpy</span>(cpy, buffer);
+  cpy[<span class="hljs-built_in">strlen</span>(cpy)<span class="hljs-number">-1</span>] = <span class="hljs-string">&apos;\0&apos;</span>;
+  <span class="hljs-keyword">return</span> cpy;
+}
+
+<span class="hljs-comment">/* Fake add_history function */</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">add_history</span><span class="hljs-params">(<span class="hljs-keyword">char</span>* unused)</span> </span>{}
+
+<span class="hljs-comment">/* Otherwise include the editline headers */</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">else</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;editline/readline.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;editline/history.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span>** argv)</span> </span>{
+
+  <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Lispy Version 0.0.0.0.1&quot;</span>);
+  <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Press Ctrl+c to Exit\n&quot;</span>);
+
+  <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+
+    <span class="hljs-comment">/* Now in either case readline will be correctly defined */</span>
+    <span class="hljs-keyword">char</span>* input = readline(<span class="hljs-string">&quot;lispy&gt; &quot;</span>);
+    add_history(input);
+
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;No you&apos;re a %s\n&quot;</span>, input);
+    <span class="hljs-built_in">free</span>(input);
+
+  }
+
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+</details></p>
+<script src="_gitbook_plugin_analytics.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="03.Basics.html" class="navigation navigation-prev " aria-label="Previous page: 第零三章 • 基础">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="05.Languages.html" class="navigation navigation-next " aria-label="Next page: 第零五章 • 编程语言">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第零四章 • 交互","level":"1.5","depth":1,"next":{"title":"第零五章 • 编程语言","level":"1.6","depth":1,"path":"05.Languages.md","ref":"05.Languages.md","articles":[]},"previous":{"title":"第零三章 • 基础","level":"1.4","depth":1,"path":"03.Basics.md","ref":"03.Basics.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","anchor-navigation-ex-toc","theme-gestalt@git+https://github.com/NoahDragon/gitbook-plugin-theme-gestalt.git","-theme-default","styles-sass-fix","analytics","collapse"],"styles":{"website":"website-1573318305263.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"buildyourownlispcn"},"styles-sass-fix":{},"theme-gestalt":{"showLevel":false,"styles":{"website":"styles/website.css"},"logo":"./assets/logo.png","favicon":"./assets/logo.png","baseUrl":null,"excludeDefaultStyles":true,"doNotHideChildrenChapters":false},"analytics":{"google":"UA-48498357-5"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"collapse":{},"anchor-navigation-ex-toc":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-edit":{"repo":"NoahDragon/BuildYourOwnLispCn","branch":"master"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"学C语言写Lisp","language":"zh","gitbook":"*"},"file":{"path":"04.Interactive.md","mtime":"2019-11-09T16:49:30.166Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-09T16:51:43.819Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-collapse/collapse.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

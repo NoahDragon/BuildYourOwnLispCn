@@ -1,0 +1,657 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>附录 · 学C语言写Lisp</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex-toc/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-collapse/collapse.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="website-1573318305263.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    
+        <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    
+    
+    
+
+    
+    
+    <link rel="prev" href="16.Bonus-Projects.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            <div class="book-logo">   
+                
+                <img src="./assets/logo.png"/>
+                
+            </div>
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.1" 
+            data-path="./">
+
+            
+                <a href="./">
+            
+                    
+                    第零零章 • 关于
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.2" 
+            data-path="01.Introduction.html">
+
+            
+                <a href="01.Introduction.html">
+            
+                    
+                    第零一章 • 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.3" 
+            data-path="02.Installation.html">
+
+            
+                <a href="02.Installation.html">
+            
+                    
+                    第零二章 • 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.4" 
+            data-path="03.Basics.html">
+
+            
+                <a href="03.Basics.html">
+            
+                    
+                    第零三章 • 基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.5" 
+            data-path="04.Interactive.html">
+
+            
+                <a href="04.Interactive.html">
+            
+                    
+                    第零四章 • 交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.6" 
+            data-path="05.Languages.html">
+
+            
+                <a href="05.Languages.html">
+            
+                    
+                    第零五章 • 编程语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.7" 
+            data-path="06.Parsing.html">
+
+            
+                <a href="06.Parsing.html">
+            
+                    
+                    第零六章 • 语法分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.8" 
+            data-path="07.Evaluation.html">
+
+            
+                <a href="07.Evaluation.html">
+            
+                    
+                    第零七章 • 计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.9" 
+            data-path="08.Error-Handling.html">
+
+            
+                <a href="08.Error-Handling.html">
+            
+                    
+                    第零八章 • 错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.10" 
+            data-path="09.S-Expressions.html">
+
+            
+                <a href="09.S-Expressions.html">
+            
+                    
+                    第零九章 • S-表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.11" 
+            data-path="10.Q-Expressions.html">
+
+            
+                <a href="10.Q-Expressions.html">
+            
+                    
+                    第零十章 • Q-表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.12" 
+            data-path="11.Variables.html">
+
+            
+                <a href="11.Variables.html">
+            
+                    
+                    第十一章 • 变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.13" 
+            data-path="12.Functions.html">
+
+            
+                <a href="12.Functions.html">
+            
+                    
+                    第十二章 • 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.14" 
+            data-path="13.Conditionals.html">
+
+            
+                <a href="13.Conditionals.html">
+            
+                    
+                    第十三章 • 条件分支
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.15" 
+            data-path="14.Strings.html">
+
+            
+                <a href="14.Strings.html">
+            
+                    
+                    第十四章 • 字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.16" 
+            data-path="15.Standard-Library.html">
+
+            
+                <a href="15.Standard-Library.html">
+            
+                    
+                    第十五章 • 标准库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.17" 
+            data-path="16.Bonus-Projects.html">
+
+            
+                <a href="16.Bonus-Projects.html">
+            
+                    
+                    第十六章 • 彩蛋
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+            active  selected  "
+            data-level="1.18" 
+            data-path="Appendix.html">
+
+            
+                <a href="Appendix.html">
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.19" 
+            >
+
+            
+                <a target="_blank" href="https://github.com/NoahDragon/BuildYourOwnLispCn/raw/master/source.tar.gz">
+            
+                    
+                    源代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.20" 
+            >
+
+            
+                <a target="_blank" href="http://buildyourownlisp.com/contents">
+            
+                    
+                    英文原版在线阅读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.21" 
+            >
+
+            
+                <a target="_blank" href="https://github.com/NoahDragon/BuildYourOwnLispCn">
+            
+                    
+                    Github
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >附录</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7DP27M&placement=abnerchoume" id="_carbonads_js"></script>
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x9644;&#x5F55;"><b>1. </b>&#x9644;&#x5F55;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7279;&#x522B;&#x611F;&#x8C22;"><b>1.1. </b>&#x7279;&#x522B;&#x611F;&#x8C22;</a></li><li><span class="title-icon "></span><a href="#beta-&#x7248;&#x672C;&#x8BFB;&#x8005;"><b>1.2. </b>Beta &#x7248;&#x672C;&#x8BFB;&#x8005;</a></li><li><span class="title-icon "></span><a href="#faq"><b>1.3. </b>FAQ</a></li><ul><li><span class="title-icon "></span><a href="#who-are-you"><b>1.3.1. </b>Who are you?</a></li><li><span class="title-icon "></span><a href="#why-dont-you-teach-arrays-in-this-book"><b>1.3.2. </b>Why don&apos;t you teach arrays in this book?</a></li><li><span class="title-icon "></span><a href="#why-do-you-use-left-handed-pointer-syntax"><b>1.3.3. </b>Why do you use left-handed pointer syntax?</a></li><li><span class="title-icon "></span><a href="#why-are-there-no-macros-in-this-lisp"><b>1.3.4. </b>Why are there no Macros in this Lisp?</a></li><li><span class="title-icon "></span><a href="#where-are-the-answers-to-the-exercises"><b>1.3.5. </b>Where are the answers to the exercises?</a></li></ul></ul></ul></div><a href="#&#x9644;&#x5F55;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x9644;&#x5F55;"><a name="&#x9644;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x9644;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x9644;&#x5F55;</h1>
+<h2 id="&#x7279;&#x522B;&#x611F;&#x8C22;"><a name="&#x7279;&#x522B;&#x611F;&#x8C22;" class="anchor-navigation-ex-anchor" href="#&#x7279;&#x522B;&#x611F;&#x8C22;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x7279;&#x522B;&#x611F;&#x8C22;</h2>
+<p>&#x975E;&#x5E38;&#x611F;&#x8C22;&#x6211;&#x7684;&#x670B;&#x53CB;&#x548C;&#x5BB6;&#x4EBA;&#x7ED9;&#x4E88;&#x6211;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x7279;&#x522B;&#x662F; Francesca Shaw&#xFF0C;&#x5979;&#x8BA9;&#x6211;&#x5168;&#x8EAB;&#x5FC3;&#x5730;&#x6295;&#x5165;&#x5230;&#x5199;&#x4F5C;&#x5F53;&#x4E2D;&#xFF0C; &#x8FD8;&#x6709; Caroline Holden&#xFF0C;&#x5E2E;&#x52A9;&#x6211;&#x6821;&#x5BF9;&#x4E66;&#x7C4D;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x4E5F;&#x611F;&#x8C22; Miran Lipovaca&#x3001;Frederic Trottier-Hebert &#x4EE5;&#x53CA; Jonathan Tang&#x3002;&#x4ED6;&#x4EEC;&#x7684;&#x4E66;&#x7C4D;&#x300A;<a href="http://learnyouahaskell.com/" target="_blank">Learn you a Haskell</a>&#x300B;&#x3001;&#x300A;<a href="http://learnyousomeerlang.com/" target="_blank">Learn you some Erlang</a>&#x300B;&#x3001;&#x300A;<a href="http://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours" target="_blank">Write Yourself a Scheme in 48 Hours</a>&#x300B;&#x7ED9;&#x4E88;&#x4E86;&#x6211;&#x5199;&#x4F5C;&#x7684;&#x7075;&#x611F;&#x3002;</p>
+<h2 id="beta-&#x7248;&#x672C;&#x8BFB;&#x8005;"><a name="beta-&#x7248;&#x672C;&#x8BFB;&#x8005;" class="anchor-navigation-ex-anchor" href="#beta-&#x7248;&#x672C;&#x8BFB;&#x8005;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Beta &#x7248;&#x672C;&#x8BFB;&#x8005;</h2>
+<p>&#x8C22;&#x8C22;&#x6240;&#x6709; Beta &#x7248;&#x672C;&#x7684;&#x8BFB;&#x8005;&#x63D0;&#x4F9B;&#x7684;&#x53CD;&#x9988;&#x3001;&#x7EA0;&#x9519;&#x3001;&#x5EFA;&#x8BAE;&#x4EE5;&#x53CA;&#x9F13;&#x52B1;&#x3002;&#x975E;&#x5E38;&#x611F;&#x8C22;&#x4EE5;&#x4E0B; Reddit &#x7528;&#x6237;&#xFF1A;<a href="http://www.reddit.com/user/neelaryan" target="_blank">neelaryan</a>, 
+  <a href="http://www.reddit.com/user/bitsbytesbikes" target="_blank">bitsbytesbikes</a>, 
+  <a href="http://www.reddit.com/user/acesHD" target="_blank">acesHD</a>, 
+  <a href="http://www.reddit.com/user/CodyChan" target="_blank">CodyChan</a>, 
+  <a href="http://www.reddit.com/user/northClan" target="_blank">northClan</a>, 
+  <a href="http://www.reddit.com/user/da4c30ff" target="_blank">da4c30ff</a>, 
+  <a href="http://www.reddit.com/user/nowords" target="_blank">nowords</a>, 
+  <a href="http://www.reddit.com/user/ozhank" target="_blank">ozhank</a>, 
+  <a href="http://www.reddit.com/user/crackez" target="_blank">crackez</a>, 
+  <a href="http://www.reddit.com/user/stubarfoo" target="_blank">stubarfoo</a>, 
+  <a href="http://www.reddit.com/user/viezebanaan" target="_blank">viezebanaan</a>, 
+  <a href="http://www.reddit.com/user/JMagnum86" target="_blank">JMagnum86</a>, 
+  <a href="http://www.reddit.com/user/uNEV6X29rpf3" target="_blank">uNEV6X29rpf3</a>, 
+  <a href="http://www.reddit.com/user/fortyninezeronine" target="_blank">fortyninezeronine</a>, 
+  <a href="http://www.reddit.com/user/skeeto" target="_blank">skeeto</a>, 
+  <a href="http://www.reddit.com/user/miketaylr" target="_blank">miketaylr</a>, 
+  <a href="http://www.reddit.com/user/wonnernaus" target="_blank">wonnernaus</a>, 
+  <a href="http://www.reddit.com/user/Barthalion" target="_blank">Barthalion</a>, 
+  <a href="http://www.reddit.com/user/codyrioux" target="_blank">codyrioux</a>, 
+  <a href="http://www.reddit.com/user/sigjuice" target="_blank">sigjuice</a>, 
+  <a href="http://www.reddit.com/user/yoshiK" target="_blank">yoshiK</a>, 
+  <a href="http://www.reddit.com/user/u-n-sky" target="_blank">u-n-sky</a>&#x3002;</p>
+<!-- 英文原版中还有图片作者的信息, 由于图片对文章理解无帮助, 所以译者选择省略图片, 同理这里的图片作者列表也不做翻译. -->
+<h2 id="faq"><a name="faq" class="anchor-navigation-ex-anchor" href="#faq"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. FAQ</h2>
+<!-- 原版FAQ为独立章节, 这里一并到附录中 -->
+<h3 id="who-are-you"><a name="who-are-you" class="anchor-navigation-ex-anchor" href="#who-are-you"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. Who are you?</h3>
+<p>Hello, my name is Daniel Holden. I&apos;m from the UK, and currently studying for a PhD at Edinburgh University. My research is in data driven tools for character animation.</p>
+<p>You may know me from one of my other projects such as Cello or Corange. As well as hacking on C, I enjoy writing short stories, digital art, and game development.</p>
+<p>You can take a look at my <a href="http://theorangeduck.com/" target="_blank">personal website</a>. Or you can follow me on <a href="https://twitter.com/anorangeduck" target="_blank">twitter</a>.</p>
+<h3 id="why-dont-you-teach-arrays-in-this-book"><a name="why-dont-you-teach-arrays-in-this-book" class="anchor-navigation-ex-anchor" href="#why-dont-you-teach-arrays-in-this-book"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.2. Why don&apos;t you teach arrays in this book?</h3>
+<p>With an already steep learning curve arrays seemed like a convenient omission to make. Teaching arrays in C is a very easy way to confuse a beginner about pointers, which are a far more important concept to learn. In C, the ways in which arrays and pointers are the same, and yet different, are subtle and numerous. Excluding fixed sized arrays, which have different behaviour altogether, pointers represent a superset of the behaviour of arrays, and so in the context of this book, teaching arrays would have been no more than teaching syntactic sugar.</p>
+<p>Those interested in arrays are encouraged to find out more. The book <a href="http://c.learncodethehardway.org/" target="_blank">Learn C the Hard Way</a> takes the opposite approach to me, and teaches arrays first, with pointers being described as a variation. For those interested in arrays this might prove useful.</p>
+<h3 id="why-do-you-use-left-handed-pointer-syntax"><a name="why-do-you-use-left-handed-pointer-syntax" class="anchor-navigation-ex-anchor" href="#why-do-you-use-left-handed-pointer-syntax"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.3. Why do you use left-handed pointer syntax?</h3>
+<p>In this book I write the syntax for pointers in a left-handed way <code>int* x</code>;, rather than the standard right-handed convention <code>int *x</code>;.</p>
+<p>Ultimately this distinction is one of personal preference, but the vast majority of C code, as well as the C standards, are written using the right-handed style. This is clearly the default, and most correct way to write pointers, and so my choice might seem odd.</p>
+<p>I picked the left-handed version because I believe it is easier to teach to beginners. Having the asterisk on the left hand side emphasises the type. It is clearer to read, and makes it obvious that the asterisk is not a weird operator or modification to the variable. With the omission of arrays, and multi-variable declarations, this notation is also almost entirely consistent within this book, and when not, it is noted. K&amp;R themselves have admitted the confusion of the right-handed syntax, made worse by historical baggage and rogue compiler implementations of the early years. For a learning resource I believe picking the left-handed version was the best approach.</p>
+<p>Once comfortable with the method behind C&apos;s declaration syntax, I encourage programmers to migrate toward the right-handed version.</p>
+<h3 id="why-are-there-no-macros-in-this-lisp"><a name="why-are-there-no-macros-in-this-lisp" class="anchor-navigation-ex-anchor" href="#why-are-there-no-macros-in-this-lisp"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.4. Why are there no Macros in this Lisp?</h3>
+<p>By far the biggest gripe conventional Lisp programmers have with the Lisp in this book is the lack of Macros. Instead of Macros a new concept of Q-Expressions is used to delay evaluation. To conventional Lisp programmers Q-Expressions are confusing because their semantics differ subtly from the quote Macro.</p>
+<p>I use Q-Expressions instead of Macros for a couple of reasons.</p>
+<p>First of all I believe them to be easier for beginners than Macros. When evaluation is delayed it is always explicit, shown by the syntax, and not implicit in the function name. It also means that S-Expressions can never be returned by the prompt or seen in the wild. They are always evaluated.</p>
+<p>Secondly it is more consistent. It no longer requires the concept of Macros, but instead transforms quoted expressions to become the dominant, more powerful concept that does everything needed by either. With Q-Expressions there are only Functions and Expressions, and the language is even more homo-iconic than before.</p>
+<p>Finally, Q-Expressions are distinctively more powerful than Macros. Using Q-Expressions it is possible to pass an argument to a function that evaluates to a Q-Expression, making input arguments capable of being dynamic. In conventional Lisps passing an expression to a Macro will always pause the evaluation, and so the arguments cannot be dynamic, only symbolic.</p>
+<h3 id="where-are-the-answers-to-the-exercises"><a name="where-are-the-answers-to-the-exercises" class="anchor-navigation-ex-anchor" href="#where-are-the-answers-to-the-exercises"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.5. Where are the answers to the exercises?</h3>
+<p>There are none. In the real world no one is going to pass you an answer booklet, or check your work for you. Ensuring your code does as you intended is an essential skill to learn. Some readers ask for the answers because they are concerned that they might not have done the right thing. But testing the right thing in this case is just testing understanding of the question; a pretty pointless exercise. Additionally there is not always a wrong or right way to approach the Bonus Marks. They are intended as suggestions to help people check their understanding, or to explore other ideas and thoughts.</p>
+<p>If you want to do a Bonus Mark question but are unsure what it means, feel free to send me an e-mail and I will try to clarify it! Otherwise don&apos;t fret over the answer. Giving it a try is the important part, not getting it right!</p>
+<script src="_gitbook_plugin_analytics.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="16.Bonus-Projects.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 第十六章 • 彩蛋">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"附录","level":"1.18","depth":1,"next":{"title":"源代码","level":"1.19","depth":1,"url":"https://github.com/NoahDragon/BuildYourOwnLispCn/raw/master/source.tar.gz","ref":"https://github.com/NoahDragon/BuildYourOwnLispCn/raw/master/source.tar.gz","articles":[]},"previous":{"title":"第十六章 • 彩蛋","level":"1.17","depth":1,"path":"16.Bonus-Projects.md","ref":"16.Bonus-Projects.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","anchor-navigation-ex-toc","theme-gestalt@git+https://github.com/NoahDragon/gitbook-plugin-theme-gestalt.git","-theme-default","styles-sass-fix","analytics","collapse"],"styles":{"website":"website-1573318305263.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"buildyourownlispcn"},"styles-sass-fix":{},"theme-gestalt":{"showLevel":false,"styles":{"website":"styles/website.css"},"logo":"./assets/logo.png","favicon":"./assets/logo.png","baseUrl":null,"excludeDefaultStyles":true,"doNotHideChildrenChapters":false},"analytics":{"google":"UA-48498357-5"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"collapse":{},"anchor-navigation-ex-toc":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-edit":{"repo":"NoahDragon/BuildYourOwnLispCn","branch":"master"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"学C语言写Lisp","language":"zh","gitbook":"*"},"file":{"path":"Appendix.md","mtime":"2019-11-09T16:49:30.170Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-09T16:51:43.819Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-collapse/collapse.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
